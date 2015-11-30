@@ -1,0 +1,10 @@
+%section
+  .column
+    %h2 Stay in touch.
+  .column
+    .form-centered
+      = simple_form_for @visitor do |f|
+        = f.error_notification
+        = f.input :email, label: false, :placeholder => 'Your email address...'
+        %br/
+        = f.button :submit, "Sign up for the mailing list", :class => "submit"
