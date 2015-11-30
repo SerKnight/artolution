@@ -13,3 +13,34 @@
  *= require_tree .
  *= require_self
  */
+
+#artolution-header {
+	top: 0px;
+	position: relative;
+	text-align: center;
+
+
+	.navbar {
+		max-height: 250px;
+	}
+
+	.artolution-logo-homepage {
+		padding-bottom: 30px;
+	  padding-top: 30px;
+	  margin: 0 auto;
+
+	  img {
+	  	height: 100px;
+	  }
+	}
+
+
+	.layout-navigation {
+    margin-bottom: 25px;
+
+		.link {
+			display: inline;
+			margin: 20px;
+		}
+	}
+}

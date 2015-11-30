@@ -23,6 +23,7 @@ gem 'simple_form'
 gem 'sucker_punch'
 group :development do
   gem 'better_errors'
+  gem 'binding_of_caller'
   gem 'guard-bundler'
   gem 'guard-rails'
   gem 'guard-rspec'

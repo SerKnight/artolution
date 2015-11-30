@@ -9,7 +9,9 @@
     = csrf_meta_tags
   %body
     %header
-      = render 'layouts/navigation'
-    %main{:role => "main"}
-      = render 'layouts/messages'
-      = yield
+      #artolution-header
+        = render 'layouts/navigation'
+    #artolution-page-body
+      %main{:role => "main"}
+        = render 'layouts/messages'
+        = yield
