@@ -1,8 +1,8 @@
 # This application was generated with Rails Composer
 
 development:
-  apps4: railsapps
-  announcements: mailinglist
+  apps4: rails-mailinglist-activejob
+  announcements: none
   dev_webserver: puma
   prod_webserver: puma
   database: postgresql
@@ -11,21 +11,21 @@ development:
   continuous_testing: guard
   frontend: bootstrap3
   email: gmail
-  authentication: devise
-  devise_modules: invitable
+  authentication: false
+  devise_modules: 
   omniauth_provider: 
-  authorization: roles
+  authorization: false
   form_builder: simple_form
-  pages: about+users
+  pages: about
   layouts: modern_business
-  locale: 
+  locale: none
   analytics: 
   deployment: 
   ban_spiders: 
   github: 
-  local_env_file: 
-  quiet_assets: 
-  better_errors: 
-  pry: 
+  local_env_file: false
+  quiet_assets: true
+  better_errors: true
+  pry: false
   rvmrc: 
-  dashboard: administrate
+  dashboard: none
