@@ -51,3 +51,5 @@ group :test do
 end
 
 gem "figaro"
+gem "font-awesome-rails"
+gem 'owlcarousel-rails'

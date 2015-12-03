@@ -1,0 +1,350 @@
+%header.text-center{:name => "home"}
+  .intro-text
+    %h1
+      Welcome to the 
+      %span.color ARTOLUTION
+    %p We are an award winning digital design and development company
+    .clearfix
+    %a.btn.btn-default.btn-lg.page-scroll{:href => "#works-section"} Our Portfolio
+/ About Section
+#about-section
+  .container
+    .section-title
+      %h2
+        %strong About
+        us
+      %hr/
+      .clearfix
+    .space
+    .row
+      .col-md-4
+        %i.fa.fa-users
+        %h4 Who We Are
+        %p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam. Sed commodo nibh ante facilisis bibendum dolor feugiat at. Duis sed dapibus leo nec ornare diam commodo nibh ante facilisis bibendum.
+      .col-md-4
+        %i.fa.fa-check-square-o
+        %h4 What We Do
+        %p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam. Sed commodo nibh ante facilisis bibendum dolor feugiat at. Duis sed dapibus leo nec ornare diam commodo nibh ante facilisis bibendum.
+      .col-md-4
+        %i.fa.fa-send
+        %h4 Why Choose Us
+        %p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam. Sed commodo nibh ante facilisis bibendum dolor feugiat at. Duis sed dapibus leo nec ornare diam commodo nibh ante facilisis bibendum.
+/ Services Section
+#services-section
+  .container
+    .section-title
+      %h2
+        Our
+        %strong Services
+      %hr/
+      .clearfix
+    .space
+    .row
+      .col-md-3.col-sm-6.service
+        %i.fa.fa-desktop
+        %h4 Web design
+        %p Lorem ipsum dolor sit amet placerat facilisis felis mi in tempus eleifend pellentesque natoque etiam.
+      .col-md-3.col-sm-6.service
+        %i.fa.fa-gears
+        %h4 App Development
+        %p Lorem ipsum dolor sit amet placerat facilisis felis mi in tempus eleifend pellentesque.
+      .col-md-3.col-sm-6.service
+        %i.fa.fa-pie-chart
+        %h4 Analystics
+        %p Lorem ipsum dolor sit amet placerat facilisis felis mi in tempus eleifend pellentesque natoque etiam.
+      .col-md-3.col-sm-6.service
+        %i.fa.fa-line-chart
+        %h4 Marketing
+        %p Lorem ipsum dolor sit amet placerat facilisis felis mi in tempus eleifend pellentesque natoque.
+    .space
+    .row
+      .col-md-3.col-sm-6.service
+        %i.fa.fa-shopping-cart
+        %h4 eCommerce
+        %p Lorem ipsum dolor sit amet placerat facilisis felis mi in tempus eleifend pellentesque natoque etiam.
+      .col-md-3.col-sm-6.service
+        %i.fa.fa-file-text-o
+        %h4 Content Development
+        %p Lorem ipsum dolor sit amet placerat facilisis felis mi in tempus eleifend pellentesque.
+      .col-md-3.col-sm-6.service
+        %i.fa.fa-rocket
+        %h4 Branding
+        %p Lorem ipsum dolor sit amet placerat facilisis felis mi in tempus eleifend pellentesque natoque etiam.
+      .col-md-3.col-sm-6.service
+        %i.fa.fa-camera
+        %h4 Video & Photography
+        %p Lorem ipsum dolor sit amet placerat facilisis felis mi in tempus eleifend pellentesque natoque.
+/ Portfolio Section
+#works-section
+  .container
+    / Container
+    .section-title
+      %h2
+        Our
+        %strong Portfolio
+      %hr/
+      .clearfix
+    .categories
+      %ul.cat
+        %li
+          %ol.type
+            %li
+              %a.active{"data-filter" => "*", :href => "#"} All
+            %li
+              %a{"data-filter" => ".web", :href => "#"} Web Design
+            %li
+              %a{"data-filter" => ".app", :href => "#"} App Development
+            %li
+              %a{"data-filter" => ".branding", :href => "#"} Branding
+      .clearfix
+    .row
+      .portfolio-items
+        .col-sm-6.col-md-3.col-lg-3.web
+          .portfolio-item
+            .hover-bg
+              %a{:href => "http://placekitten.com/200/300", :rel => "prettyPhoto"}
+                .hover-text
+                  %h4 Project Title
+                  %small Web Design
+                  .clearfix
+                  %i.fa.fa-plus
+                %img.img-responsive{:alt => "Project Title", :src => "http://placekitten.com/200/300"}/
+        .col-sm-6.col-md-3.col-lg-3.app
+          .portfolio-item
+            .hover-bg
+              %a{:href => "http://placekitten.com/200/300", :rel => "prettyPhoto"}
+                .hover-text
+                  %h4 Project Title
+                  %small App Development
+                  .clearfix
+                  %i.fa.fa-plus
+                %img.img-responsive{:alt => "Project Title", :src => "http://placekitten.com/200/300"}/
+        .col-sm-6.col-md-3.col-lg-3.web
+          .portfolio-item
+            .hover-bg
+              %a{:href => "http://placekitten.com/200/300", :rel => "prettyPhoto"}
+                .hover-text
+                  %h4 Project Title
+                  %small Web Design
+                  .clearfix
+                  %i.fa.fa-plus
+                %img.img-responsive{:alt => "Project Title", :src => "http://placekitten.com/200/300"}/
+        .col-sm-6.col-md-3.col-lg-3.web
+          .portfolio-item
+            .hover-bg
+              %a{:href => "http://placekitten.com/200/300", :rel => "prettyPhoto"}
+                .hover-text
+                  %h4 Project Title
+                  %small Web Design
+                  .clearfix
+                  %i.fa.fa-plus
+                %img.img-responsive{:alt => "Project Title", :src => "http://placekitten.com/200/300"}/
+        .col-sm-6.col-md-3.col-lg-3.app
+          .portfolio-item
+            .hover-bg
+              %a{:href => "http://placekitten.com/200/300", :rel => "prettyPhoto"}
+                .hover-text
+                  %h4 Project Title
+                  %small App Development
+                  .clearfix
+                  %i.fa.fa-plus
+                %img.img-responsive{:alt => "Project Title", :src => "http://placekitten.com/200/300"}/
+        .col-sm-6.col-md-3.col-lg-3.branding
+          .portfolio-item
+            .hover-bg
+              %a{:href => "http://placekitten.com/200/300", :rel => "prettyPhoto"}
+                .hover-text
+                  %h4 Project Title
+                  %small Branding
+                  .clearfix
+                  %i.fa.fa-plus
+                %img.img-responsive{:alt => "Project Title", :src => "http://placekitten.com/200/300"}/
+        .col-sm-6.col-md-3.col-lg-3.branding.app
+          .portfolio-item
+            .hover-bg
+              %a{:href => "http://placekitten.com/200/300", :rel => "prettyPhoto"}
+                .hover-text
+                  %h4 Project Title
+                  %small App Development, Branding
+                  .clearfix
+                  %i.fa.fa-plus
+                %img.img-responsive{:alt => "Project Title", :src => "http://placekitten.com/200/300"}/
+        .col-sm-6.col-md-3.col-lg-3.web
+          .portfolio-item
+            .hover-bg
+              %a{:href => "http://placekitten.com/200/300", :rel => "prettyPhoto"}
+                .hover-text
+                  %h4 Project Title
+                  %small Web Design
+                  .clearfix
+                  %i.fa.fa-plus
+                %img.img-responsive{:alt => "Project Title", :src => "http://placekitten.com/200/300"}/
+/ Team Section
+#team-section
+  .container
+    .section-title
+      %h2
+        Meet the
+        %strong Team
+      %hr/
+      .clearfix
+    #row
+      .owl-carousel
+        %div
+          .col-md-3.col-sm-6.team
+            .thumbnail
+              %img.img-circle.team-img{:alt => "...", :src => "http://placekitten.com/200/300"}/
+              .caption
+                %h3 Jessica Wally
+                %p Founder
+                %p Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        %div
+          .col-md-3.col-sm-6.team
+            .thumbnail
+              %img.img-circle.team-img{:alt => "...", :src => "http://placekitten.com/200/300"}/
+              .caption
+                %h3 Jessica Wally
+                %p Founder
+                %p Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        %div
+          .col-md-3.col-sm-6.team
+            .thumbnail
+              %img.img-circle.team-img{:alt => "...", :src => "http://placekitten.com/200/300"}/
+              .caption
+                %h3 Jessica Wally
+                %p Founder
+                %p Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        %div
+          .col-md-3.col-sm-6.team
+            .thumbnail
+              %img.img-circle.team-img{:alt => "...", :src => "http://placekitten.com/200/300"}/
+              .caption
+                %h3 Jessica Wally
+                %p Founder
+                %p Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        %div
+          .col-md-3.col-sm-6.team
+            .thumbnail
+              %img.img-circle.team-img{:alt => "...", :src => "http://placekitten.com/200/300"}/
+              .caption
+                %h3 Jessica Wally
+                %p Founder
+                %p Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+
+/ Testimonials Section
+#testimonials-section
+  .container
+    .section-title
+      %h2
+        What our
+        %strong clients
+        say
+      %hr/
+      .clearfix
+      %i.fa.fa-quote-left
+    .row
+      .col-md-8
+        #testimonial.owl-carousel.owl-theme
+          .item
+            %p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam. Sed commodo nibh ante facilisis bibendum dolor feugiat at duis sed dapibus leo nec ornare diam.
+            %p
+              %strong> John DOE
+              , CEO, Company.
+          .item
+            %p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam. Sed commodo nibh ante facilisis bibendum dolor feugiat at duis sed dapibus leo nec ornare diam.
+            %p
+              %strong> Jenny DOE
+              , CEO, Company.
+          .item
+            %p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam. Sed commodo nibh ante facilisis bibendum dolor feugiat at duis sed dapibus leo nec ornare diam.
+            %p
+              %strong> John DOEn
+              , CEO, Company.
+/ Contact Section
+#contact-section
+  .container
+    .section-title.center
+      %h2
+        %strong Contact
+        us
+      %hr/
+      .clearfix
+    .col-md-4
+      %h3 Contact Info
+      .space
+      %p
+        %i.fa.fa-map-marker.fa-fw.pull-left.fa-2x>
+        321 Awesome Street
+        %br/
+        New York, NY 17022
+      .space
+      %p
+        %i.fa.fa-envelope-o.fa-fw.pull-left.fa-2x
+        
+      .space
+      %p
+        %i.fa.fa-phone.fa-fw.pull-left.fa-2x>
+        +1 800 123 1234
+    .col-md-8
+      %h3 Leave us a message
+      %form#contactForm{:name => "sentMessage", :novalidate => ""}
+        = simple_form_for @visitor do |f|
+          .row
+            = f.error_notification
+            .col-md-6
+              .form-group
+                = f.input :email, label: false, :placeholder => 'Your email address...', :required => "required"
+                %p.help-block.text-danger
+            .col-md-6
+              .form-group
+                %input#email.form-control{:placeholder => "Email", :required => "required", :type => "email"}/
+                %p.help-block.text-danger
+          .form-group
+            %textarea#message.form-control{:name => "message", :placeholder => "Message", :required => "", :rows => "4"}
+            %p.help-block.text-danger
+          #success
+          %button.btn.btn-default{:type => "submit", :class => "submit"} Send Message
+
+
+#social-section
+  .container
+    .social
+      %ul
+        %li
+          %a{:href => "#"}
+            %i.fa.fa-facebook
+        %li
+          %a{:href => "#"}
+            %i.fa.fa-twitter
+        %li
+          %a{:href => "#"}
+            %i.fa.fa-dribbble
+        %li
+          %a{:href => "#"}
+            %i.fa.fa-github
+        %li
+          %a{:href => "#"}
+            %i.fa.fa-instagram
+        %li
+          %a{:href => "#"}
+            %i.fa.fa-linkedin
+#footer
+  .container
+    %p
+      Made with love by 
+      %a{:href => "http://serknight.com", :rel => "nofollow", target: '_blank'} SerKnight
+
+/ jQuery (necessary for Bootstrap's JavaScript plugins)
+%script{:src => "https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"}
+/ Include all compiled plugins (below), or include individual files as needed
+// %script{:src => "js/bootstrap.js", :type => "text/javascript"}
+// %script{:src => "js/SmoothScroll.js", :type => "text/javascript"}
+/// %script{:src => "js/jquery.prettyPhoto.js", :type => "text/javascript"}
+/ %script{:src => "js/jquery.isotope.js", :type => "text/javascript"}
+/ %script{:src => "js/jqBootstrapValidation.js", :type => "text/javascript"}
+/ %script{:src => "js/contact_me.js", :type => "text/javascript"}
+// %script{:src => "js/owl.carousel.js", :type => "text/javascript"}
+/
+  Javascripts
+  \==================================================
+// %script{:src => "js/main.js", :type => "text/javascript"}
