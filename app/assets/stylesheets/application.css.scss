@@ -13,8 +13,6 @@
  *= require_tree .
  *= require_self
  *= require font-awesome
- *= require owl.carousel.css
- *= require owl.theme.css
  */
 
 #artolution-header {
@@ -298,27 +296,7 @@ img.img-circle.team-img {
 #team-section .thumbnail .caption {
 	padding: 9px;
 }
-.owl-theme .owl-controls .owl-page span {
-	display: block;
-	width: 10px;
-	height: 10px;
-	margin: 5px 7px;
-	filter: Alpha(Opacity=1);
-	opacity: 1;
-	-webkit-border-radius: 0;
-	-moz-border-radius: 20px;
-	border-radius: 50%;
-	background: #e1f8f4;
-	transition: all 0.5s;
-}
-.owl-theme .owl-controls .owl-page.active span, .owl-theme .owl-controls.clickable .owl-page:hover span {
-	filter: Alpha(Opacity=100);
-	opacity: 1;
-	background: #78cbbf;
-}
-.owl-theme .owl-controls .owl-page.active span {
-	background: #78cbbf;
-}
+
 /* Services Section */
 #services-section {
 	padding: 80px 0;

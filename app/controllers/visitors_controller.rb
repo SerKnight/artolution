@@ -1,6 +1,8 @@
 class VisitorsController < ApplicationController
 
   def new
+
+    @posts = Post.all
     @visitor = Visitor.new
   end
 

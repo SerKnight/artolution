@@ -13,10 +13,7 @@
 //= require jquery
 //= require jquery_ujs
 //= require bootstrap-sprockets
-//= require SmoothScroll.js
-//= require prettyPhoto.js
 //= require main
-//= require owl.carousel
 //= require_tree .
 
 /* Modernizr 2.8.3 (Custom Build) | MIT & BSD
