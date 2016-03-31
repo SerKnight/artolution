@@ -5,40 +5,42 @@
     %meta{:name => "viewport", :content => "width=device-width, initial-scale=1.0"}
     %title= content_for?(:title) ? yield(:title) : 'Solution'
     %meta{:name => "description", :content => "#{content_for?(:description) ? yield(:description) : 'Solution'}"}
-    
+    %link{:href => "https://fonts.googleapis.com/css?family=Montserrat:400,700", :rel => "stylesheet", :type => "text/css"}/
+    %link{:href => "https://fonts.googleapis.com/css?family=Kaushan+Script", :rel => "stylesheet", :type => "text/css"}/
+    %link{:href => "https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic", :rel => "stylesheet", :type => "text/css"}/
+    %link{:href => "https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700", :rel => "stylesheet", :type => "text/css"}/
+    %script{:src => "https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"}
+    %script{:src => "https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"}
     = stylesheet_link_tag 'application', media: 'all'
     = javascript_include_tag 'application'
     = csrf_meta_tags
+
   %body
-    %nav#menu.navbar.navbar-default.navbar-fixed-top
-      .container
-        / Brand and toggle get grouped for better mobile display
-        .navbar-header
-          %button.navbar-toggle.collapsed{"data-target" => "#bs-example-navbar-collapse-1", "data-toggle" => "collapse", :type => "button"}
-            %span.sr-only Toggle navigation
-            %span.icon-bar
-            %span.icon-bar
-            %span.icon-bar
-          %a.navbar-brand{:href => "/"} ARTOLUTION
-        / Collect the nav links, forms, and other content for toggling
-        #bs-example-navbar-collapse-1.collapse.navbar-collapse
-          %ul.nav.navbar-nav.navbar-right
-            %li
-              %a.page-scroll{:href => "#home"} Home
-            %li
-              %a.page-scroll{:href => "#about-section"} About
-            %li
-              %a.page-scroll{:href => "#services-section"} Services
-            %li
-              %a.page-scroll{:href => "#works-section"} Portfolio
-            %li
-              %a.page-scroll{:href => "#team-section"} Team
-            %li
-              %a.page-scroll{:href => "#testimonials-section"} Testimonials
-            %li
-              %a.page-scroll{:href => "#contact-section"} Contact
-        / /.navbar-collapse
-      / /.container-fluid
-    / Header
-    = yield
+    %body#page-top.index
+      %nav.navbar.navbar-default.navbar-fixed-top
+        .container#header-container
+          .navbar-header.page-scroll
+            %button.navbar-toggle{"data-target" => "#bs-example-navbar-collapse-1", "data-toggle" => "collapse", :type => "button"}
+              %span.sr-only Toggle navigation
+              %span.icon-bar
+              %span.icon-bar
+              %span.icon-bar
+            %a.navbar-brand.page-scroll{:href => "#page-top"} Start Bootstrap
+
+          #bs-example-navbar-collapse-1.collapse.navbar-collapse
+            %ul.nav.navbar-nav.navbar-right
+              %li.hidden
+                %a{:href => "#page-top"}
+              %li
+                %a.page-scroll{:href => "#services"} Services
+              %li
+                %a.page-scroll{:href => "#portfolio"} Portfolio
+              %li
+                %a.page-scroll{:href => "#about"} About
+              %li
+                %a.page-scroll{:href => "#team"} Team
+              %li
+                %a.page-scroll{:href => "#contact"} Contact
+          
+      = yield
     

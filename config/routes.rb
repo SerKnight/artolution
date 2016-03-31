@@ -5,5 +5,5 @@ Rails.application.routes.draw do
 
   get '/team', to: 'application#team'
 
-  root to: 'visitors#new'
+  root to: 'visitors#homepage'
 end

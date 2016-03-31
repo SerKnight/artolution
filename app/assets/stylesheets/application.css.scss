@@ -11,8 +11,12 @@
  * file per style scope.
  *
  *= require_tree .
- *= require_self
+
+ *= require blueimp-gallery.css
+ *= require grizdy-1.1.css
  *= require font-awesome
+
+ *= require_self
  */
 
 #artolution-header {
@@ -47,7 +51,10 @@
 }
 
 
-
+#header-container {
+  background-color: rgba(0, 0, 0, 0.2) !important;
+  width: 100% !important;
+}
 
 
 

@@ -1,13 +1,14 @@
 class VisitorsController < ApplicationController
 
-  def new
+  def homepage
 
     @posts = Post.all
     @visitor = Visitor.new
   end
 
   def create
-    @visitor = Visitor.new(params.require(:visitor).permit(:email))
+    @visitor = Visitor.create(visitor_params)
+
     if @visitor.save
       redirect_to root_path, notice: "Signed up #{@visitor.email}."
     else
@@ -15,4 +16,10 @@ class VisitorsController < ApplicationController
     end
   end
 
+
+  private
+
+    def visitor_params
+      params.require(:visitor).permit(:email, :name, :phone, :message)
+    end   
 end
