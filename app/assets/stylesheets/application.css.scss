@@ -19,6 +19,13 @@
  *= require_self
  */
 
+
+.relative {
+	position: relative;
+	float: left;
+	width: 100%;
+}
+
 #artolution-header {
 	top: 0px;
 	position: relative;
@@ -50,16 +57,24 @@
 	}
 }
 
-
 #header-container {
   background-color: rgba(0, 0, 0, 0.2) !important;
   width: 100% !important;
+  height: 100%;
 }
 
 
-
-
-
+#artolution-logo {
+  position: absolute;
+  bottom: 0;
+  height: 75%;
+  left: 0;
+  width: 100%;
+  img {
+  	margin: 0;
+  	height: 100%;
+  }
+}
 
 
 /* style css lol */
@@ -176,7 +191,7 @@ hr {
 }
 /* Home Style */
 header {
-	background: asset-url('artolution.jpg') no-repeat center center;
+	background: asset-url('arto.png') no-repeat center center;
 	background-size: cover;
 	background-color: #000;
 	position: relative;

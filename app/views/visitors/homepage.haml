@@ -1,173 +1,173 @@
 %header
   .container
     .intro-text
-      .intro-lead-in Welcome To Our Studio!
-      .intro-heading It's Nice To Meet You
-      %a.page-scroll.btn.btn-xl{:href => "#services"} Tell Me More
+      .intro-lead-in International Community based public arts network
+      .intro-heading Artolution
+      %a.page-scroll.btn.btn-xl{:href => "#about-artolution"} Learn what we do
 / Services Section
-%section#services
+%section#about-artolution
   .container
     .row
       .col-lg-12.text-center
-        %h2.section-heading Our Process
-        %h3.section-subheading.text-muted Activating large scale community arts initiatives around the globe
+        %h2.section-heading Our Mission
+        %h3.section-subheading.text-muted 
+          We work with communities facing critical issues related to
+          %br 
+          armed conflict, trauma, and social marginalization
     .row.text-center
       .col-md-4
         %span.fa-stack.fa-4x
           %i.fa.fa-circle.fa-stack-2x.text-primary
           %i.fa.fa-commenting.fa-stack-1x.fa-inverse
         %h4.service-heading Relationships
-        %p.text-muted We work with organizations like UNICEF, the World Health Organization, & the United Nations. 
+        %p.text-muted Partnering with organizations such as UNICEF, World Health Organization, United Nations, and embassy's around the world, our projects have the established backup to succeed.
       .col-md-4
         %span.fa-stack.fa-4x
           %i.fa.fa-circle.fa-stack-2x.text-primary
-          %i.fa.fa-laptop.fa-plane-1x.fa-inverse
+          %i.fa.fa-laptop.fa-stack-1x.fa-inverse
         %h4.service-heading Planning
-        %p.text-muted Our team has decades of experience in travel logistics, project supply, and 
+        %p.text-muted Our full time team of educators, administrators, and technologists paired with our network of local nationals allow us to execute projects with maximum time & cost efficiencies.
       .col-md-4
         %span.fa-stack.fa-4x
           %i.fa.fa-circle.fa-stack-2x.text-primary
-          %i.fa.fa-lock.fa-stack-1x.fa-inverse
-        %h4.service-heading Web Security
-        %p.text-muted Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.
+          %i.fa.fa-plane.fa-stack-1x.fa-inverse
+        %h4.service-heading Execution
+        %p.text-muted With decades of experience in travel logistics & project management, we have completed projects everywhere from the Turkey & Syria border, the Australian Outback, the Antarctic Tundra, to midtown Manhattan.
+
 / Portfolio Grid Section
 %section#portfolio.bg-light-gray
   .container
     .row
       .col-lg-12.text-center
         %h2.section-heading Portfolio
-        %h3.section-subheading.text-muted Lorem ipsum dolor sit amet consectetur.
+        %h3.section-subheading.text-muted Categories of our work around the world
     .row
       .col-md-4.col-sm-6.portfolio-item
         %a.portfolio-link{"data-toggle" => "modal", :href => "#portfolioModal1"}
           .portfolio-hover
             .portfolio-hover-content
               %i.fa.fa-plus.fa-3x
-          %img.img-responsive{:alt => "", :src => "img/portfolio/roundicons.png"}/
+          %img.img-responsive{:alt => "", :src => asset_url("portfolio/official.jpg")}
         .portfolio-caption
-          %h4 Round Icons
-          %p.text-muted Graphic Design
+          %h4 Human Rights
+          %p.text-muted Protecting Humanity with Artistic Action
       .col-md-4.col-sm-6.portfolio-item
         %a.portfolio-link{"data-toggle" => "modal", :href => "#portfolioModal2"}
           .portfolio-hover
             .portfolio-hover-content
               %i.fa.fa-plus.fa-3x
-          %img.img-responsive{:alt => "", :src => "img/portfolio/startup-framework.png"}/
+          %img.img-responsive{:alt => "", :src => asset_url("portfolio/israel-pal.jpg")}
         .portfolio-caption
-          %h4 Startup Framework
-          %p.text-muted Website Design
+          %h4 Armed Conflict
+          %p.text-muted Engaging refugees on all sides of a fight
       .col-md-4.col-sm-6.portfolio-item
         %a.portfolio-link{"data-toggle" => "modal", :href => "#portfolioModal3"}
           .portfolio-hover
             .portfolio-hover-content
               %i.fa.fa-plus.fa-3x
-          %img.img-responsive{:alt => "", :src => "img/portfolio/treehouse.png"}/
+          %img.img-responsive{:alt => "", :src => asset_url("portfolio/local.jpg")}
         .portfolio-caption
-          %h4 Treehouse
-          %p.text-muted Website Design
+          %h4 Global Health
+          %p.text-muted Education Initiatives & Community Building
       .col-md-4.col-sm-6.portfolio-item
         %a.portfolio-link{"data-toggle" => "modal", :href => "#portfolioModal4"}
           .portfolio-hover
             .portfolio-hover-content
               %i.fa.fa-plus.fa-3x
-          %img.img-responsive{:alt => "", :src => "img/portfolio/golden.png"}/
+          %img.img-responsive{:alt => "", :src => asset_url("portfolio/girl.jpg")}
         .portfolio-caption
-          %h4 Golden
-          %p.text-muted Website Design
+          %h4 Womens Empowerment
+          %p.text-muted Programs and Workshops to uplift young women
       .col-md-4.col-sm-6.portfolio-item
         %a.portfolio-link{"data-toggle" => "modal", :href => "#portfolioModal5"}
           .portfolio-hover
             .portfolio-hover-content
               %i.fa.fa-plus.fa-3x
-          %img.img-responsive{:alt => "", :src => "img/portfolio/escape.png"}/
+          %img.img-responsive{:alt => "", :src => asset_url("portfolio/port.jpg")}
         .portfolio-caption
-          %h4 Escape
-          %p.text-muted Website Design
+          %h4 Street Art
+          %p.text-muted Good old fashioned mural art projects
       .col-md-4.col-sm-6.portfolio-item
         %a.portfolio-link{"data-toggle" => "modal", :href => "#portfolioModal6"}
           .portfolio-hover
             .portfolio-hover-content
               %i.fa.fa-plus.fa-3x
-          %img.img-responsive{:alt => "", :src => "img/portfolio/dreams.png"}/
+          %img.img-responsive{:alt => "", :src => asset_url("portfolio/l-2.jpg")}
         .portfolio-caption
-          %h4 Dreams
-          %p.text-muted Website Design
+          %h4 Local Program Creation
+          %p.text-muted Creating sustainable art programs
 / About Section
 %section#about
   .container
     .row
       .col-lg-12.text-center
-        %h2.section-heading About
-        %h3.section-subheading.text-muted Lorem ipsum dolor sit amet consectetur.
+        %h2.section-heading Our Timeline
+        %h3.section-subheading.text-muted Founded in 2008..
     .row
       .col-lg-12
         %ul.timeline
           %li
             .timeline-image
-              %img.img-circle.img-responsive{:alt => "", :src => "img/about/1.jpg"}/
+              %img.img-circle.img-responsive{:alt => "", :src => asset_url("timeline/t-1.jpg")}
             .timeline-panel
               .timeline-heading
-                %h4 2009-2011
+                %h4 2008
                 %h4.subheading Our Humble Beginnings
               .timeline-body
-                %p.text-muted Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!
+                %p.text-muted Max got his first chubby for art in middle school that just kept growing for the following 10 years
+
           %li.timeline-inverted
             .timeline-image
-              %img.img-circle.img-responsive{:alt => "", :src => "img/about/2.jpg"}/
+              %img.img-circle.img-responsive{:alt => "", :src => asset_url("timeline/t-5.jpg")}
             .timeline-panel
               .timeline-heading
-                %h4 March 2011
-                %h4.subheading An Agency is Born
+                %h4 First Artist Network
+                %h4.subheading International groundings
               .timeline-body
-                %p.text-muted Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!
+                %p.text-muted Our first project with the UN! We onboarded 120 artist to work on our prjects around the globe..
           %li
             .timeline-image
-              %img.img-circle.img-responsive{:alt => "", :src => "img/about/3.jpg"}/
+              %img.img-circle.img-responsive{:alt => "", :src => asset_url("timeline/t-3.jpg")}
             .timeline-panel
               .timeline-heading
-                %h4 December 2012
-                %h4.subheading Transition to Full Service
+                %h4 Partnership with the UN
+                %h4.subheading Transition to Full Boner
               .timeline-body
-                %p.text-muted Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!
+                %p.text-muted We finally got some skrilla to do what we love, and help soo soo many people, in the darkest corners of the world.
+
+
           %li.timeline-inverted
             .timeline-image
-              %img.img-circle.img-responsive{:alt => "", :src => "img/about/4.jpg"}/
+              %img.img-circle.img-responsive{:alt => "", :src => asset_url("timeline/t-4.jpg")}
             .timeline-panel
               .timeline-heading
-                %h4 July 2014
-                %h4.subheading Phase Two Expansion
+                %h4 Press Publications
+                %h4.subheading We rock arts socks off
               .timeline-body
-                %p.text-muted Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!
+                %p.text-muted Senor Joel Bernger Joined the Party.. and his murals are literally 2 legit 2 quit..
           %li.timeline-inverted
-            .timeline-image
+            %a.timeline-image{href: '/join-us'}
               %h4
                 Be Part
-                = succeed "Of" do
-                  %br/
-                = succeed "Story!" do
-                  %br/
-      .col-md-12.close-study-wrapper.relative.text-left
-        .close-study
-          .fa-cross{style: 'margin-right: 10px;'}
-          CLOSE
-      .case-study-content-wrapper
-
-        #top-section.cs-section
-          .text-center
-            %h4
-              qwerqwer
-            .hr-short
-            %i
-              qwerqwer
-
-          .cs-title
-            The Request
-          .cs-body
-            asdfsdfsfsd
+                %br
+                Of
+                %br
+                Our Story
 
 
-        #middle-section 
-          = ary = [asset_url("portfolio/dreams-preview.png"), asset_url("portfolio/dreams-preview.png"), asset_url("portfolio/dreams-preview.png"), asset_url("portfolio/dreams-preview.png"), asset_url("portfolio/dreams-preview.png")]
+  %hr
+  %br
+  %br
+  %br
+  .container
+    .row
+      .col-lg-12.text-center
+        %h2.section-heading Recent Photography
+    %hr
+    .row
+      .col-lg-12
+        #middle-section.relative
+          - ary = [asset_url("portfolio/girl.jpg"), asset_url("portfolio/israel-pal.jpg"), asset_url("portfolio/official.jpg"), asset_url("portfolio/port.jpg"), asset_url("portfolio/local.jpg")]
           #grizzly-wrapper.gridzy.gridzyClassic.gridzyLightProgressIndicator.gridzyAnimated
             - ary.each do |image|
               %a.gallery-image{href: image, "data-gallery" => ""}
@@ -204,39 +204,20 @@
                   %i.glyphicon.glyphicon-chevron-right
 
 
-    .relative#bot-bg-color
-      #bottom-section.cs-section
-        .cs-title
-          The Solution
-        .cs-body
-          qwerqwerqwer
-
-        / - !true
-        /   .cs-video
-        /     %iframe{:allowfullscreen => "", :frameborder => "0", :height => "480", :width => "853", :src => "https://www.youtube.com/embed/#{study['video_url_id']}"}
-
-
-
-        %br
-        #view-more-close.text-center
-          .btn.close-study
-            VIEW MORE CASE STUDIES
-
-
-
 / Team Section
 %section#team.bg-light-gray
   .container
     .row
       .col-lg-12.text-center
-        %h2.section-heading Our Amazing Team
-        %h3.section-subheading.text-muted Lorem ipsum dolor sit amet consectetur.
+        %h2.section-heading Our Team
+        %h3.section-subheading.text-muted All sides of the coin
     .row
       .col-sm-4
         .team-member
-          %img.img-responsive.img-circle{:alt => "", :src => "img/team/1.jpg"}/
-          %h4 Kay Garland
-          %p.text-muted Lead Designer
+          %img.img-responsive.img-circle{:alt => "", :src => asset_url("team/joel.jpg")}
+          %h4 Joel Bergner: Executive Director
+          %p.text-muted Joel is an artist, educator and organizer of public arts-based social action. He creates elaborate murals that explore social topics and reflect a wide array of artistic influences forging partnerships with dozens of institutions, community groups and local artists along the way. 
+
           %ul.list-inline.social-buttons
             %li
               %a{:href => "#"}
@@ -249,9 +230,9 @@
                 %i.fa.fa-linkedin
       .col-sm-4
         .team-member
-          %img.img-responsive.img-circle{:alt => "", :src => "img/team/2.jpg"}/
-          %h4 Larry Parker
-          %p.text-muted Lead Marketer
+          %img.img-responsive.img-circle{:alt => "", :src => asset_url("team/max.jpg")}
+          %h4 Max Levi Frieder: Founding Director
+          %p.text-muted Max's work ranges from community building in refugee crisis, hospital workshops, abuse and addiction counseling through art, creative facilitation and conflict resolution. His projects have taken him to every single continent over the past 5 years.
           %ul.list-inline.social-buttons
             %li
               %a{:href => "#"}
@@ -264,9 +245,9 @@
                 %i.fa.fa-linkedin
       .col-sm-4
         .team-member
-          %img.img-responsive.img-circle{:alt => "", :src => "img/team/3.jpg"}/
-          %h4 Diana Pertersen
-          %p.text-muted Lead Developer
+          %img.img-responsive.img-circle{:alt => "", :src => asset_url("team/devving.jpeg")}
+          %h4 Christopher Knight: Lead Technologist
+          %p.text-muted With a foundation in cultural anthropology, documentary journalism, and software development Christopher comes to Artolution as their lead digital strategist. He sees the power in digital human connection as quintessential for the modern evolution of ideas.
           %ul.list-inline.social-buttons
             %li
               %a{:href => "#"}
@@ -279,30 +260,37 @@
                 %i.fa.fa-linkedin
     .row
       .col-lg-8.col-lg-offset-2.text-center
-        %p.large.text-muted Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut eaque, laboriosam veritatis, quos non quis ad perspiciatis, totam corporis ea, alias ut unde.
+        %p.large.text-muted Over 35+ artists, educators, investors, and advisors consistently work with Artolution. 
+        %br
+        %a.btn.btn-xl{:href => "/team"} Meet the Rest of our Team
 / Clients Aside
 %aside.clients
   .container
     .row
       .col-md-3.col-sm-6
         %a{:href => "#"}
-          %img.img-responsive.img-centered{:alt => "", :src => "img/logos/envato.jpg"}/
+          %img.img-responsive.img-centered{:alt => "", :src => asset_url("portfolio/girl.jpg")}/
+          PRESS
       .col-md-3.col-sm-6
         %a{:href => "#"}
-          %img.img-responsive.img-centered{:alt => "", :src => "img/logos/designmodo.jpg"}/
+          %img.img-responsive.img-centered{:alt => "", :src => asset_url("portfolio/port.jpg")}/
+          FAQ
       .col-md-3.col-sm-6
         %a{:href => "#"}
-          %img.img-responsive.img-centered{:alt => "", :src => "img/logos/themeforest.jpg"}/
+          %img.img-responsive.img-centered{:alt => "", :src => asset_url("portfolio/official.jpg")}/
+          CAREERS
       .col-md-3.col-sm-6
         %a{:href => "#"}
-          %img.img-responsive.img-centered{:alt => "", :src => "img/logos/creative-market.jpg"}/
+          %img.img-responsive.img-centered{:alt => "", :src => asset_url("portfolio/girl.jpg")}/
+          ORGANIZATIONS
+
 / Contact Section
 %section#contact
   .container
     .row
       .col-lg-12.text-center
         %h2.section-heading Contact Us
-        %h3.section-subheading.text-muted Lorem ipsum dolor sit amet consectetur.
+        %h3.section-subheading.text-muted Join us in the Artolution!
     .row
       .col-lg-12
         %form{"accept-charset" => "UTF-8", action: "/visitors", method: "POST", roll: "form", id: 'visitor_form', "data-remote" => "true"}
@@ -332,7 +320,8 @@
   .container
     .row
       .col-md-4
-        %span.copyright Copyright © Your Website 2014
+        %span.copyright Copyright © Artolution
+
       .col-md-4
         %ul.list-inline.social-buttons
           %li
@@ -344,6 +333,9 @@
           %li
             %a{:href => "#"}
               %i.fa.fa-linkedin
+        %br
+        %span Made with <3 by SerKnight
+
       .col-md-4
         %ul.list-inline.quicklinks
           %li
@@ -365,15 +357,12 @@
             / Project Details Go Here
             %h2 Project Name
             %p.item-intro.text-muted Lorem ipsum dolor sit amet consectetur.
-            %img.img-responsive.img-centered{:alt => "", :src => "img/portfolio/roundicons-free.png"}/
+            %img.img-responsive.img-centered{:alt => "", :src => ""}/
             %p Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!
             %p
               %strong> Want these icons in this portfolio item sample?
               You can download 60 of them for free, courtesy of
-              = succeed "," do
-                %a{:href => "https://getdpd.com/cart/hoplink/18076?referrer=bvbo4kax5k8ogc"} RoundIcons.com
-              = succeed "." do
-                %a{:href => "https://getdpd.com/cart/hoplink/18076?referrer=bvbo4kax5k8ogc"} here
+              
             %ul.list-inline
               %li Date: July 2014
               %li Client: Round Icons
@@ -391,16 +380,11 @@
       .row
         .col-lg-8.col-lg-offset-2
           .modal-body
-            %h2 Project Heading
+            %h2 Project Name
             %p.item-intro.text-muted Lorem ipsum dolor sit amet consectetur.
-            %img.img-responsive.img-centered{:alt => "", :src => "img/portfolio/startup-framework-preview.png"}/
+            %img.img-responsive.img-centered{:alt => "", :src => ""}/
             %p
-              %a{:href => "http://designmodo.com/startup/?u=787"} Startup Framework
-              is a website builder for professionals. Startup Framework contains components and complex blocks (PSD+HTML Bootstrap themes and templates) which can easily be integrated into almost any design. All of these components are made in the same style, and can easily be integrated into projects, allowing you to create hundreds of solutions for your future projects.
-            %p
-              You can preview Startup Framework
-              = succeed "." do
-                %a{:href => "http://designmodo.com/startup/?u=787"} here
+              Here we put more proejct info.. or we just screw this modal and send them to an artolution scoped projects page..
             %button.btn.btn-primary{"data-dismiss" => "modal", :type => "button"}
               %i.fa.fa-times
               Close Project
@@ -417,15 +401,9 @@
             / Project Details Go Here
             %h2 Project Name
             %p.item-intro.text-muted Lorem ipsum dolor sit amet consectetur.
-            %img.img-responsive.img-centered{:alt => "", :src => "img/portfolio/treehouse-preview.png"}/
+            %img.img-responsive.img-centered{:alt => "", :src => ""}/
             %p
-              Treehouse is a free PSD web template built by
-              = succeed "." do
-                %a{:href => "https://www.behance.net/MathavanJaya"} Mathavan Jaya
-            %p
-              You can download the PSD template in this portfolio sample item at
-              = succeed "." do
-                %a{:href => "http://freebiesxpress.com/gallery/treehouse-free-psd-web-template/"} FreebiesXpress.com
+              Here we put more proejct info.. or we just screw this modal and send them to an artolution scoped projects page..
             %button.btn.btn-primary{"data-dismiss" => "modal", :type => "button"}
               %i.fa.fa-times
               Close Project
@@ -442,15 +420,9 @@
             / Project Details Go Here
             %h2 Project Name
             %p.item-intro.text-muted Lorem ipsum dolor sit amet consectetur.
-            %img.img-responsive.img-centered{:alt => "", :src => "img/portfolio/golden-preview.png"}/
+            %img.img-responsive.img-centered{:alt => "", :src => ""}/
             %p
-              Start Bootstrap's Agency theme is based on Golden, a free PSD website template built by
-              = succeed "." do
-                %a{:href => "https://www.behance.net/MathavanJaya"} Mathavan Jaya
-            %p
-              You can download the PSD template in this portfolio sample item at
-              = succeed "." do
-                %a{:href => "http://freebiesxpress.com/gallery/golden-free-one-page-web-template/"} FreebiesXpress.com
+              Here we put more proejct info.. or we just screw this modal and send them to an artolution scoped projects page..
             %button.btn.btn-primary{"data-dismiss" => "modal", :type => "button"}
               %i.fa.fa-times
               Close Project
@@ -467,15 +439,9 @@
             / Project Details Go Here
             %h2 Project Name
             %p.item-intro.text-muted Lorem ipsum dolor sit amet consectetur.
-            %img.img-responsive.img-centered{:alt => "", :src => "img/portfolio/escape-preview.png"}/
+            %img.img-responsive.img-centered{:alt => "", :src => ""}/
             %p
-              Escape is a free PSD web template built by
-              = succeed "." do
-                %a{:href => "https://www.behance.net/MathavanJaya"} Mathavan Jaya
-            %p
-              You can download the PSD template in this portfolio sample item at
-              = succeed "." do
-                %a{:href => "http://freebiesxpress.com/gallery/escape-one-page-psd-web-template/"} FreebiesXpress.com
+              Here we put more proejct info.. or we just screw this modal and send them to an artolution scoped projects page..
             %button.btn.btn-primary{"data-dismiss" => "modal", :type => "button"}
               %i.fa.fa-times
               Close Project
@@ -492,15 +458,9 @@
             / Project Details Go Here
             %h2 Project Name
             %p.item-intro.text-muted Lorem ipsum dolor sit amet consectetur.
-            %img.img-responsive.img-centered{:alt => "", :src => "img/portfolio/dreams-preview.png"}/
+            %img.img-responsive.img-centered{:alt => "", :src => ""}/
             %p
-              Dreams is a free PSD web template built by
-              = succeed "." do
-                %a{:href => "https://www.behance.net/MathavanJaya"} Mathavan Jaya
-            %p
-              You can download the PSD template in this portfolio sample item at
-              = succeed "." do
-                %a{:href => "http://freebiesxpress.com/gallery/dreams-free-one-page-web-template/"} FreebiesXpress.com
+              Here we put more proejct info.. or we just screw this modal and send them to an artolution scoped projects page..
             %button.btn.btn-primary{"data-dismiss" => "modal", :type => "button"}
               %i.fa.fa-times
               Close Project

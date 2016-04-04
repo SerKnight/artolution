@@ -1,12 +1,30 @@
-
 function main() {
 
+  var navHeight = $(window).height() - 300;
+
+  $(window).load(function() { 
+    if ($(window).scrollTop() > navHeight ) {
+      $('.navbar-brand').css('padding-top','35px')
+    } else {
+      $('.navbar-brand').css('padding-top','15px')
+    }
+  })
+
   $(window).bind('scroll', function() {
-    var navHeight = $(window).height() - 500;
-    if ($(window).scrollTop() > navHeight) {
+    if ($(window).scrollTop() > navHeight || window.location.pathname != '/') {
       $('.navbar-default').addClass('on');
+      $('.header-elements').css({
+        'padding-top': '0px',
+        'padding-bottom': '0px'
+      })
+      $('.navbar-brand').css('padding-top','15px');
     } else {
       $('.navbar-default').removeClass('on');
+      $('.header-elements').css({
+        'padding-top': '20px',
+        'padding-bottom': '20px'
+      })
+      $('.navbar-brand').css('padding-top','35px')
     }
   });
 
@@ -19,7 +37,6 @@ function main() {
       event.preventDefault();
     });
   });
-
 
   pictureGridInit('.gridzy');
   scrollSpyToggle();
