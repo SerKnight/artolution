@@ -15,27 +15,27 @@ class Medium
 
 
 		# Use the class methods to get down to business quickly
-		client_id = '1a19312abe74'
-		client_secret = '4831730aaab50551df5322e232293a7355b166d2' 
-		redirect_uri = Rails.env.production? ? "http://artolution.herokuapp.com/medium/callback" : 'http://localhost:3000/callback'
+		# client_id = '1a19312abe74'
+		# client_secret = '4831730aaab50551df5322e232293a7355b166d2' 
+		# redirect_uri = Rails.env.production? ? "http://artolution.herokuapp.com/medium/callback" : 'http://localhost:3000/callback'
 
-		response = HTTParty.get("https://medium.com/m/oauth/authorize?client_id=1a19312abe74&scope=basicProfile,publishPost&state=legit&response_type=code&redirect_uri=http://localhost:3000/callback")
+		# response = HTTParty.get("https://medium.com/m/oauth/authorize?client_id=1a19312abe74&scope=basicProfile,publishPost&state=legit&response_type=code&redirect_uri=http://localhost:3000/callback")
 
-		"https://api.medium.com/v1?code=code&client_id=#{client_id}&client_secret=#{client_secret}&grant_type=authorization_code&redirect_uri=#{redirect_uri}"
-
-
-    HTTParty.get("https://example.com/callback/medium?state={{state}}&code={{code}}")
+		# "https://api.medium.com/v1?code=code&client_id=#{client_id}&client_secret=#{client_secret}&grant_type=authorization_code&redirect_uri=#{redirect_uri}"
 
 
-    https://medium.com/m/oauth/authorize?client_id={{clientId}}
-        &scope=basicProfile,publishPost
-        &state={{state}}
-        &response_type=code
-        &redirect_uri={{redirectUri}}
+  #   HTTParty.get("https://example.com/callback/medium?state={{state}}&code={{code}}")
 
-		#puts response.body, response.code, response.message, response.headers.inspect
 
-		HTTParty.get("https://api.medium.com/v1/users/lo_5c7368c78e39/publications")
+  #   https://medium.com/m/oauth/authorize?client_id={{clientId}}
+  #       &scope=basicProfile,publishPost
+  #       &state={{state}}
+  #       &response_type=code
+  #       &redirect_uri={{redirectUri}}
+
+		# #puts response.body, response.code, response.message, response.headers.inspect
+
+		# HTTParty.get("https://api.medium.com/v1/users/lo_5c7368c78e39/publications")
 
 
 		# Or wrap things up in your own class
