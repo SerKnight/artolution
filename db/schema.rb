@@ -55,16 +55,12 @@ ActiveRecord::Schema.define(version: 20160406013706) do
     t.string   "title"
     t.string   "description"
     t.text     "body"
-    t.datetime "created_at",         null: false
-    t.datetime "updated_at",         null: false
+    t.datetime "created_at",        null: false
+    t.datetime "updated_at",        null: false
     t.string   "hero_file_name"
     t.string   "hero_content_type"
     t.integer  "hero_file_size"
     t.datetime "hero_updated_at"
-    t.string   "image_file_name"
-    t.string   "image_content_type"
-    t.integer  "image_file_size"
-    t.datetime "image_updated_at"
   end
 
   create_table "users", force: :cascade do |t|

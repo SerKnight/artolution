@@ -1,5 +1,26 @@
 RailsAdmin.config do |config|
 
+  config.model 'Project' do
+    list do
+      exclude_fields_if do
+        type == :datetime
+      end
+
+      exclude_fields :gallery_images
+      exclude_fields :artists
+    end
+  end
+
+  config.model 'Artist' do
+    list do
+      exclude_fields_if do
+        type == :datetime
+      end
+
+    end
+  end
+
+
   ### Popular gems integration
 
   ## == Devise ==

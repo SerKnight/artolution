@@ -2,7 +2,7 @@ class VisitorsController < ApplicationController
 
   def homepage
 
-    @posts = Post.all
+    @projects = Project.all
     @visitor = Visitor.new
   end
 

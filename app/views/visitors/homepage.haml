@@ -41,6 +41,9 @@
       .col-lg-12.text-center
         %h2.section-heading Portfolio
         %h3.section-subheading.text-muted Categories of our work around the world
+        - @projects.each do |p|
+          = p.inspect
+          = image_tag p.hero(:large)
     .row
       .col-md-4.col-sm-6.portfolio-item
         %a.portfolio-link{"data-toggle" => "modal", :href => "#portfolioModal1"}
