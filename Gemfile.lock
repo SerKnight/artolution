@@ -41,6 +41,12 @@ GEM
     autoprefixer-rails (6.1.1)
       execjs
       json
+    aws-sdk (2.2.32)
+      aws-sdk-resources (= 2.2.32)
+    aws-sdk-core (2.2.32)
+      jmespath (~> 1.0)
+    aws-sdk-resources (2.2.32)
+      aws-sdk-core (= 2.2.32)
     better_errors (2.1.1)
       coderay (>= 1.0.0)
       erubis (>= 2.6.6)
@@ -77,6 +83,10 @@ GEM
       timers (>= 4.1.1)
     childprocess (0.5.8)
       ffi (~> 1.0, >= 1.0.11)
+    climate_control (0.0.3)
+      activesupport (>= 3.0)
+    cocaine (0.5.8)
+      climate_control (>= 0.0.3, < 1.0)
     coderay (1.1.0)
     coffee-rails (4.1.0)
       coffee-script (>= 2.2.0)
@@ -150,6 +160,8 @@ GEM
     jbuilder (2.3.2)
       activesupport (>= 3.0.0, < 5)
       multi_json (~> 1.2)
+    jmespath (1.2.3)
+      json_pure (>= 1.8.1)
     jquery-rails (4.0.5)
       rails-dom-testing (~> 1.0)
       railties (>= 4.2.0)
@@ -157,6 +169,7 @@ GEM
     jquery-ui-rails (5.0.5)
       railties (>= 3.2.16)
     json (1.8.3)
+    json_pure (1.8.3)
     kaminari (0.16.3)
       actionpack (>= 3.0.0)
       activesupport (>= 3.0.0)
@@ -172,6 +185,7 @@ GEM
       mime-types (>= 1.16, < 3)
     method_source (0.8.2)
     mime-types (2.99)
+    mimemagic (0.3.1)
     mini_portile (0.6.2)
     minitest (5.8.3)
     multi_json (1.11.2)
@@ -183,6 +197,12 @@ GEM
     notiffany (0.0.8)
       nenv (~> 0.1)
       shellany (~> 0.0)
+    paperclip (5.0.0.beta1)
+      activemodel (>= 4.2.0)
+      activesupport (>= 4.2.0)
+      cocaine (~> 0.5.5)
+      mime-types
+      mimemagic (~> 0.3.0)
     pg (0.18.4)
     pry (0.10.3)
       coderay (~> 1.1.0)
@@ -321,6 +341,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  aws-sdk
   better_errors
   binding_of_caller
   bootstrap-sass
@@ -342,6 +363,7 @@ DEPENDENCIES
   jbuilder (~> 2.0)
   jquery-rails
   launchy
+  paperclip (~> 5.0.0.beta1)
   pg
   puma
   quiet_assets

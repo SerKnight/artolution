@@ -368,6 +368,7 @@ section h3.section-subheading {
   }
 }
 .timeline {
+
   list-style: none;
   padding: 0;
   position: relative;
@@ -739,3 +740,5 @@ img::-moz-selection {
 body {
   webkit-tap-highlight-color: #fed136;
 }
+
+

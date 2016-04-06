@@ -16,9 +16,65 @@
  *= require grizdy-1.1.css
  *= require font-awesome
 
+
  *= require_self
  */
 
+
+
+$hover-blue: rgba( 29,185,214,0.6);
+$main-blue: rgba( 29,185,214,1);
+ 
+
+$rgba-primary-2: rgba( 34,138,158,1);
+$rgba-primary-3: rgba( 38, 80, 87,1);
+$rgba-primary-4: rgba( 27, 45, 48,1);
+
+$rgba-secondary-1-0: rgba(202,123, 60,1); // Main Secondary color (1) */
+$rgba-secondary-1-1: rgba(255,130, 30,1);
+$rgba-secondary-1-2: rgba(255,142, 51,1);
+$rgba-secondary-1-3: rgba(142, 96, 60,1);
+$rgba-secondary-1-4: rgba( 79, 59, 44,1);
+
+$rgba-secondary-2-0: rgba( 37,123,119,1); // Main Secondary color (2) */
+$rgba-secondary-2-1: rgba( 25,213,206,1);
+$rgba-secondary-2-2: rgba( 31,155,151,1);
+$rgba-secondary-2-3: rgba( 37, 86, 84,1);
+$rgba-secondary-2-4: rgba( 26, 48, 47,1);
+
+$rgba-complement-0: rgba(202,129, 60,1);  // Main Complement color */
+$rgba-complement-1: rgba(255,140, 30,1);
+$rgba-complement-2: rgba(255,151, 51,1);
+$rgba-complement-3: rgba(142,100, 60,1);
+$rgba-complement-4: rgba( 79, 61, 44,1);
+
+.navbar-brand {
+  font-size: inherit;
+  color: $main-blue !important;
+
+  &:hover {
+  	color: $hover-blue !important;
+  }
+}
+
+#about-artolution {
+	.fa-commenting, .fa-laptop, .fa-plane {
+		color: rgba(0,0,0, 0.9)
+	}
+}
+
+.page-scroll {
+	background: transparent;
+	font-size: 20px;
+	letter-spacing: 4px;
+	-webkit-transition-duration: 0.25s;
+
+	&:hover {
+		transition-duration: 1s;
+		background: #fed136;
+		color: #000;
+	}
+}
 
 .relative {
 	position: relative;

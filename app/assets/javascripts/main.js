@@ -4,18 +4,26 @@ function main() {
 
   $(window).load(function() { 
     if ($(window).scrollTop() > navHeight ) {
-      $('.navbar-brand').css('padding-top','35px')
+      $('.navbar-brand') //.css('padding-top','35px')
     } else {
-      $('.navbar-brand').css('padding-top','15px')
+      $('.navbar-brand') //.css('padding-top','15px')
     }
   })
 
+  // set it before
+  $('.header-elements').css({
+    'padding-top': '20px',
+    'padding-bottom': '20px'
+  })
+  $('.navbar-brand').css('padding-top','30px')
+
   $(window).bind('scroll', function() {
     if ($(window).scrollTop() > navHeight || window.location.pathname != '/') {
+      // im below hero
       $('.navbar-default').addClass('on');
       $('.header-elements').css({
-        'padding-top': '0px',
-        'padding-bottom': '0px'
+        'padding-top': '5px',
+        'padding-bottom': '5px'
       })
       $('.navbar-brand').css('padding-top','15px');
     } else {
@@ -24,7 +32,7 @@ function main() {
         'padding-top': '20px',
         'padding-bottom': '20px'
       })
-      $('.navbar-brand').css('padding-top','35px')
+      $('.navbar-brand').css('padding-top','30px')
     }
   });
 

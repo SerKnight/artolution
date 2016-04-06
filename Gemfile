@@ -19,6 +19,8 @@ gem 'sucker_punch'
 gem 'figaro'
 gem 'font-awesome-rails'
 gem 'rails_admin'
+gem "paperclip", "~> 5.0.0.beta1"
+gem 'aws-sdk'
 
 group :development do
   gem 'better_errors'
