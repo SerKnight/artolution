@@ -1,8 +1,8 @@
 FactoryGirl.define do
   factory :post do
     title "MyString"
-teaser "MyString"
-body "MyText"
+		teaser "MyString"
+		body "MyText"
   end
 
 end

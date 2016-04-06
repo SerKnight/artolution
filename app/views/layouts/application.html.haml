@@ -16,6 +16,10 @@
     = csrf_meta_tags
 
   %body
+    .flash-notice
+      %p.notice= notice
+      %p.alert= alert
+
     %body#page-top.index
       %nav.navbar.navbar-default.navbar-fixed-top
         .container#header-container
@@ -42,5 +46,6 @@
               %li
                 %a.page-scroll{:href => "#contact"} Contact
           
-      = yield
+      #content-wrapper
+        = yield
     

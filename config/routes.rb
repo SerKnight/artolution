@@ -1,7 +1,9 @@
 Rails.application.routes.draw do
 
-  mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
+  mount RailsAdmin::Engine => '/studio', as: 'rails_admin'
   resources :visitors, only: [:new, :create]
+
+  devise_for :users
 
   get '/team', to: 'application#team'
 
