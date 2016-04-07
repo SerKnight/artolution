@@ -69,14 +69,14 @@ Rails.application.configure do
     :bucket => ENV['S3_BUCKET_NAME'],
     :s3_host_name => ENV['AWS_HOST_NAME'],
     :region => ENV['AWS_REGION'],
-    :s3_region => ENV['AWS_REGION'],
-    :s3_endpoint => ENV['AWS_ENDPOINT'],
     :url => ":s3_domain_url",
     :s3_credentials => {
       :access_key_id => ENV['AWS_ACCESS_KEY_ID'],
       :secret_access_key => ENV['AWS_SECRET_ACCESS_KEY']
     }
   }
+  # :s3_region => ENV['AWS_REGION'],
+  # :s3_endpoint => ENV['AWS_ENDPOINT'],
 
   # Enable locale fallbacks for I18n (makes lookups for any locale fall back to
   # the I18n.default_locale when a translation cannot be found).
