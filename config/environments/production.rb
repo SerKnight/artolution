@@ -47,7 +47,7 @@ Rails.application.configure do
   # :s3_host_name => ENV['AWS_HOST_NAME'],
   # :region => ENV['AWS_REGION'],
   # :s3_region => ENV['AWS_REGION'],
-  # :s3_endpoint => ENV['AWS_ENDPOINT'],
+  # 
 
   config.action_mailer.smtp_settings = {
     address: "smtp.gmail.com",
