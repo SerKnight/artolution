@@ -30,6 +30,7 @@ Rails.application.configure do
   config.i18n.fallbacks = true
   config.active_support.deprecation = :notify
 
+
   config.paperclip_defaults = {
     :storage => :s3,
     :s3_credentials => {
@@ -41,8 +42,8 @@ Rails.application.configure do
     :s3_host_alias => 'static.artolution.com',
     :path => ":class/:attachment/:id_partition/:style/:filename",
     :bucket => ENV['S3_BUCKET_NAME'],
-    :s3_region => ENV['AWS_REGION'],
-    :s3_host_name => ENV['AWS_HOST_NAME']
+    :region => 'us-west-2',
+    :s3_host_name => 's3.amazonaws.com'
   }
 
   # :s3_host_name => ,
