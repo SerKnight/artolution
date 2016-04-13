@@ -42,7 +42,7 @@ Rails.application.configure do
     :s3_host_alias => 'static.artolution.com',
     :path => ":class/:attachment/:id_partition/:style/:filename",
     :bucket => ENV['S3_BUCKET_NAME'],
-    :region => 'us-west-2',
+    :region => 'us-east-1',
     :s3_host_name => 's3.amazonaws.com'
   }
 
