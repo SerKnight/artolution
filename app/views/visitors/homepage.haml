@@ -1,39 +1,29 @@
 %header
   .container
     .intro-text
-      .intro-lead-in International Community based public arts network
-      .intro-heading Artolution
-      %a.page-scroll.btn.btn-xl{:href => "#about-artolution"} Learn what we do
+      .intro-heading The Artolution
+      .intro-lead-in.small-mobile-hide - International Community Arts Network -
+      .page-scroll.btn.btn-xl.youtube-video{"data-target" => "#video-modal", "data-toggle" => "modal", 'data-youtube-src' => "https://www.youtube.com/watch?v=dGLHswH0qWs"} Watch Our Work
+
       
 / Services Section
 %section#about-artolution
   .container
     .row
       .col-lg-12.text-center
-        %h2.section-heading Our Mission
-        %h3.section-subheading.text-muted 
-          We work with communities facing critical issues related to
-          %br 
-          armed conflict, trauma, and social marginalization
+        = image_tag 'artolution.png'
+        
     .row.text-center
-      .col-md-4
-        %span.fa-stack.fa-4x
-          %i.fa.fa-circle.fa-stack-2x.text-primary
-          %i.fa.fa-commenting.fa-stack-1x.fa-inverse
-        %h4.service-heading Relationships
-        %p.text-muted Partnering with organizations such as UNICEF, World Health Organization, United Nations, and embassy's around the world, our projects have the established backup to succeed.
-      .col-md-4
-        %span.fa-stack.fa-4x
-          %i.fa.fa-circle.fa-stack-2x.text-primary
-          %i.fa.fa-laptop.fa-stack-1x.fa-inverse
-        %h4.service-heading Planning
-        %p.text-muted Our full time team of educators, administrators, and technologists paired with our network of local nationals allow us to execute projects with maximum time & cost efficiencies.
-      .col-md-4
-        %span.fa-stack.fa-4x
-          %i.fa.fa-circle.fa-stack-2x.text-primary
-          %i.fa.fa-plane.fa-stack-1x.fa-inverse
-        %h4.service-heading Execution
-        %p.text-muted With decades of experience in travel logistics & project management, we have completed projects everywhere from the Turkey & Syria border, the Australian Outback, the Antarctic Tundra, to midtown Manhattan.
+      .col-md-12
+        .col-md-8.col-md-offset-2
+          %h4{style: 'margin: 35px;'}
+            The Artolution is a community-based public art network that empowers positive social change through creative, participatory, and collaborative art making.
+      .col-md-12
+
+        %p.text-muted 
+          We facilitate projects around the world that connect diverse peoples in order to address common social objectives. Our projects bring together children, youth, families, artists, educators and community groups. Our founding objective is to address critical issues related to armed conflict, trauma and social marginalization by cultivating sustainable global initiatives that promote reconciliation, healing and community empowerment.
+
+
 
 / Portfolio Grid Section
 %section#portfolio.bg-light-gray

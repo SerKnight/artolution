@@ -70,7 +70,6 @@ $rgba-complement-4: rgba( 79, 61, 44,1);
 .navbar-brand {
   font-size: inherit;
   color: $main-blue !important;
-	transition-duration: 0.5s;
 
   &:hover {
   	color: $hover-blue !important;
@@ -85,7 +84,7 @@ $rgba-complement-4: rgba( 79, 61, 44,1);
 
 .page-scroll {
 	background: transparent;
-	font-size: 20px;
+	font-size: 18px;
 	letter-spacing: 4px;
 	-webkit-transition-duration: 0.25s;
 
@@ -151,6 +150,7 @@ $rgba-complement-4: rgba( 79, 61, 44,1);
   	height: 100%;
   }
 }
+
 
 
 /* style css lol */
@@ -231,9 +231,9 @@ hr {
 }
 #menu a.navbar-brand {
 	text-transform: uppercase;
-	font-size: 22px;
+	font-size: 30px;
 	color: #878d8f;
-	font-weight: 700;
+	font-weight: 400;
 }
 #menu a.navbar-brand i.fa {
 	color: #88bb45;
@@ -305,8 +305,9 @@ header p {
 	font-family: 'Open Sans', sans-serif;
 	background-color: rgba(255,255,255,0.8);
 	border: 0;
-	margin: 0 8px;
-	font-size: 18px;
+	margin: 0 1px;
+	letter-spacing: 2px;
+	font-size: 17px;
 	transition: all 0.5s;
 }
 .btn-default:hover, .btn-default:focus, .btn-default.focus, .btn-default:active, .btn-default.active {
@@ -694,6 +695,9 @@ a:focus, .btn:focus, .btn:active:focus, .btn.active:focus, .btn.focus, .btn:acti
 	.content {
 		padding: 40% 0 0;
 	}
+	.small-mobile-hide {
+		display: none;
+	}
 }
 
 @media (max-width: 603px) {
@@ -721,3 +725,73 @@ a:focus, .btn:focus, .btn:active:focus, .btn.active:focus, .btn.focus, .btn:acti
 
 /* pretty photo css lol */
 
+#video-container {
+
+	#player-wrapper {
+		position: fixed;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		background-color: rgba(0, 0, 0, 0.9);
+		z-index: 999;
+		text-align: center;
+
+
+		#player {
+			margin-top: 4%;
+		}
+	}
+
+	#close-video {
+		position: fixed;
+		width: 75px;
+		margin-top: 2.5%;
+		cursor: pointer;
+		margin-right: 2.5%;
+		z-index: 999;
+		right: 0;
+		z-index: 99999;
+		display: none;
+	}
+
+	.modal-dialog {
+		width: 75% !important;
+		margin: 0 auto;
+
+		.modal-body {
+			margin-top: 5%;
+		  padding: 0px !important;
+
+		  iframe {
+		  	width: 100%;
+		  }
+		}
+	}
+
+	.modal-backdrop.in {
+		opacity: 0.9;
+	}
+	#video-modal {
+    background: rgba(0,0,0,0.75);
+	}
+}
+
+.modal-open {
+  overflow: scroll !important;
+  padding: 0px !important;
+  margin: 0px !important;
+}
+.bar {
+  float: right;
+  position: relative;
+  border-bottom: 3px solid #e5e5e5;
+  width: 45px;
+  margin: 6px;
+  
+  -webkit-transition: all 100ms linear;
+  -moz-transition: all 100ms linear;
+  -o-transition: all 100ms linear;
+  -ms-transition: all 100ms linear;
+  transition: all 100ms linear;
+}

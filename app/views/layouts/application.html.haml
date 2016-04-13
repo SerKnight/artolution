@@ -7,10 +7,11 @@
     %meta{:name => "description", :content => "#{content_for?(:description) ? yield(:description) : 'Solution'}"}
     %link{:href => "https://fonts.googleapis.com/css?family=Montserrat:400,700", :rel => "stylesheet", :type => "text/css"}/
     %link{:href => "https://fonts.googleapis.com/css?family=Kaushan+Script", :rel => "stylesheet", :type => "text/css"}/
-    %link{:href => "https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic", :rel => "stylesheet", :type => "text/css"}/
+    %link{:href => "https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic", :rel => "stylesheet", :type => "text/css"}
     %link{:href => "https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700", :rel => "stylesheet", :type => "text/css"}/
     %script{:src => "https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"}
     %script{:src => "https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"}
+    %script{:src => "https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"}
     = stylesheet_link_tag 'application', media: 'all'
     = javascript_include_tag 'application'
     = csrf_meta_tags
@@ -29,22 +30,33 @@
               %span.icon-bar
               %span.icon-bar
               %span.icon-bar
-            %a.navbar-brand.page-scroll{:href => "#page-top"} The Artolution
+            %a.navbar-brand{:href => "/"} Artolution
 
           #bs-example-navbar-collapse-1.collapse.navbar-collapse.header-elements
             %ul.nav.navbar-nav.navbar-right
               %li.hidden
                 %a{:href => "#page-top"}
               %li
-                %a.page-scroll{:href => "#about-artolution"} About Us
+                %a.page-scroll{:href => "/about"} About Us
               %li
-                %a.page-scroll{:href => "#portfolio"} Portfolio
+                %a.page-scroll{:href => "/projects"} Projects
               %li
-                %a.page-scroll{:href => "#about"} About
+                %a.page-scroll{:href => "/partners"} Partners
               %li
-                %a.page-scroll{:href => "#team"} Team
+                %a.page-scroll{:href => "/team"} Team
               %li
-                %a.page-scroll{:href => "#contact"} Contact
+                %a.page-scroll{:href => "/contact"} Contact
+              %li
+                %a.page-scroll{:href => "/get-involved"} Donate
           
       = yield
-    
+      #video-container
+        #video-modal.modal.fade{"aria-labelledby" => "video-modalLabel", :role => "dialog", :tabindex => "-1"}
+          .modal-dialog{:role => "document", style: 'width: 853px;'}
+            .modal-body
+
+        #close-video
+          .bar.short-bar
+          .bar.long-bar
+          .bar.short-bar
+
