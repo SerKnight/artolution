@@ -246,6 +246,14 @@ fieldset[disabled] .btn-xl.active {
   transition: all ease 0.5s;
   -webkit-transition: all ease 0.5s;
   -moz-transition: all ease 0.5s;
+
+  .hover-copy {
+    color: #000;
+    font-family: "Droid Serif", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    text-align: center;
+    font-size: 20px;
+    margin-top: 60px;
+  }
 }
 #portfolio .portfolio-item .portfolio-link .portfolio-hover:hover {
   opacity: 1;

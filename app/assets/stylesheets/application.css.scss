@@ -163,6 +163,22 @@ $rgba-complement-4: rgba( 79, 61, 44,1);
 	width: 100%;
 }
 
+.margin-50 {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.padding-50 {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.whitesmoke-bg {
+	background-color: whitesmoke;
+}
+
+
+
 #artolution-header {
 	top: 0px;
 	position: relative;
@@ -222,14 +238,22 @@ body, html {
 	-webkit-font-smoothing: antialiased !important;
 	color: #333;
 }
+
 h1 {
+	color: #fed136;
+	font-size: 45px;
+	margin-top: 10px;
+	margin-bottom: 30px;
+	text-shadow: 0px 1px 3px #000;
+	font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
+
 h1 strong {
 	font-weight: 900;
 }
 h2 {
 	text-transform: uppercase;
-	line-height: 20px;
+	line-height: 42px;
 	margin: 0;
 }
 h3 {
