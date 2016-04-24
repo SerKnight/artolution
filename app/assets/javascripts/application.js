@@ -15,6 +15,7 @@
 //= require bootstrap-sprockets
 //= require main
 //= require grizdy-1.1.min.js
+//= require extra.slider.min.js
 //= require jquery.blueimp-gallery.min
 //= require_tree .
 

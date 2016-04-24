@@ -1,9 +1,39 @@
-%header
-  .container
-    .intro-text
-      .intro-heading The Artolution
-      .intro-lead-in.small-mobile-hide - International Community Arts Network -
+.homepage-hero-container
+  .extra-slider
+    .wrapper
+      %ul
+        %li.hero-image-banner{:style => "background-image: url(#{image_path 'portfolio/israel-pal.jpg'});"}
+        %li.hero-image-banner{:style => "background-image: url(#{image_path 'portfolio/local.jpg'});"}
+        %li.hero-image-banner{:style => "background-image: url(#{image_path 'portfolio/girl.jpg'});"}
+
+    
+    .pagination
+    :javascript
+      $(document).ready(function() {
+        $(".extra-slider").extraSlider({
+          paginate: true
+        });
+      });
+
+    .hero-copy-container
+      .intro-heading 
+        %span
+          The 
+        %span
+          Art
+        %span
+          olution
+      .intro-explain 
+        Revolutionizing the Global Arts Network,
+      %p
+        by creating community driven healing through artistic expression. 
+        
       .page-scroll.btn.btn-xl.youtube-video{"data-target" => "#video-modal", "data-toggle" => "modal", 'data-youtube-src' => "https://www.youtube.com/watch?v=dGLHswH0qWs"} Watch Our Work
+
+  
+
+
+
 
       
 / Services Section
@@ -30,7 +60,7 @@
   .container
     .row
       .col-lg-12.text-center
-        %h2.section-heading Portfolio
+        %h2.section-heading Areas of Focus
         %h3.section-subheading.text-muted Categories of our work around the world
         - @projects.each do |p|
           = p.inspect
