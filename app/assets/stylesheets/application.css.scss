@@ -52,11 +52,7 @@ $rgba-complement-4: rgba( 79, 61, 44,1);
 .homepage-hero-container {
   height: 100%;
   background-color: black;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
+  position: relative;
   min-height: 650px;
   z-index: 999;
   
@@ -724,7 +720,6 @@ a:focus, .btn:focus, .btn:active:focus, .btn.active:focus, .btn.focus, .btn:acti
 	margin-top: 10px;
 	color: #666;
 }
-
 
 
 /* responsive css lol */

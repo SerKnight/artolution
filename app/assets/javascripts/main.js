@@ -1,5 +1,14 @@
+
 function main() {
 
+  pictureGridInit('.gridzy');
+  scrollSpyToggle();
+  homeSetup();
+  sizeHomepageHero();
+}
+
+
+function homeSetup() {
   var navHeight = $(window).height() - 300;
 
   $(window).load(function() { 
@@ -94,9 +103,6 @@ function main() {
       event.preventDefault();
     });
   });
-
-  pictureGridInit('.gridzy');
-  scrollSpyToggle();
 }
 
 
@@ -162,11 +168,8 @@ function youtubeEmbed(){
 }
 
 
-
-
-$(document).ready(function (){
-  main()
-  youtubeEmbed();
-})
+function sizeHomepageHero(){
+  $('.homepage-hero-container').height($(window).height())
+}
 
 
