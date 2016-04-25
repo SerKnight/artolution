@@ -161,6 +161,7 @@ $rgba-complement-4: rgba( 79, 61, 44,1);
 	position: relative;
 	float: left;
 	width: 100%;
+	background: #fff;
 }
 
 .margin-50 {
@@ -177,7 +178,9 @@ $rgba-complement-4: rgba( 79, 61, 44,1);
 	background-color: whitesmoke;
 }
 
-
+.black {
+  color: #000;
+}
 
 #artolution-header {
 	top: 0px;
@@ -314,6 +317,7 @@ hr {
 #menu.navbar-default {
 	background-color: rgba(248, 248, 248, 0);
 	border-color: rgba(231, 231, 231, 0);
+	transition: all 0.5s ease;
 }
 #menu a.navbar-brand {
 	text-transform: uppercase;
