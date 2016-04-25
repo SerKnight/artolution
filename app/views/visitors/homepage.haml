@@ -24,9 +24,9 @@
         %span
           olution
       .intro-explain 
-        A Revolutionary the Global Arts Network,
+        We are an international public arts network,
       %p
-        that creates community-driven healing via public artistic expression. 
+        that creates community-driven growth via public artistic expression.
         
       .page-scroll.btn.btn-xl.youtube-video{"data-target" => "#video-modal", "data-toggle" => "modal", 'data-youtube-src' => "https://www.youtube.com/watch?v=dGLHswH0qWs"} Watch Our Work
 
@@ -34,17 +34,16 @@
 
       
 / Services Section
-#about-artolution.relative.margin-50
+.relative#about-artolution.padding-50
   .container
-    .row
-      .col-lg-12.text-center
-        = image_tag 'artolution.png'
+    .col-lg-12.text-center
+      = image_tag 'artolution.png'
         
-    .row.text-center
+    .text-center
       .col-md-12
         .col-md-8.col-md-offset-2
           %h4{style: 'margin: 35px;'}
-            We give individuals a chance to have their voices heard.
+            Community art projects that give people a voice
       .col-md-6.col-md-offset-3
         %p.text-muted 
           Our projects bring together children, youth, families, artists, educators and community groups that promote reconciliation, healing and community empowerment. Our founding objective is to alleviate critical issues related to
@@ -56,60 +55,70 @@
 
 .relative#portfolio.padding-50.whitesmoke-bg
   .container
-    .row
-      .col-lg-12.text-center
-        %h1 Core Capabilities
-    .row
-      .col-md-3.col-sm-6.portfolio-item
-        %a.portfolio-link{"data-toggle" => "modal", :href => "#portfolioModal"}
-          .portfolio-hover
-            .portfolio-hover-content
-              %i.fa.fa-plus.fa-3x
-            .hover-copy Engaging refugees on all sides of a fight
-          %img.img-responsive{:alt => "", :src => asset_url("portfolio/official.jpg")}
-          .portfolio-caption
-            %h4 Armed Conflict
+    .col-lg-12.text-center
+      %h1 Core Capabilities
+    .col-md-3.col-sm-6.portfolio-item
+      %a.portfolio-link{"data-toggle" => "modal", :href => "#portfolioModal"}
+        .portfolio-hover
+          .portfolio-hover-content
+            %i.fa.fa-plus.fa-3x
+          .hover-copy Engaging refugees on all sides of a fight through shared creative experiences
+        .capability-img{style: "background-image: url(#{image_path 'asset_url("portfolio/official.jpg'})"}
 
-      .col-md-3.col-sm-6.portfolio-item
-        %a.portfolio-link{"data-toggle" => "modal", :href => "#portfolioModal"}
-          .portfolio-hover
-            .portfolio-hover-content
-              %i.fa.fa-plus.fa-3x
-            .hover-copy Protecting Humanity with Artistic Action
-          %img.img-responsive{:alt => "", :src => asset_url("portfolio/israel-pal.jpg")}
-          .portfolio-caption
-            %h4 Human Rights
+        
 
-          
-      .col-md-3.col-sm-6.portfolio-item
-        %a.portfolio-link{"data-toggle" => "modal", :href => "#portfolioModal"}
-          .portfolio-hover
-            .portfolio-hover-content
-              %i.fa.fa-plus.fa-3x
-            .hover-copy Programs that teach skills to negotiate key life decision
-          %img.img-responsive{:alt => "", :src => asset_url("portfolio/girl.jpg")}
-          .portfolio-caption
-            %h4 Girls Empowerment
+        .portfolio-caption
+          %h4 Armed Conflict
 
-      .col-md-3.col-sm-6.portfolio-item
-        %a.portfolio-link{"data-toggle" => "modal", :href => "#portfolioModal"}
-          .portfolio-hover
-            .portfolio-hover-content
-              %i.fa.fa-plus.fa-3x
-            .hover-copy Education Initiatives & Community Building
-          %img.img-responsive{:alt => "", :src => asset_url("portfolio/local.jpg")}
-          .portfolio-caption
-            %h4 Health Education
+    .col-md-3.col-sm-6.portfolio-item
+      %a.portfolio-link{"data-toggle" => "modal", :href => "#portfolioModal"}
+        .portfolio-hover
+          .portfolio-hover-content
+            %i.fa.fa-plus.fa-3x
+          .hover-copy Protecting basic human rights through visibility & artistic exhibition
+        .capability-img{style: "background-image: url(#{image_path 'portfolio/israel-pal.jpg'})"}
+        
+
+        .portfolio-caption
+          %h4 Human Rights
+
+        
+    .col-md-3.col-sm-6.portfolio-item
+      %a.portfolio-link{"data-toggle" => "modal", :href => "#portfolioModal"}
+        .portfolio-hover
+          .portfolio-hover-content
+            %i.fa.fa-plus.fa-3x
+          .hover-copy Programs that teach women skills to negotiate key life decision and equality
+        .capability-img{style: "background-image: url(#{image_path 'asset_url("portfolio/girl.jpg'})"}
+
+        
+
+        .portfolio-caption
+          %h4 Girls Empowerment
+
+    .col-md-3.col-sm-6.portfolio-item
+      %a.portfolio-link{"data-toggle" => "modal", :href => "#portfolioModal"}
+        .portfolio-hover
+          .portfolio-hover-content
+            %i.fa.fa-plus.fa-3x
+          .hover-copy Education integrated into artistic projects that instill life's basic health skills.
+        .capability-img{style: "background-image: url(#{image_path 'asset_url("portfolio/local.jpg'})"}
+
+        
+
+        .portfolio-caption
+          %h4 Health Education
 
 
 
 / About Section
-%section#about
+.relative#about.padding-50
   .container
     .row
       .col-lg-12.text-center
-        %h2.section-heading Our Timeline
-        %h3.section-subheading.text-muted Founded in 2008..
+        %h2.section-heading The Artolution Project Blueprint
+        .col.col-md-6.col-md-offset-3.margin-50
+          %p.text-muted While ever project is incredibly unique in their medium & execution, we have a transparent project process that educates both funders & beneficiaries for our projects.
     .row
       .col-lg-12
         %ul.timeline
@@ -118,20 +127,24 @@
               %img.img-circle.img-responsive{:alt => "", :src => asset_url("timeline/t-1.jpg")}
             .timeline-panel
               .timeline-heading
-                %h4 2008
-                %h4.subheading Our Humble Beginnings
+                %h4 Project Conception
+                %h4.subheading ~ 1 -2 weeks
               .timeline-body
-                %p.text-muted Max got his first chubby for art in middle school that just kept growing for the following 10 years
+                %p.text-muted 
+                  Inital project idea conception usually comes from our global NGO partner's network, or individuals who we have worked with already. If you have an idea for a project well suited for 
+                  %i The Artolution
+                  please 
+                  %a{href: 'mailto_info@artolution.org'} Contact Us!
 
           %li.timeline-inverted
             .timeline-image
               %img.img-circle.img-responsive{:alt => "", :src => asset_url("timeline/t-5.jpg")}
             .timeline-panel
               .timeline-heading
-                %h4 First Artist Network
-                %h4.subheading International groundings
+                %h4 Team & Budget
+                %h4.subheading ~ 1 month
               .timeline-body
-                %p.text-muted Our first project with the UN! We onboarded 120 artist to work on our prjects around the globe..
+                %p.text-muted With over 120 professional working artists around the globe, we generally lock in our artist parterns
           %li
             .timeline-image
               %img.img-circle.img-responsive{:alt => "", :src => asset_url("timeline/t-3.jpg")}
@@ -209,19 +222,129 @@
 
 
 / Team Section
-%section#team.bg-light-gray
-  .container
-    .row
-      .col-lg-12.text-center
-        %h2.section-heading Our Team
-        %h3.section-subheading.text-muted All sides of the coin
-    .row
-      .col-sm-4
-        .team-member
-          %img.img-responsive.img-circle{:alt => "", :src => asset_url("team/joel.jpg")}
-          %h4 Joel Bergner: Executive Director
-          %p.text-muted Joel is an artist, educator and organizer of public arts-based social action. He creates elaborate murals that explore social topics and reflect a wide array of artistic influences forging partnerships with dozens of institutions, community groups and local artists along the way. 
+.relative
+  #team.bg-light-gray
+    .container
+      .row
+        .col-lg-12.text-center
+          %h2.section-heading Our Team
+          %h3.section-subheading.text-muted All sides of the coin
+      .row
+        .col-sm-4
+          .team-member
+            %img.img-responsive.img-circle{:alt => "", :src => asset_url("team/joel.jpg")}
+            %h4 Joel Bergner: Executive Director
+            %p.text-muted Joel is an artist, educator and organizer of public arts-based social action. He creates elaborate murals that explore social topics and reflect a wide array of artistic influences forging partnerships with dozens of institutions, community groups and local artists along the way. 
 
+            %ul.list-inline.social-buttons
+              %li
+                %a{:href => "#"}
+                  %i.fa.fa-twitter
+              %li
+                %a{:href => "#"}
+                  %i.fa.fa-facebook
+              %li
+                %a{:href => "#"}
+                  %i.fa.fa-linkedin
+        .col-sm-4
+          .team-member
+            %img.img-responsive.img-circle{:alt => "", :src => asset_url("team/max.jpg")}
+            %h4 Max Levi Frieder: Founding Director
+            %p.text-muted Max's work ranges from community building in refugee crisis, hospital workshops, abuse and addiction counseling through art, creative facilitation and conflict resolution. His projects have taken him to every single continent over the past 5 years.
+            %ul.list-inline.social-buttons
+              %li
+                %a{:href => "#"}
+                  %i.fa.fa-twitter
+              %li
+                %a{:href => "#"}
+                  %i.fa.fa-facebook
+              %li
+                %a{:href => "#"}
+                  %i.fa.fa-linkedin
+        .col-sm-4
+          .team-member
+            %img.img-responsive.img-circle{:alt => "", :src => asset_url("team/devving.jpg")}
+            %h4 Christopher Knight: Lead Technologist
+            %p.text-muted With a foundation in cultural anthropology, documentary journalism, and software development Christopher comes to Artolution as their lead digital strategist. He sees the power in digital human connection as quintessential for the modern evolution of ideas.
+            %ul.list-inline.social-buttons
+              %li
+                %a{:href => "#"}
+                  %i.fa.fa-twitter
+              %li
+                %a{:href => "#"}
+                  %i.fa.fa-facebook
+              %li
+                %a{:href => "#"}
+                  %i.fa.fa-linkedin
+      .row
+        .col-lg-8.col-lg-offset-2.text-center
+          %p.large.text-muted Over 35+ artists, educators, investors, and advisors consistently work with Artolution. 
+          %br
+          %a.page-scroll.btn.btn-xl{:href => "#about-artolution"} Learn what we do
+  / Clients Aside
+  %aside.clients
+    .container
+      .row
+        .col-md-3.col-sm-6
+          %a{:href => "#"}
+            %img.img-responsive.img-centered{:alt => "", :src => asset_url("portfolio/girl.jpg")}/
+            PRESS
+        .col-md-3.col-sm-6
+          %a{:href => "#"}
+            %img.img-responsive.img-centered{:alt => "", :src => asset_url("portfolio/port.jpg")}/
+            FAQ
+        .col-md-3.col-sm-6
+          %a{:href => "#"}
+            %img.img-responsive.img-centered{:alt => "", :src => asset_url("portfolio/official.jpg")}/
+            CAREERS
+        .col-md-3.col-sm-6
+          %a{:href => "#"}
+            %img.img-responsive.img-centered{:alt => "", :src => asset_url("portfolio/girl.jpg")}/
+            ORGANIZATIONS
+
+  / Contact Section
+  %section#contact{style: "background-image: url(#{asset_url('map-image.png')});"}
+    .container
+      .row
+        .col-lg-12.text-center
+          %h2.section-heading Join us in the Artolution
+          %br
+          %br
+          %br
+      .row
+        .col-lg-12
+          %form{"accept-charset" => "UTF-8", action: "/visitors", method: "POST", roll: "form", id: 'visitor_form', "data-remote" => "true"}
+            = tag(:input, :type => "hidden", :name => request_forgery_protection_token.to_s, :value => form_authenticity_token)
+
+            %form#contactForm{:name => "sentMessage", :novalidate => ""}
+              .row
+                .col-md-6
+                  .form-group
+                    %input#name.form-control{"data-validation-required-message" => "Please enter your name.", :placeholder => "Your Name *", :required => "", :type => "text", name: 'visitor[name]'}
+                    %p.help-block.text-danger
+                  .form-group
+                    %input#email.form-control{"data-validation-required-message" => "Please enter your email address.", :placeholder => "Your Email *", :required => "", :type => "email", name: 'visitor[email]'}
+                    %p.help-block.text-danger
+                  .form-group
+                    %input#phone.form-control{"data-validation-required-message" => "Please enter your phone number.", :placeholder => "Your Phone *", :required => "", :type => "tel", name: 'visitor[phone]'}
+                    %p.help-block.text-danger
+                .col-md-6
+                  .form-group
+                    %textarea#message.form-control{"data-validation-required-message" => "Please enter a message.", :placeholder => "Your Message *", :required => "", name: 'visitor[message]'}
+                    %p.help-block.text-danger
+                .clearfix
+                .col-lg-12.text-center
+                  %br
+                  %br
+                  #success
+                  %button.btn.btn-xl{:type => "submit"} Send Message
+  %footer
+    .container
+      .row
+        .col-md-4
+          %span.copyright Copyright © Artolution
+
+        .col-md-4
           %ul.list-inline.social-buttons
             %li
               %a{:href => "#"}
@@ -232,127 +355,18 @@
             %li
               %a{:href => "#"}
                 %i.fa.fa-linkedin
-      .col-sm-4
-        .team-member
-          %img.img-responsive.img-circle{:alt => "", :src => asset_url("team/max.jpg")}
-          %h4 Max Levi Frieder: Founding Director
-          %p.text-muted Max's work ranges from community building in refugee crisis, hospital workshops, abuse and addiction counseling through art, creative facilitation and conflict resolution. His projects have taken him to every single continent over the past 5 years.
-          %ul.list-inline.social-buttons
-            %li
-              %a{:href => "#"}
-                %i.fa.fa-twitter
-            %li
-              %a{:href => "#"}
-                %i.fa.fa-facebook
-            %li
-              %a{:href => "#"}
-                %i.fa.fa-linkedin
-      .col-sm-4
-        .team-member
-          %img.img-responsive.img-circle{:alt => "", :src => asset_url("team/devving.jpg")}
-          %h4 Christopher Knight: Lead Technologist
-          %p.text-muted With a foundation in cultural anthropology, documentary journalism, and software development Christopher comes to Artolution as their lead digital strategist. He sees the power in digital human connection as quintessential for the modern evolution of ideas.
-          %ul.list-inline.social-buttons
-            %li
-              %a{:href => "#"}
-                %i.fa.fa-twitter
-            %li
-              %a{:href => "#"}
-                %i.fa.fa-facebook
-            %li
-              %a{:href => "#"}
-                %i.fa.fa-linkedin
-    .row
-      .col-lg-8.col-lg-offset-2.text-center
-        %p.large.text-muted Over 35+ artists, educators, investors, and advisors consistently work with Artolution. 
-        %br
-        %a.page-scroll.btn.btn-xl{:href => "#about-artolution"} Learn what we do
-/ Clients Aside
-%aside.clients
-  .container
-    .row
-      .col-md-3.col-sm-6
-        %a{:href => "#"}
-          %img.img-responsive.img-centered{:alt => "", :src => asset_url("portfolio/girl.jpg")}/
-          PRESS
-      .col-md-3.col-sm-6
-        %a{:href => "#"}
-          %img.img-responsive.img-centered{:alt => "", :src => asset_url("portfolio/port.jpg")}/
-          FAQ
-      .col-md-3.col-sm-6
-        %a{:href => "#"}
-          %img.img-responsive.img-centered{:alt => "", :src => asset_url("portfolio/official.jpg")}/
-          CAREERS
-      .col-md-3.col-sm-6
-        %a{:href => "#"}
-          %img.img-responsive.img-centered{:alt => "", :src => asset_url("portfolio/girl.jpg")}/
-          ORGANIZATIONS
+          %br
+          %span Made with <3 by SerKnight
 
-/ Contact Section
-%section#contact{style: "background-image: url(#{asset_url('map-image.png')});"}
-  .container
-    .row
-      .col-lg-12.text-center
-        %h2.section-heading Join us in the Artolution
-        %br
-        %br
-        %br
-    .row
-      .col-lg-12
-        %form{"accept-charset" => "UTF-8", action: "/visitors", method: "POST", roll: "form", id: 'visitor_form', "data-remote" => "true"}
-          = tag(:input, :type => "hidden", :name => request_forgery_protection_token.to_s, :value => form_authenticity_token)
-
-          %form#contactForm{:name => "sentMessage", :novalidate => ""}
-            .row
-              .col-md-6
-                .form-group
-                  %input#name.form-control{"data-validation-required-message" => "Please enter your name.", :placeholder => "Your Name *", :required => "", :type => "text", name: 'visitor[name]'}
-                  %p.help-block.text-danger
-                .form-group
-                  %input#email.form-control{"data-validation-required-message" => "Please enter your email address.", :placeholder => "Your Email *", :required => "", :type => "email", name: 'visitor[email]'}
-                  %p.help-block.text-danger
-                .form-group
-                  %input#phone.form-control{"data-validation-required-message" => "Please enter your phone number.", :placeholder => "Your Phone *", :required => "", :type => "tel", name: 'visitor[phone]'}
-                  %p.help-block.text-danger
-              .col-md-6
-                .form-group
-                  %textarea#message.form-control{"data-validation-required-message" => "Please enter a message.", :placeholder => "Your Message *", :required => "", name: 'visitor[message]'}
-                  %p.help-block.text-danger
-              .clearfix
-              .col-lg-12.text-center
-                %br
-                %br
-                #success
-                %button.btn.btn-xl{:type => "submit"} Send Message
-%footer
-  .container
-    .row
-      .col-md-4
-        %span.copyright Copyright © Artolution
-
-      .col-md-4
-        %ul.list-inline.social-buttons
-          %li
-            %a{:href => "#"}
-              %i.fa.fa-twitter
-          %li
-            %a{:href => "#"}
-              %i.fa.fa-facebook
-          %li
-            %a{:href => "#"}
-              %i.fa.fa-linkedin
-        %br
-        %span Made with <3 by SerKnight
-
-      .col-md-4
-        %ul.list-inline.quicklinks
-          %li
-            %a{:href => "#"} Privacy Policy
-          %li
-            %a{:href => "#"} Terms of Use
-/ Portfolio Modals
-/ Use the modals below to showcase details about your portfolio projects!
-/ Portfolio Modal 1
+        .col-md-4
+          %ul.list-inline.quicklinks
+            %li
+              %a{:href => "#"} Privacy Policy
+            %li
+              %a{:href => "#"} Terms of Use
+  / Portfolio Modals
+  / Use the modals below to showcase details about your portfolio projects!
+  / Portfolio Modal 1
 #portfolioModal.portfolio-modal.modal.fade{"aria-hidden" => "true", :role => "dialog", :tabindex => "-1"}
   .modal-content
     .close-modal{"data-dismiss" => "modal"}
