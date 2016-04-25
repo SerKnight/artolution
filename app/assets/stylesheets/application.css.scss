@@ -168,7 +168,10 @@ $rgba-complement-4: rgba( 79, 61, 44,1);
   margin-top: 50px;
   margin-bottom: 50px;
 }
-
+.padding-25 {
+	padding-top: 25px;
+	padding-bottom: 25px;
+}
 .padding-50 {
   padding-top: 50px;
   padding-bottom: 50px;
@@ -249,6 +252,10 @@ h1 {
 	margin-bottom: 30px;
 	text-shadow: 0px 1px 3px #000;
 	font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+	span {
+		color: $main-blue;
+	}
 }
 
 h1 strong {

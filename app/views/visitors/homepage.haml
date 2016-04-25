@@ -34,7 +34,7 @@
 
       
 / Services Section
-#about-artolution.relative.margin-50
+#about-artolution.relative.padding-50
   .container
     .row
       .col-lg-12.text-center
@@ -54,11 +54,13 @@
 
 
 
-.relative#portfolio.padding-50.whitesmoke-bg
+.relative#portfolio.whitesmoke-bg.padding-25
   .container
     .row
       .col-lg-12.text-center
-        %h1 Core Capabilities
+        %h1 
+          Core 
+          %span Capabilities
     .row
       .col-md-3.col-sm-6.portfolio-item
         %a.portfolio-link{"data-toggle" => "modal", :href => "#portfolioModal"}
@@ -104,81 +106,97 @@
 
 
 / About Section
-%section#about
-  .container
-    .row
-      .col-lg-12.text-center.padding-50
-        %h1 Our Timeline
-        %h3.section-subheading.text-muted Founded in 2008..
-    .row
-      .col-lg-12
-        %ul.timeline
-          %li
-            .timeline-image
-              %img.img-circle.img-responsive{:alt => "", :src => asset_url("timeline/t-1.jpg")}
-            .timeline-panel
-              .timeline-heading
-                %h4 2008
-                %h4.subheading Our Humble Beginnings
-              .timeline-body
-                %p.text-muted Max got his first chubby for art in middle school that just kept growing for the following 10 years
+.relative
+  #about.padding-25
+    .container
+      .row
+        .col-lg-12.text-center
+          %h1 
+            %span
+              Project 
+            Process
 
-          %li.timeline-inverted
-            .timeline-image
-              %img.img-circle.img-responsive{:alt => "", :src => asset_url("timeline/t-5.jpg")}
-            .timeline-panel
-              .timeline-heading
-                %h4 First Artist Network
-                %h4.subheading International groundings
-              .timeline-body
-                %p.text-muted Our first project with the UN! We onboarded 120 artist to work on our prjects around the globe..
-          %li
-            .timeline-image
-              %img.img-circle.img-responsive{:alt => "", :src => asset_url("timeline/t-3.jpg")}
-            .timeline-panel
-              .timeline-heading
-                %h4 Partnership with the UN
-                %h4.subheading Transition to Full Boner
-              .timeline-body
-                %p.text-muted We finally got some skrilla to do what we love, and help soo soo many people, in the darkest corners of the world.
+      %br
+      %br
+      %br
+      .row
+        .col-lg-12
+          %ul.timeline
+            %li
+              .timeline-image
+                %img.img-circle.img-responsive{:alt => "", :src => asset_url("timeline/t-1.jpg")}
+              .timeline-panel
+                .timeline-heading
+                  %h4 Project Conception
+                  %h6.subheading 1 - 2 weeks
+                .timeline-body
+                  %p.text-muted 
+                    Inital ideas come from a network of local artists, international NGOs, community centers, government agencies, & schools. We dream big and work hard to make them a reality.
+                  %h4
+                    %strong
+                      %a{href: '/contact'} Contact us with project proposals.
 
+            %li.timeline-inverted
+              .timeline-image
+                %img.img-circle.img-responsive{:alt => "", :src => asset_url("timeline/t-5.jpg")}
+              .timeline-panel
+                .timeline-heading
+                  %h4 Team & Logistics
+                  %h4.subheading 1 - 2 months
+                .timeline-body
+                  %p.text-muted We work with over 120 professional artists, and have completed projects with the UN, UNICEF, Mercy Corps, and Embassies around the globe.
+                  %h4
+                    %strong
+                      %a{href: '/team'} Learn about our partners.
 
-          %li.timeline-inverted
-            .timeline-image
-              %img.img-circle.img-responsive{:alt => "", :src => asset_url("timeline/t-4.jpg")}
-            .timeline-panel
-              .timeline-heading
-                %h4 Press Publications
-                %h4.subheading We rock arts socks off
-              .timeline-body
-                %p.text-muted Senor Joel Bernger Joined the Party.. and his murals are literally 2 legit 2 quit..
-          %li.timeline-inverted
-            %a.timeline-image{href: '/join-us'}
-              %h4
-                Be Part
-                %br
-                Of
-                %br
-                Our Story
+            %li
+              .timeline-image
+                %img.img-circle.img-responsive{:alt => "", :src => asset_url("timeline/t-3.jpg")}
+              .timeline-panel
+                .timeline-heading
+                  %h4 Project Completion
+                  %h4.subheading 1 day ~ 1 month
+                .timeline-body
+                  %p.text-muted From Brooklyn street art with youth centers, to week long mural workshops in refugee camps, our network of project participants is diverse and strong.
+                  %h4
+                    %strong
+                      %a{href: '/projects'} Meet the Artolution Alumni.
 
+                   
 
-  %hr
-  %br
-  %br
-  %br
+            %li.timeline-inverted
+              .timeline-image
+                %img.img-circle.img-responsive{:alt => "", :src => asset_url("timeline/t-4.jpg")}
+              .timeline-panel
+                .timeline-heading
+                  %h4 Artistic Documentation
+                  %h4.subheading 1 - 2 months
+                .timeline-body
+                  %p.text-muted We document the artistic collaborations, maintain select pieces, and publicly share documentation (photos, videos, participant testimonials, etc) in an on-line format that we disctribute to a wide public.
+                  %h4
+                    %strong
+                      %a{href: '/press'} Artolution in the news
+
+.relative.whitesmoke-bg.padding-50
   .container
     .row
       .col-lg-12.text-center
-        %h2.section-heading Recent Photography
+        %h1 
+          Recent 
+          %span Projects
     %hr
     .row
       .col-lg-12
         #middle-section.relative
-          - ary = [asset_url("portfolio/girl.jpg"), asset_url("portfolio/israel-pal.jpg"), asset_url("portfolio/official.jpg"), asset_url("portfolio/port.jpg"), asset_url("portfolio/local.jpg")]
+          / - ary = [asset_url("portfolio/girl.jpg"), asset_url("portfolio/israel-pal.jpg"), asset_url("portfolio/official.jpg"), asset_url("portfolio/port.jpg"), asset_url("portfolio/local.jpg")]
           #grizzly-wrapper.gridzy.gridzyClassic.gridzyLightProgressIndicator.gridzyAnimated
-            - ary.each do |image|
-              %a.gallery-image{href: image, "data-gallery" => ""}
-                %img{src: image }
+            - @projects.each do |project|
+              / %a.gallery-image{href: project_path(project), "data-gallery" => ""}
+              %a{href: project_path(project)}
+                %img{src: project.hero(:medium) }
+                .project-copy
+                  %h1= project.title
+                  %h7= project.body
             
 
       #blueimp-gallery.blueimp-gallery.blueimp-gallery-controls{"data-use-bootstrap-modal" => "false"}
@@ -209,59 +227,28 @@
 
 
 / Team Section
-%section#team.bg-light-gray
+.relative#team.padding-50
   .container
     .row
       .col-lg-12.text-center
-        %h2.section-heading Our Team
-        %h3.section-subheading.text-muted All sides of the coin
+        %h1 
+          %span
+            Founding 
+          Team
     .row
-      .col-sm-4
-        .team-member
-          %img.img-responsive.img-circle{:alt => "", :src => asset_url("team/joel.jpg")}
+      .col-md-6
+        .team-member.padding-25
+          %img.img-responsive.img-circle.padding-25{:alt => "", :src => asset_url("team/joel.jpg")}
           %h4 Joel Bergner: Executive Director
-          %p.text-muted Joel is an artist, educator and organizer of public arts-based social action. He creates elaborate murals that explore social topics and reflect a wide array of artistic influences forging partnerships with dozens of institutions, community groups and local artists along the way. 
-
-          %ul.list-inline.social-buttons
-            %li
-              %a{:href => "#"}
-                %i.fa.fa-twitter
-            %li
-              %a{:href => "#"}
-                %i.fa.fa-facebook
-            %li
-              %a{:href => "#"}
-                %i.fa.fa-linkedin
-      .col-sm-4
-        .team-member
-          %img.img-responsive.img-circle{:alt => "", :src => asset_url("team/max.jpg")}
+          %p.text-muted Joel is an artist, educator and organizer of public arts-based social action. He creates elaborate murals that explore social topics and reflect a wide array of artistic influences.
+          
+      .col-md-6
+        .team-member.padding-25
+          %img.img-responsive.img-circle.padding-25{:alt => "", :src => asset_url("team/max.jpg")}
           %h4 Max Levi Frieder: Founding Director
           %p.text-muted Max's work ranges from community building in refugee crisis, hospital workshops, abuse and addiction counseling through art, creative facilitation and conflict resolution. His projects have taken him to every single continent over the past 5 years.
-          %ul.list-inline.social-buttons
-            %li
-              %a{:href => "#"}
-                %i.fa.fa-twitter
-            %li
-              %a{:href => "#"}
-                %i.fa.fa-facebook
-            %li
-              %a{:href => "#"}
-                %i.fa.fa-linkedin
-      .col-sm-4
-        .team-member
-          %img.img-responsive.img-circle{:alt => "", :src => asset_url("team/devving.jpg")}
-          %h4 Christopher Knight: Lead Technologist
-          %p.text-muted With a foundation in cultural anthropology, documentary journalism, and software development Christopher comes to Artolution as their lead digital strategist. He sees the power in digital human connection as quintessential for the modern evolution of ideas.
-          %ul.list-inline.social-buttons
-            %li
-              %a{:href => "#"}
-                %i.fa.fa-twitter
-            %li
-              %a{:href => "#"}
-                %i.fa.fa-facebook
-            %li
-              %a{:href => "#"}
-                %i.fa.fa-linkedin
+          
+          
     .row
       .col-lg-8.col-lg-offset-2.text-center
         %p.large.text-muted Over 35+ artists, educators, investors, and advisors consistently work with Artolution. 
