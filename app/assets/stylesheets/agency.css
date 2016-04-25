@@ -164,7 +164,7 @@ fieldset[disabled] .btn-xl.active {
   color: #fec503;
 }
 .navbar-default .navbar-collapse {
-  padding-top: 25px;
+
   border-color: rgba(255, 255, 255, 0.02);
 }
 .navbar-default .navbar-toggle {
@@ -184,6 +184,7 @@ fieldset[disabled] .btn-xl.active {
   font-weight: 400;
   letter-spacing: 1px;
   color: white;
+  font-size: 14px;
 }
 .navbar-default .nav li a:hover,
 .navbar-default .nav li a:focus {
