@@ -8,12 +8,6 @@
 
     
     .pagination
-    :javascript
-      $(document).ready(function() {
-        $(".extra-slider").extraSlider({
-          paginate: true
-        });
-      });
 
     .hero-copy-container
       .intro-heading 
@@ -59,7 +53,7 @@
     .row
       .col-lg-12.text-center
         %h1.margin-50
-          Body of Wor
+          Body of Projects
     .row
       - @categories.each do |category|
         .col-md-3.col-sm-6.portfolio-item
@@ -152,7 +146,7 @@
     .row
       .col-lg-12.text-center
         %h1 
-          Projects
+          Participatory Art
     %hr
     .row
       .col-lg-12
@@ -250,11 +244,7 @@
             %p.large.text-muted Over 35+ artists, educators, investors, and advisors consistently work with Artolution. 
             %br
             %a.page-scroll.btn.btn-xl#get-involved{style: 'margin-bottom: 50px;'}  Get Involved
-            :javascript
-              $('#get-involved').click(function(){
-                $(this).hide()
-                $("#homepage-form-wrapper").fadeIn()
-              })
+            
     
     .row#homepage-form-wrapper{style: 'display:none;'}
       .col-lg-12
