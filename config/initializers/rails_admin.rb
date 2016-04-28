@@ -20,6 +20,15 @@ RailsAdmin.config do |config|
     end
   end
 
+  config.model 'Category' do
+    list do
+      exclude_fields_if do
+        type == :datetime
+      end
+
+    end
+  end
+
 
   ### Popular gems integration
 

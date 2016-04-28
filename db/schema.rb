@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160406013706) do
+ActiveRecord::Schema.define(version: 20160428032338) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -31,6 +31,18 @@ ActiveRecord::Schema.define(version: 20160406013706) do
   create_table "artists_projects", id: false, force: :cascade do |t|
     t.integer "artist_id"
     t.integer "project_id"
+  end
+
+  create_table "categories", force: :cascade do |t|
+    t.string   "name"
+    t.string   "description"
+    t.string   "body"
+    t.datetime "created_at",         null: false
+    t.datetime "updated_at",         null: false
+    t.string   "image_file_name"
+    t.string   "image_content_type"
+    t.integer  "image_file_size"
+    t.datetime "image_updated_at"
   end
 
   create_table "gallery_images", force: :cascade do |t|
@@ -61,6 +73,7 @@ ActiveRecord::Schema.define(version: 20160406013706) do
     t.string   "hero_content_type"
     t.integer  "hero_file_size"
     t.datetime "hero_updated_at"
+    t.integer  "category_id"
   end
 
   create_table "users", force: :cascade do |t|

@@ -4,6 +4,7 @@ class VisitorsController < ApplicationController
 
     @projects = Project.all
     @visitor = Visitor.new
+    @categories = Category.all
   end
 
   def create

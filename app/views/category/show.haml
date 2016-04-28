@@ -1,0 +1,12 @@
+
+%h1= @category.inspect
+
+%hr
+
+.col.col-md-8.col-md-offset-2
+	%h3 Projects
+	%br
+	- @category.projects.each do |p|
+		.project
+			= p.title
+			= image_tag p.hero(:medium)

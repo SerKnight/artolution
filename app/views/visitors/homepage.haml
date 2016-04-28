@@ -58,50 +58,21 @@
   .container
     .row
       .col-lg-12.text-center
-        %h1 
-          Core 
-          %span Capabilities
+        %h1.margin-50
+          Body of Wor
     .row
-      .col-md-3.col-sm-6.portfolio-item
-        %a.portfolio-link{"data-toggle" => "modal", :href => "#portfolioModal"}
-          .portfolio-hover
-            .portfolio-hover-content
-              %i.fa.fa-plus.fa-3x
-            .hover-copy Engaging refugees on all sides of a fight
-          %img.img-responsive{:alt => "", :src => asset_url("portfolio/official.jpg")}
-          .portfolio-caption
-            %h4 Armed Conflict
+      - @categories.each do |category|
+        .col-md-3.col-sm-6.portfolio-item
+          %a.portfolio-link{"data-toggle" => "modal", :href => category_path(category.id)}
+            .portfolio-hover
+              .portfolio-hover-content
+                %i.fa.fa-plus.fa-3x
+              .hover-copy= category.description
+            %img.img-responsive{:alt => "", :src => asset_url(category.image(:medium))}
+            .portfolio-caption
+              %h4= category.name
 
-      .col-md-3.col-sm-6.portfolio-item
-        %a.portfolio-link{"data-toggle" => "modal", :href => "#portfolioModal"}
-          .portfolio-hover
-            .portfolio-hover-content
-              %i.fa.fa-plus.fa-3x
-            .hover-copy Protecting Humanity with Artistic Action
-          %img.img-responsive{:alt => "", :src => asset_url("portfolio/israel-pal.jpg")}
-          .portfolio-caption
-            %h4 Human Rights
-
-          
-      .col-md-3.col-sm-6.portfolio-item
-        %a.portfolio-link{"data-toggle" => "modal", :href => "#portfolioModal"}
-          .portfolio-hover
-            .portfolio-hover-content
-              %i.fa.fa-plus.fa-3x
-            .hover-copy Programs that teach skills to negotiate key life decision
-          %img.img-responsive{:alt => "", :src => asset_url("portfolio/girl.jpg")}
-          .portfolio-caption
-            %h4 Girls Empowerment
-
-      .col-md-3.col-sm-6.portfolio-item
-        %a.portfolio-link{"data-toggle" => "modal", :href => "#portfolioModal"}
-          .portfolio-hover
-            .portfolio-hover-content
-              %i.fa.fa-plus.fa-3x
-            .hover-copy Education Initiatives & Community Building
-          %img.img-responsive{:alt => "", :src => asset_url("portfolio/local.jpg")}
-          .portfolio-caption
-            %h4 Health Education
+      
 
 
 
@@ -113,8 +84,7 @@
         .col-lg-12.text-center
           %h1 
             %span
-              Project 
-            Process
+              Process
 
       %br
       %br
@@ -182,8 +152,7 @@
     .row
       .col-lg-12.text-center
         %h1 
-          Recent 
-          %span Projects
+          Projects
     %hr
     .row
       .col-lg-12
@@ -249,42 +218,45 @@
           %p.text-muted Max's work ranges from community building in refugee crisis, hospital workshops, abuse and addiction counseling through art, creative facilitation and conflict resolution. His projects have taken him to every single continent over the past 5 years.
           
           
-    .row
-      .col-lg-8.col-lg-offset-2.text-center
-        %p.large.text-muted Over 35+ artists, educators, investors, and advisors consistently work with Artolution. 
-        %br
-        %a.page-scroll.btn.btn-xl{:href => "#about-artolution"} Learn what we do
 / Clients Aside
-%aside.clients
-  .container
-    .row
-      .col-md-3.col-sm-6
-        %a{:href => "#"}
-          %img.img-responsive.img-centered{:alt => "", :src => asset_url("portfolio/girl.jpg")}/
-          PRESS
-      .col-md-3.col-sm-6
-        %a{:href => "#"}
-          %img.img-responsive.img-centered{:alt => "", :src => asset_url("portfolio/port.jpg")}/
-          FAQ
-      .col-md-3.col-sm-6
-        %a{:href => "#"}
-          %img.img-responsive.img-centered{:alt => "", :src => asset_url("portfolio/official.jpg")}/
-          CAREERS
-      .col-md-3.col-sm-6
-        %a{:href => "#"}
-          %img.img-responsive.img-centered{:alt => "", :src => asset_url("portfolio/girl.jpg")}/
-          ORGANIZATIONS
+/ %aside.clients
+/   .container
+/     .row
+/       .col-md-3.col-sm-6
+/         %a{:href => "#"}
+/           %img.img-responsive.img-centered{:alt => "", :src => asset_url("portfolio/girl.jpg")}/
+/           PRESS
+/       .col-md-3.col-sm-6
+/         %a{:href => "#"}
+/           %img.img-responsive.img-centered{:alt => "", :src => asset_url("portfolio/port.jpg")}/
+/           FAQ
+/       .col-md-3.col-sm-6
+/         %a{:href => "#"}
+/           %img.img-responsive.img-centered{:alt => "", :src => asset_url("portfolio/official.jpg")}/
+/           CAREERS
+/       .col-md-3.col-sm-6
+/         %a{:href => "#"}
+/           %img.img-responsive.img-centered{:alt => "", :src => asset_url("portfolio/girl.jpg")}/
+/           ORGANIZATIONS
 
 / Contact Section
 %section#contact{style: "background-image: url(#{asset_url('map-image.png')});"}
   .container
     .row
       .col-lg-12.text-center
-        %h2.section-heading Join us in the Artolution
-        %br
-        %br
-        %br
-    .row
+        %h2.section-heading.padding-50 Join us in the Artolution
+        .row
+          .col-lg-8.col-lg-offset-2.text-center
+            %p.large.text-muted Over 35+ artists, educators, investors, and advisors consistently work with Artolution. 
+            %br
+            %a.page-scroll.btn.btn-xl#get-involved{style: 'margin-bottom: 50px;'}  Get Involved
+            :javascript
+              $('#get-involved').click(function(){
+                $(this).hide()
+                $("#homepage-form-wrapper").fadeIn()
+              })
+    
+    .row#homepage-form-wrapper{style: 'display:none;'}
       .col-lg-12
         %form{"accept-charset" => "UTF-8", action: "/visitors", method: "POST", roll: "form", id: 'visitor_form', "data-remote" => "true"}
           = tag(:input, :type => "hidden", :name => request_forgery_protection_token.to_s, :value => form_authenticity_token)
@@ -310,7 +282,7 @@
                 %br
                 %br
                 #success
-                %button.btn.btn-xl{:type => "submit"} Send Message
+                %button.page-scroll.btn.btn-xl{:type => "submit", style: 'margin-bottom: 55px;'} Send Message
 %footer
   .container
     .row
@@ -350,7 +322,7 @@
         .col-lg-8.col-lg-offset-2
           .modal-body
             / Project Details Go Here
-            %h2 ie. Armed Conflict
+            %h2 health - education - environmental - international - arts & culture
             %p or womens health. 
             %p.item-intro.text-muted Lorem ipsum dolor sit amet consectetur.
             %img.img-responsive.img-centered{:alt => "", :src => ""}/
