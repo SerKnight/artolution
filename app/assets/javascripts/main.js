@@ -13,6 +13,12 @@ function homeSetup() {
   var navHeight = $(window).height();
 
   // transition: background-color 0.5s ease;
+  if(window.location.pathname != '/'){
+    $('.navbar-default').css({
+      'transition': 'all 0.75s ease',
+      'background-color': '#000'
+    })
+  }
 
   $(window).bind('scroll', function() {
     if ($(window).scrollTop() > navHeight || window.location.pathname != '/') {

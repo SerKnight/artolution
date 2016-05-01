@@ -29,10 +29,6 @@
 
 function homepage(){
 
-	$(".extra-slider").extraSlider({
-		paginate: true
-	});
-
 	$('#get-involved').click(function(){
 		$(this).hide()
 		$("#homepage-form-wrapper").fadeIn()
@@ -51,4 +47,3 @@ document.addEventListener("turbolinks:load", function() {
 	$(document).ready(ready);
 	$(document).on('page:load', ready);
 });
-

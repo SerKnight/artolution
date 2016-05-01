@@ -7,6 +7,9 @@ class Project < ActiveRecord::Base
   validates_attachment_content_type :hero, content_type: /\Aimage\/.*\Z/
 
 
+  def to_param
+    [title.parameterize].join("-")
+  end
 
   #attr_accessor :delete_asset
 end

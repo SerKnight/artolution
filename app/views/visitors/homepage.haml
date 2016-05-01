@@ -5,7 +5,6 @@
         %li.hero-image-banner{:style => "background-image: url(#{image_path 'portfolio/israel-pal.jpg'});"}
         %li.hero-image-banner{:style => "background-image: url(#{image_path 'portfolio/local.jpg'});"}
         %li.hero-image-banner{:style => "background-image: url(#{image_path 'portfolio/girl.jpg'});"}
-
     
     .pagination
 
@@ -57,7 +56,7 @@
     .row
       - @categories.each do |category|
         .col-md-3.col-sm-6.portfolio-item
-          %a.portfolio-link{"data-toggle" => "modal", :href => category_path(category.id)}
+          %a.portfolio-link{"data-toggle" => "modal", :href => category_path(category)}
             .portfolio-hover
               .portfolio-hover-content
                 %i.fa.fa-plus.fa-3x
@@ -343,3 +342,12 @@
 / / Custom Theme JavaScript
 
 // %script{:src => "js/agency.js"}
+
+
+:javascript
+  document.addEventListener("turbolinks:load", function() {
+    $(".extra-slider").not('.initialized').extraSlider({
+      paginate: true
+    });
+    $(".extra-slider").addClass('initialized');
+  });

@@ -7,7 +7,7 @@ class CategoryController < ApplicationController
 
 
 	def show
-		@category = Category.find(params[:id])
+		@category = Category.find_by_name(params[:id].gsub('-',' ').split.map(&:capitalize)*' ')
 	end
 
 
