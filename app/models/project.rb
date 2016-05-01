@@ -1,4 +1,6 @@
 class Project < ActiveRecord::Base
+  extend FriendlyId
+  friendly_id :title, use: :slugged
 	has_and_belongs_to_many :artists
 	has_many :gallery_images
 	belongs_to :category
@@ -7,9 +9,7 @@ class Project < ActiveRecord::Base
   validates_attachment_content_type :hero, content_type: /\Aimage\/.*\Z/
 
 
-  def to_param
-    [title.parameterize].join("-")
-  end
+  
 
   #attr_accessor :delete_asset
 end
