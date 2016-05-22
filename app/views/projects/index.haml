@@ -32,9 +32,9 @@
           %p
             %i.fa.fa-newspaper-o
             = link_to project.category.name, "/category/#{project.category.slug}"
-          %hr/
+          
           = link_to project_path(project) do
-            %img.img-responsive.img-hover{:alt => "", :src => "http://placehold.it/900x300"}/
+            %img.img-responsive.img-hover{:alt => "", :height => "236", :src => project.hero(:medium), :width => "100%"}
           %hr/
           %p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore, veritatis, tempora, necessitatibus inventore nisi quam quia repellat ut tempore laborum possimus eum dicta id animi corrupti debitis ipsum officiis rerum.
           = link_to project_path(project), class: 'btn btn-primary' do
@@ -69,25 +69,9 @@
         .row
           .col-lg-6
             %ul.list-unstyled
-              %li
-                %a{:href => "#"} Category Name
-              %li
-                %a{:href => "#"} Category Name
-              %li
-                %a{:href => "#"} Category Name
-              %li
-                %a{:href => "#"} Category Name
-          / /.col-lg-6
-          .col-lg-6
-            %ul.list-unstyled
-              %li
-                %a{:href => "#"} Category Name
-              %li
-                %a{:href => "#"} Category Name
-              %li
-                %a{:href => "#"} Category Name
-              %li
-                %a{:href => "#"} Category Name
+              - @categories.each do |cat|
+                %li
+                  %a{:href => "/category/#{cat.slug}"}= cat.name
           / /.col-lg-6
         / /.row
       / Side Widget Well
