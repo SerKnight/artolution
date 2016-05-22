@@ -15,6 +15,8 @@ gem 'pg'
 gem 'puma'
 gem 'simple_form'
 gem 'sucker_punch'
+gem 'ransack'
+# gem 'will_paginate', github: 'jonatack/will_paginate'
 
 gem 'figaro'
 gem 'font-awesome-rails'

@@ -37,7 +37,7 @@ function homepage(){
 
 var ready;
 ready = function() {
-  main()
+  main();
   youtubeEmbed();
   homepage();
 };

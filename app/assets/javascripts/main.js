@@ -1,7 +1,5 @@
 
 function main() {
-
-  pictureGridInit('.gridzy');
   scrollSpyToggle();
   homeSetup();
   sizeHomepageHero();

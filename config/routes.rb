@@ -6,7 +6,11 @@ Rails.application.routes.draw do
 
   devise_for :users
 
+  get '/about', to: 'application#about'
   get '/team', to: 'application#team'
+
+  get '/contact', to: 'application#contact'
+  get '/get-involved', to: 'application#contact'
 
   root to: 'visitors#homepage'
 end
