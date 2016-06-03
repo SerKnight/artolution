@@ -87,37 +87,37 @@
                 %img.img-circle.img-responsive{:alt => "", :src => asset_url("timeline/t-1.jpg")}
               .timeline-panel
                 .timeline-heading
-                  %h4 Project Conception
+                  %h3 Project Conception
                 .timeline-body
                   %p.text-muted 
                     Ideas come from all over: local artists, NGOs, community centers, government agencies, & schools. We dream big and work hard to complete them.
-                  %h4
+                  %h2
                     %strong
-                      %a{href: '/contact'} Contact us with proposals
+                      %a{href: '/contact'} Propose a Project
 
             %li.timeline-inverted
               .timeline-image
                 %img.img-circle.img-responsive{:alt => "", :src => asset_url("timeline/t-5.jpg")}
               .timeline-panel
                 .timeline-heading
-                  %h4 Team & Logistics
+                  %h3 Team & Logistics
                 .timeline-body
                   %p.text-muted We work with over 120 professional artists, and have completed projects with the UN, UNICEF, Mercy Corps, and Embassies around the globe.
-                  %h4
+                  %h2
                     %strong
-                      %a{href: '/team'} Explore our partnerships
+                      %a{href: '/team'} Become a Partner
 
             %li
               .timeline-image
                 %img.img-circle.img-responsive{:alt => "", :src => asset_url("timeline/t-3.jpg")}
               .timeline-panel
                 .timeline-heading
-                  %h4 Project Completion
+                  %h3 Project Completion
                 .timeline-body
                   %p.text-muted From Brooklyn street art with youth centers, to week long mural workshops in refugee camps, our network of project participants is diverse and strong.
-                  %h4
+                  %h2
                     %strong
-                      %a{href: '/projects'} Meet the Alumni
+                      %a{href: '/projects'} Explore Projects
 
 
 .relative.whitesmoke-bg.padding-50
@@ -135,10 +135,11 @@
             - @projects.each do |project|
               / %a.gallery-image{href: project_path(project), "data-gallery" => ""}
               %a{href: project_path(project)}
-                %img{src: project.hero(:medium) }
-                .project-copy
-                  %h1= project.title
-                  %h7= project.body
+                .homepage-project-wrapper
+                  %img{src: project.hero(:medium) }
+                  .project-copy
+                    %h1= project.title
+                    %h7= "#{project.body[0..200]}..."
             
 
       #blueimp-gallery.blueimp-gallery.blueimp-gallery-controls{"data-use-bootstrap-modal" => "false"}
@@ -222,7 +223,7 @@
           .col-lg-8.col-lg-offset-2.text-center
             %p.large.text-muted Over 35+ artists, educators, investors, and advisors consistently work with Artolution. 
             %br
-            %a.page-scroll.btn.btn-xl#get-involved{style: 'margin-bottom: 50px;', href: '/get-involved'}  Get Involved
+            %a.btn.btn-xl{style: 'margin-bottom: 50px;', href: '/get-involved'}  Get Involved
             
     
     / .row#homepage-form-wrapper{style: 'display:none;'}

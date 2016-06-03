@@ -9,28 +9,23 @@
   .row
 
     .col-md-8
-      %h3 Send us a Message
       %form#contactForm{:name => "sentMessage", :novalidate => ""}
         .control-group.form-group
           .controls
-            %label Full Name:
-            %input#name.form-control{"data-validation-required-message" => "Please enter your name.", :required => "", :type => "text"}/
+            %input#name.form-control{"data-validation-required-message" => "Please enter your name.", :required => "", :type => "text", placeholder: 'Name / Organization'}
             %p.help-block
         .control-group.form-group
           .controls
-            %label Phone Number:
-            %input#phone.form-control{"data-validation-required-message" => "Please enter your phone number.", :required => "", :type => "tel"}/
+            %input#phone.form-control{"data-validation-required-message" => "Please enter your phone number.", :required => "", :type => "tel", placeholder: 'Phone Number'}
         .control-group.form-group
           .controls
-            %label Email Address:
-            %input#email.form-control{"data-validation-required-message" => "Please enter your email address.", :required => "", :type => "email"}/
+            %input#email.form-control{"data-validation-required-message" => "Please enter your email address.", :required => "", :type => "email", placeholder: '* Email Address', :required => ""}
         .control-group.form-group
           .controls
-            %label Message:
-            %textarea#message.form-control{:cols => "100", "data-validation-required-message" => "Please enter your message", :maxlength => "999", :required => "", :rows => "10", :style => "resize:none"}
+            %textarea#message.form-control{:cols => "100", "data-validation-required-message" => "Please enter your message", :maxlength => "999", placeholder: '* Message', :required => "", :rows => "10", :style => "resize:none"}
         #success
         / For success/fail messages
-        %button.btn.btn-primary{:type => "submit"} Send Message
+        %button.btn.btn-xl{:type => "submit", style: 'margin-top: 30px; text-shadow: -1px 1px 10px #000;' } Send Message
 
     .col-md-4
       %h3 Contact Details

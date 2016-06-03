@@ -365,6 +365,46 @@ hr {
 }
 /* Home Style */
 
+.homepage-project-wrapper {
+	position: relative;
+  float: left;
+  width: 30%;
+  height: 500px;
+  margin: 1%;
+
+  background-color: rgba(0,0,0,0.12);
+  border-radius: 10px;
+	img {
+		padding: 30px;
+		position: relative;
+		float: left;
+		padding-bottom: 0px;
+		-webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+	}
+	&:hover {
+		img {
+			padding: 25px;
+			padding-bottom: 0px;
+
+		}
+	}
+
+	.project-copy {
+		height: 200px;
+		padding: 30px;
+		padding-top: 20px;
+		float: left;
+		position: relative;
+		-webkit-transition-duration: 0.3s;
+		transition-duration: 0.3s;
+
+		&:hover {
+			padding-top: 20px;
+		}
+	}
+}
+
 .color {
 	color: #1fb9b1;
 	font-weight: 700;

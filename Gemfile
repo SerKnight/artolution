@@ -55,3 +55,5 @@ end
 group :production do
   gem 'rails_12factor'
 end
+
+gem 'mail_form'

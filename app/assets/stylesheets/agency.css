@@ -28,6 +28,7 @@ a:active,
 a.active {
   outline: none;
 }
+
 a {
   color: #fed136;
 }
@@ -37,6 +38,11 @@ a:active,
 a.active {
   color: #fec503;
 }
+
+.timeline-panel a:hover {
+  text-decoration: underline !important;
+}
+
 h1,
 h2,
 h3,
