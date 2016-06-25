@@ -1,6 +1,5 @@
 
 function main() {
-  scrollSpyToggle();
   homeSetup();
   sizeHomepageHero();
 }
@@ -32,18 +31,6 @@ function homeSetup() {
     }
   });
 };
-
-
-function scrollSpyToggle(){
-  $('body').scrollspy({
-    target: '.navbar-fixed-top'
-  })
-
-  $('.navbar-collapse ul li a:not(.dropdown-toggle)').click(function() {
-    $('.navbar-toggle:visible').click();
-  });
-};
-
 
 
 function pictureGridInit(instigator){
