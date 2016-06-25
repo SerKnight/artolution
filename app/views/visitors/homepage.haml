@@ -124,8 +124,8 @@
   .container
     .row
       .col-lg-12.text-center
-        %h1 
-          Participatory Art
+        %h1
+          Recent Projects
     %hr
     .row
       .col-lg-12
@@ -139,7 +139,7 @@
                   %img{src: project.hero(:medium) }
                   .project-copy
                     %h1= project.title
-                    %h7= "#{project.body[0..200]}..."
+                    .project-copy= "#{project.body[0..200]}..."
             
 
       #blueimp-gallery.blueimp-gallery.blueimp-gallery-controls{"data-use-bootstrap-modal" => "false"}

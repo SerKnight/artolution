@@ -1,96 +1,264 @@
-/ Header Carousel
-
-.container
-  / Marketing Icons Section
-  .row
-    %br
-    %br
-    %br
-    %br
-    %br
-    %br
-    .col-md-4
-      .panel.panel-default
-        .panel-heading
-          %h4
-            %i.fa.fa-fw.fa-check
-            Bootstrap v3.2.0
-        .panel-body
-          %p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque, optio corporis quae nulla aspernatur in alias at numquam rerum ea excepturi expedita tenetur assumenda voluptatibus eveniet incidunt dicta nostrum quod?
-          %a.btn.btn-default{:href => "#"} Learn More
-    .col-md-4
-      .panel.panel-default
-        .panel-heading
-          %h4
-            %i.fa.fa-fw.fa-gift
-            Free & Open Source
-        .panel-body
-          %p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque, optio corporis quae nulla aspernatur in alias at numquam rerum ea excepturi expedita tenetur assumenda voluptatibus eveniet incidunt dicta nostrum quod?
-          %a.btn.btn-default{:href => "#"} Learn More
-    .col-md-4
-      .panel.panel-default
-        .panel-heading
-          %h4
-            %i.fa.fa-fw.fa-compass
-            Easy to Use
-        .panel-body
-          %p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque, optio corporis quae nulla aspernatur in alias at numquam rerum ea excepturi expedita tenetur assumenda voluptatibus eveniet incidunt dicta nostrum quod?
-          %a.btn.btn-default{:href => "#"} Learn More
-  / /.row
-  / Portfolio Section
-  .row
-    .col-lg-12
-      %h2.page-header Portfolio Heading
-    .col-md-4.col-sm-6
-      = link_to page_path('portfolio-item') do
-        %img.img-responsive.img-portfolio.img-hover{:alt => "", :src => "http://placehold.it/700x450"}/
-    .col-md-4.col-sm-6
-      = link_to page_path('portfolio-item') do
-        %img.img-responsive.img-portfolio.img-hover{:alt => "", :src => "http://placehold.it/700x450"}/
-    .col-md-4.col-sm-6
-      = link_to page_path('portfolio-item') do
-        %img.img-responsive.img-portfolio.img-hover{:alt => "", :src => "http://placehold.it/700x450"}/
-    .col-md-4.col-sm-6
-      = link_to page_path('portfolio-item') do
-        %img.img-responsive.img-portfolio.img-hover{:alt => "", :src => "http://placehold.it/700x450"}/
-    .col-md-4.col-sm-6
-      = link_to page_path('portfolio-item') do
-        %img.img-responsive.img-portfolio.img-hover{:alt => "", :src => "http://placehold.it/700x450"}/
-    .col-md-4.col-sm-6
-      = link_to page_path('portfolio-item') do
-        %img.img-responsive.img-portfolio.img-hover{:alt => "", :src => "http://placehold.it/700x450"}/
-  / /.row
-  / Features Section
-  .row
-    .col-lg-12
-      %h2.page-header Modern Business Features
-    .col-md-6
-      %p The Modern Business template by Start Bootstrap includes:
-      %ul
-        %li
-          %strong Bootstrap v3.2.0
-        %li jQuery v1.11.0
-        %li Font Awesome v4.1.0
-        %li Working PHP contact form with validation
-        %li Unstyled page elements for easy customization
-        %li 17 HTML pages
-      %p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis, omnis doloremque non cum id reprehenderit, quisquam totam aspernatur tempora minima unde aliquid ea culpa sunt. Reiciendis quia dolorum ducimus unde.
-    .col-md-6
-      %img.img-responsive{:alt => "", :src => "http://placehold.it/700x450"}/
-  / /.row
-  %hr/
-  / Call to Action Section
-  .well
+.page-container
+  / Header Carousel
+  .col-lg-12
+    .full-width-image#about-image-top
+      = image_tag (image_path 'about.jpeg')
+      
+  .container.relative
+    / Marketing Icons Section
     .row
-      .col-md-8
-        %p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias, expedita, saepe, vero rerum deleniti beatae veniam harum neque nemo praesentium cum alias asperiores commodi.
       .col-md-4
-        %a.btn.btn-lg.btn-default.btn-block{:href => "#"} Call to Action
-/ /.container
-/ Script to Activate the Carousel
-:javascript
-  $(document).on('ready', function () {
-    $('.carousel').carousel({
-        interval: 1000 //changes the speed
-    })
-  });
+        .panel.panel-default
+          .panel-heading
+            %h4
+              %i.fa.fa-fw.fa-heart-o
+              Our Purpose
+          .panel-body
+            %p Our founding objective is to address critical issues related to armed conflict, trauma and social marginalization through public based, community art proejcts. Always with the goal of creating sustainable global initiatives that promote reconciliation, healing and community empowerment.
+      .col-md-4
+        .panel.panel-default
+          .panel-heading
+            %h4
+              %i.fa.fa-fw.fa-check
+              Mission Statement
+          .panel-body
+            %p The Artolution is a community-based public art network that ignites positive social change through creative, participatory and collaborative art making. We facilitate projects around the world that bring together children, youth, families, artists, educators and community groups.
+      .col-md-4
+        .panel.panel-default
+          .panel-heading
+            %h4
+              %i.fa.fa-fw.fa-compass
+              Our Methods
+          .panel-body
+            %p We use visual public art mediums such as murals, sculptures, performance, dance, and music. Our workshops explore important community issues and we collectively decide on the subject and content of the artistic production in collaboration with the communities.
+      .col.col-md-12.text-center.join-us-btn
+        %a.btn.btn-default{:href => "/contact"} Help us build a global communitity through community art.
+    / /.row
+    / Portfolio Section
+    .row
+      .col-md-4.col-sm-6
+        = link_to page_path('portfolio-item') do
+          %img.img-responsive.img-portfolio.img-hover{:alt => "", :src => "http://placehold.it/700x450"}/
+      .col-md-4.col-sm-6
+        = link_to page_path('portfolio-item') do
+          %img.img-responsive.img-portfolio.img-hover{:alt => "", :src => "http://placehold.it/700x450"}/
+      .col-md-4.col-sm-6
+        = link_to page_path('portfolio-item') do
+          %img.img-responsive.img-portfolio.img-hover{:alt => "", :src => "http://placehold.it/700x450"}/
+      .col-md-4.col-sm-6
+        = link_to page_path('portfolio-item') do
+          %img.img-responsive.img-portfolio.img-hover{:alt => "", :src => "http://placehold.it/700x450"}/
+      .col-md-4.col-sm-6
+        = link_to page_path('portfolio-item') do
+          %img.img-responsive.img-portfolio.img-hover{:alt => "", :src => "http://placehold.it/700x450"}/
+      .col-md-4.col-sm-6
+        = link_to page_path('portfolio-item') do
+          %img.img-responsive.img-portfolio.img-hover{:alt => "", :src => "http://placehold.it/700x450"}/
+    / /.row
+    / Features Section
+
+    .col-md-10.col-md-offset-1
+      .row
+        .col-lg-12
+          %h2.page-header Artiolution Founding Story
+
+        .col-md-12
+          %p
+            The Artolution began as a community-based public art initiative founded by US-based artist Max Frieder in 2009. In 2015, he and like-minded community artist Joel Bergner, whose work had followed a similar trajectory, joined forces as co-directors to launch the Artolution as an international organization that functions as a network of community-based artists, educators and institutions around the world.
+          %p
+            We believe that the process of creating collaborative art is a powerful tool to bring diverse communities together in the face of conflict and social turmoil in order to address challenges that they face. Artolution projects engage youth and communities that have faced social exclusion and trauma, including refugees, street youth, the incarcerated, people with physical and mental disabilities, and young people living in areas of violent conflict or extreme poverty. These projects have been organized and facilitated in partnerships with local artists and educators, grass-roots community groups, schools, religious centers and international institutions in over 20 countries across Latin America, Africa, North America, the Middle East, Europe and South Asia.
+      
+      
+      %hr
+      = render partial: 'shared/contact_bar'
+
+
+  .col-lg-12
+    .full-width-image
+      = image_tag (image_path 'is-pal-long.jpeg')
+
+  .col-lg-10.col-md-offset-1.padding-25
+    .relative
+      %h5
+        Artolution projects are made possible through partnerships with institutions around the world, from international NGO's to grass-roots community centers, government agencies to schools.
+      %hr
+      .col.col-md-6
+
+        %li
+          = link_to "UNICEF", "http://www.unicef.org/"
+
+        %li
+          = link_to "United Nations", "http://www.un.org/en/index.html"
+
+        %li
+          = link_to "Street Child United (UK, Brazil)", "http://www.streetchildunited.org/"
+
+        %li
+          = link_to "Mercy Corps", "https://www.mercycorps.org/"
+
+        %li
+          = link_to "Meridian International Center", "http://www.meridian.org/"
+
+        %li
+          = link_to "Open Society Initiative of Eastern Africa", "https://www.opensocietyfoundations.org"
+
+        %li
+          = link_to "Give a Hand/ Monde Par La Mai", "http://www.mondeparlamain.org/"
+
+        %li
+          = link_to "US Consulate General, Jerusalem", "http://jerusalem.usconsulate.gov/"
+
+        %li
+          = link_to "aptART (Awareness and Prevention Through Art)", "http://www.aptart.org/"
+
+        %li
+          = link_to "ACTED", "http://www.acted.org/en"
+
+        %li
+          = link_to "US Consulate General, Mumbai", "http://mumbai.usconsulate.gov/"
+
+        %li
+          = link_to "Birla Academy of Art & Culture (Kolkata, India)", "http://www.birlaart.com/"
+
+        %li
+          = link_to "US Embassy, Tel Aviv", "http://israel.usembassy.gov/"
+
+        %li
+          = link_to "Park Inn by Radisson", "http://www.parkinn.com/"
+
+        %li
+          = link_to "Brooklyn Arts Council", "http://www.brooklynartscouncil.org/"
+
+        %li
+          = link_to "International Rescue Committee (IRC)", "http://www.rescue.org/"
+
+        %li
+          = link_to "The Children’s Museum of the Arts (NYC)", "http://cmany.org/"
+
+        %li
+          = link_to "Boys & Girls Club of Greater Washington", "http://www.bgcgw.org/"
+
+        %li
+          = link_to "University of Dayton (Ohio)", "https://www.udayton.edu/"
+        %li
+          = link_to "Taller Cultural (Santiago de Cub", "http://www.ecured.cu/"
+
+        %li
+          = link_to "Shakti Vahini (India)", "https://shaktivahini.wordpress.com/"
+
+        %li
+          = link_to "IRRI (International Renewable Resources Institute)", "http://www.irrimexico.org/"
+
+        %li
+          = link_to "Dumbo Arts Festival (NYC)", "http://dumboartsfestival.com/"
+
+        %li
+          = link_to "The Karam Foundation (Turkey)", "http://www.karamfoundation.org/"
+        %li
+          = link_to "ConcentrArte (Mexico)", "http://www.concentrarte.org/"
+
+        %li
+          = link_to "Kibera Hamlets (Nairobi, Kenya)", "http://www.kiberahamlets.org/"
+
+        %li
+          = link_to "Kid Powered Media (Delhi, India)", "http://www.kidpoweredmedia.com/"
+
+        %li
+          = link_to "DC Commission on the Arts and Humaniti", "http://dcarts.dc.gov/"
+
+        %li
+          = link_to "Mumbai Smiles (India)", "http://www.mumbaismiles.org/"
+
+        %li
+          = link_to "Shambala Festival (UK)", "http://www.shambalafestival.org/"
+
+
+
+      .col.col-md-6
+
+        %li
+          = link_to "US Consulate General, Kolkata (India)", "http://kolkata.usconsulate.gov/"
+
+        %li
+          = link_to "Parents Circle Families Forum (Israel and Palestin", "http://www.theparentscircle.com/"
+
+        %li
+          = link_to "Riverbank State Park (NYC)", "http://nysparks.com/parks/93/details.aspx"
+
+        %li
+          = link_to "Greenbelt Festival (UK)", "https://www.greenbelt.org.uk/"
+
+        %li
+          = link_to "Project Jericho (Ohio)", "http://www.project-jericho.com/"
+
+        %li
+          = link_to "CAES (Center for Art Education and Sustainability)", "http://www.caes-eco-art.net/"
+
+        %li
+          = link_to "Artistic Noise (NYC)", "http://www.artisticnoise.org/"
+
+        %li
+          = link_to "Latin American Youth Center (Washington, DC)", "http://www.layc-dc.org/"
+
+        %li
+          = link_to "Paróquia Cristo Rei, Cidade de Deus (Rio de Janeiro, Brazil)", "https://www.facebook.com/Pacristorei/"
+
+        %li
+          = link_to "Karunalaya (Chennai, India)", "http://www.karunalaya.in/"
+
+        %li
+          = link_to "Hand in Hand (Yad be Yad) School, Jerusalem", "https://www.handinhandk12.org/"
+
+        %li
+          = link_to "Partners of the Americas", "http://www.partners.net/"
+
+        %li
+          = link_to "Rhode Island School of Design Museum of Art", "http://risdmuseum.org/"
+
+        %li
+          = link_to "Salt Lake City Commission for the Arts", "http://saltlakearts.org/"
+
+        %li
+          = link_to "J Street", "http://jstreet.org/"
+
+        %li
+          = link_to "HBO Latino", "http://www.hbomax.tv/hbo/"
+
+        %li
+          = link_to "Casa del Caribe (Cuba)", "https://www.facebook.com/casadelcaribe/"
+
+        %li
+          = link_to "Groundswell (NYC)", "https://www.groundswell.nyc/"
+
+        %li
+          = link_to "Isla Urbana (Mexico)", "http://islaurbana.org/"
+
+        %li
+          = link_to "El Museo De Los Niños (San Jose, Costa Rica)", "https://www.museocr.org/"
+
+        %li
+          = link_to "The National Museum of the Jewish People: Beit Hatfuts", "http://www.bh.org.il/"
+
+        %li
+          = link_to "The Providence Mayor’s Office (Rhode Islan", "https://www.providenceri.com/mayor"
+
+        %li
+          = link_to "Tambour International Paint Company", "http://www.tambourpaints.com/"
+
+        %li
+          = link_to "Providence Children’s Museum (Rhode Island)", "http://www.childrenmuseum.org/"
+
+        %li
+          = link_to "Vidya (Delhi)", "http://vidya-india.org/"
+
+        %li
+          = link_to "Class Acts Arts (Maryland)", "http://classactsarts.org/"
+
+        %li
+          = link_to "Alyn Hospital (Jerusalem)", "https://www.alyn.org/"
+
+        %li
+          = link_to "Recycling for Rhode Island Education Center", "http://www.rrie.org/"
+
+        %li
+          = link_to "New Zealand Children’s Arthouse Foundati", "http://www.arthouse.org.nz/"

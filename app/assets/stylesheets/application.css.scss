@@ -49,6 +49,25 @@ $rgba-complement-3: rgba(142,100, 60,1);
 $rgba-complement-4: rgba( 79, 61, 44,1);
 
 
+
+.page-container {
+	position: relative;
+	float: left;
+	width: 100%;
+	margin-top: 70px;
+}
+
+.full-width-image {
+	position: relative;
+	float: left;
+	width: 100%;
+}
+
+.join-us-btn {
+	margin-top: 30px;
+	margin-bottom: 50px;
+}
+
 .homepage-hero-container {
   height: 100%;
   background-color: black;
@@ -161,7 +180,6 @@ $rgba-complement-4: rgba( 79, 61, 44,1);
 	position: relative;
 	float: left;
 	width: 100%;
-	background: #fff;
 }
 
 .margin-50 {
@@ -372,8 +390,9 @@ hr {
   height: 500px;
   margin: 1%;
 
-  background-color: rgba(0,0,0,0.12);
+  background-color: rgba(0,0,0,0.1);
   border-radius: 10px;
+  
 	img {
 		padding: 30px;
 		position: relative;

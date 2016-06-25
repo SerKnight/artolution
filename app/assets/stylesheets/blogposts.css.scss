@@ -1,0 +1,44 @@
+
+#about-image-top {
+	padding-top: 5px;
+	padding-bottom: 40px;
+}
+
+.blogpost {
+  position: relative;
+  float: left;
+  margin-bottom: 40px;
+}
+
+#project-categories {
+
+	li {
+		font-size: 16px;
+	}
+}
+
+
+#social-well {
+	a {
+		width: 25%;
+	  float: left;
+	  font-size: 20px;
+	  text-align: center;
+	}
+}
+
+.sidewall-blog-index-active {
+  position: fixed;
+  right: 0;
+  top: 65px;
+}
+
+@media (max-width: 1091px) {
+
+	#project-search {
+		.btn-primary {
+	    margin-top: 10px;
+		}
+	}
+	
+}
