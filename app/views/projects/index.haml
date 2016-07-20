@@ -62,7 +62,7 @@
 
             
         .well.relative
-          %h4 Project Categories
+          %h4 Categories
           .row#project-categories
             .col-lg-12
               %ul.list-unstyled
@@ -87,8 +87,8 @@
     / /.row
   / /.container
 
-  :javascript
-    document.addEventListener("turbolinks:load", function() {
-      $(document).ready(blogPostInit());
-      $(document).on('page:load', blogPostInit());
-    });
+:javascript
+  document.addEventListener("turbolinks:load", function() {
+    $(document).ready(blogPostInit());
+    $(document).on('page:load', blogPostInit());
+  });
