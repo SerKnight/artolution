@@ -42,17 +42,12 @@ a.active {
 .timeline-panel a:hover {
   text-decoration: underline !important;
 }
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  text-transform: uppercase;
-  font-weight: 700;
+.img-circle {
+  height: 100%;
+  border-radius: 50%;
+  padding: 5px;
 }
+
 .img-centered {
   margin: 0 auto;
 }
@@ -84,6 +79,7 @@ h6 {
 .open .dropdown-toggle.btn-primary {
   background-image: none;
 }
+
 .btn-primary.disabled,
 .btn-primary[disabled],
 fieldset[disabled] .btn-primary,
@@ -208,6 +204,7 @@ fieldset[disabled] .btn-xl.active {
   background-color: #fec503;
 }
 @media (min-width: 768px) {
+
   .navbar-default {
     background-color: transparent;
     -webkit-transition: padding 0.3s;
@@ -237,36 +234,45 @@ fieldset[disabled] .btn-xl.active {
 #portfolio .portfolio-item {
   margin: 0 0 15px;
   right: 0;
+  
+  padding: 0;
+
+  background-repeat:no-repeat;
+  background-position: center center;
 }
 #portfolio .portfolio-item .portfolio-link {
   display: block;
   position: relative;
-  max-width: 400px;
+  height: 300px;
   margin: 0 auto;
 }
 #portfolio .portfolio-item .portfolio-link .portfolio-hover {
-  background: rgba(254, 209, 54, 0.9);
+  background: rgba(0,0,0,0.75);
   position: absolute;
-  width: 100%;
-  height: 100%;
   opacity: 0;
   transition: all ease 0.5s;
   -webkit-transition: all ease 0.5s;
   -moz-transition: all ease 0.5s;
-
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
 }
 .hover-copy {
   font-size: 18px;
   text-align: center;
-  padding: 36px;
-  color: rgba(0,0,0,0.8);
+  padding: 20px;
+  color: #fff;
+  opacity: 0.8;
   font-family: helvetica;
+  color: #fff;
   text-shadow: 1px 2px 0px rgba(0,0,0,0.2);
 }
 
 #portfolio .portfolio-item .portfolio-link .portfolio-hover:hover {
   opacity: 1;
 }
+
 #portfolio .portfolio-item .portfolio-link .portfolio-hover .portfolio-hover-content {
   position: absolute;
   width: 100%;
@@ -286,16 +292,23 @@ fieldset[disabled] .btn-xl.active {
   margin: 0;
 }
 #portfolio .portfolio-item .portfolio-caption {
-  max-width: 400px;
   margin: 0 auto;
-  background-color: white;
+  background-color: rgba(255,255,255, 0.7);
   text-align: center;
   padding: 25px;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
 }
 #portfolio .portfolio-item .portfolio-caption h4 {
   text-transform: none;
   margin: 0;
+  font-size: 20px;
+  color: rgba(0,0,0,0.8);
+  letter-spacing: 3px;
+  font-family: Impact, Charcoal, sans-serif;
 }
+
 #portfolio .portfolio-item .portfolio-caption p {
   font-family: "Droid Serif", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-style: italic;
@@ -403,6 +416,12 @@ fieldset[disabled] .btn-xl.active {
 .timeline .timeline-heading h4.subheading {
   text-transform: none;
 }
+
+.timeline-title {
+  font-size: 30px;
+  opacity: 0.7;
+}
+
 .timeline .timeline-body > p,
 .timeline .timeline-body > ul {
   margin-bottom: 0;
@@ -467,9 +486,9 @@ fieldset[disabled] .btn-xl.active {
     padding: 0 20px 20px 100px;
   }
   .timeline > li .timeline-image {
-    width: 170px;
-    height: 170px;
-    margin-left: -85px;
+    width: 200px;
+    height: 200px;
+    margin-left: -100px;
   }
   .timeline > li .timeline-image h4 {
     margin-top: 40px;

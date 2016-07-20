@@ -37,53 +37,39 @@
       .col-md-12
         .col-md-8.col-md-offset-2
           %h4{style: 'margin: 35px;'}
-            We give individuals a chance to have their voices heard.
+            We give voice through art
       .col-md-6.col-md-offset-3
-        %p.text-muted 
+        %p
           Our projects bring together children, youth, families, artists, educators and community groups that promote reconciliation, healing and community empowerment. Our founding objective is to alleviate critical issues related to:
-          %br
-          %strong
-            - @categories.each_with_index do |cat, i|
-              - if i == 0 || i == @categories.count
-                = cat.name
-              - else
-                = " - #{cat.name} - "
   
 
 
 
-.relative#portfolio.whitesmoke-bg.padding-25
+.relative#portfolio.whitesmoke-bg.padding-50
   .container
     .row
-      .col-lg-12.text-center
-        %h1.margin-50
-          Project Categories
-    .row
-      - @categories.each do |category|
-        .col-md-3.col-sm-6.portfolio-item
-          %a.portfolio-link{"data-toggle" => "modal", :href => category_path(category)}
-            .portfolio-hover
-              .hover-copy
-                %h4= category.description
-            %img.img-responsive{:alt => "", :src => asset_url(category.image(:medium))}
-            .portfolio-caption
-              %h4= category.name
+      .col-lg-12.text-left
+        .section-heading
+          Our Artistc Pathways
+    
+  .container
+    - @categories.each do |category|
+      .col-md-4.portfolio-item{:style => %Q{background-image: url( #{image_path "#{asset_url(category.image(:medium))}"})}}
+        %a.portfolio-link{"data-toggle" => "modal", :href => category_path(category)}
+          .portfolio-hover
+            .hover-copy
+              = category.description
+          .portfolio-caption
+            %h4= category.name
 
-      
+    
 
 
 
 / About Section
-.relative
+.relative.padding-50
   #about.padding-25
     .container
-      .row
-        .col-lg-12.text-center
-          %h1 
-            Our Process
-
-      %br
-      %br
       .row
         .col-lg-12
           %ul.timeline
@@ -92,46 +78,54 @@
                 %img.img-circle.img-responsive{:alt => "", :src => asset_url("timeline/t-1.jpg")}
               .timeline-panel
                 .timeline-heading
-                  %h3 Project Conception
+                  .timeline-title Project Conception
+                  %strong
+                    %h3
+                      %a{href: '/contact'}
+                        %i.fa.fa-caret-square-o-right{"aria-hidden" => "true"}
+                        Propose a Project
+                  %hr
                 .timeline-body
                   %p.text-muted 
                     Ideas come from all over: local artists, NGOs, community centers, government agencies, & schools. We dream big and work hard to complete them.
-                  %h2
-                    %strong
-                      %a{href: '/contact'} Propose a Project
 
             %li.timeline-inverted
               .timeline-image
                 %img.img-circle.img-responsive{:alt => "", :src => asset_url("timeline/t-5.jpg")}
               .timeline-panel
                 .timeline-heading
-                  %h3 Team & Logistics
+                  .timeline-title Team & Logistics
+                  %hr
                 .timeline-body
                   %p.text-muted We work with over 120 professional artists, and have completed projects with the UN, UNICEF, Mercy Corps, and Embassies around the globe.
-                  %h2
-                    %strong
-                      %a{href: '/team'} Become a Partner
+                  %strong
+                    %h3
+                      %a{href: '/team'} 
+                        %i.fa.fa-caret-square-o-right{"aria-hidden" => "true"}
+                        Become a Partner
 
             %li
               .timeline-image
                 %img.img-circle.img-responsive{:alt => "", :src => asset_url("timeline/t-3.jpg")}
               .timeline-panel
                 .timeline-heading
-                  %h3 Project Completion
+                  .timeline-title Project Completion
+                  %hr
                 .timeline-body
                   %p.text-muted From Brooklyn street art with youth centers, to week long mural workshops in refugee camps, our network of project participants is diverse and strong.
-                  %h2
-                    %strong
-                      %a{href: '/projects'} Explore Projects
+                  %strong
+                    %h3
+                      %a{href: '/projects'}
+                        %i.fa.fa-caret-square-o-right{"aria-hidden" => "true"}
+                        Explore Projects
 
 
 .relative.whitesmoke-bg.padding-50
   .container
     .row
-      .col-lg-12.text-center
-        %h1
-          Recent Projects
-    %hr
+      .col-lg-12.text-left
+        .section-heading
+          Our Projects
     .row
       .col-lg-12
         #middle-section.relative
@@ -140,11 +134,10 @@
             - @projects.each do |project|
               / %a.gallery-image{href: project_path(project), "data-gallery" => ""}
               %a{href: project_path(project)}
-                .grid-project-wrapper.col.col-md-4
-                  %img{src: project.hero(:medium) }
+                .grid-project-wrapper{style: %Q{background-image: url( #{image_path "#{asset_url(project.hero(:medium))}"})}}
                   .project-copy
-                    %h1= project.title
-                    .project-copy= "#{project.body[0..200]}..."
+                    = project.title
+                    
             
 
       #blueimp-gallery.blueimp-gallery.blueimp-gallery-controls{"data-use-bootstrap-modal" => "false"}
@@ -175,24 +168,24 @@
 
 
 / Team Section
-.relative#team.padding-50
-  .container
-    .row
-      .col-lg-12.text-center
-        %h1 
-          Founders
-    .row
-      .col-md-6
-        .team-member.padding-25
-          %img.img-responsive.img-circle.padding-25{:alt => "", :src => asset_url("team/joel.jpg")}
-          %h4 Joel Bergner: Executive Director
-          %p.text-muted Joel is an artist, educator and organizer of public arts-based social action. He creates elaborate murals that explore social topics and reflect a wide array of artistic influences.
+/ .relative#team.padding-50
+/   .container
+/     .row
+/       .col-lg-12.text-center
+/         %h1 
+/           Founders
+/     .row
+/       .col-md-6
+/         .team-member.padding-25
+/           %img.img-responsive.img-circle.padding-25{:alt => "", :src => asset_url("team/joel.jpg")}
+/           %h4 Joel Bergner: Executive Director
+/           %p.text-muted Joel is an artist, educator and organizer of public arts-based social action. He creates elaborate murals that explore social topics and reflect a wide array of artistic influences.
           
-      .col-md-6
-        .team-member.padding-25
-          %img.img-responsive.img-circle.padding-25{:alt => "", :src => asset_url("team/max.jpg")}
-          %h4 Max Levi Frieder: Founding Director
-          %p.text-muted Max's work ranges from community building in refugee crisis, hospital workshops, abuse and addiction counseling through art, creative facilitation and conflict resolution. His projects have taken him to every single continent over the past 5 years.
+/       .col-md-6
+/         .team-member.padding-25
+/           %img.img-responsive.img-circle.padding-25{:alt => "", :src => asset_url("team/max.jpg")}
+/           %h4 Max Levi Frieder: Founding Director
+/           %p.text-muted Max's work ranges from community building in refugee crisis, hospital workshops, abuse and addiction counseling through art, creative facilitation and conflict resolution. His projects have taken him to every single continent over the past 5 years.
           
           
 / Clients Aside
