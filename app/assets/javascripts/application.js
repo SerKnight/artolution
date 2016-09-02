@@ -18,6 +18,7 @@
 //= require grizdy-1.1.min.js
 //= require extra.slider.min.js
 //= require jquery.blueimp-gallery.min
+//= require dropzone
 //= require_tree .
 
 /* Modernizr 2.8.3 (Custom Build) | MIT & BSD

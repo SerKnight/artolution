@@ -21,7 +21,8 @@ gem 'ransack'
 gem 'figaro'
 gem 'font-awesome-rails'
 gem 'rails_admin'
-gem "paperclip", "~> 5.0.0.beta1"
+gem 'rails_admin_dropzone'
+gem "paperclip", "~> 5.0.0"
 gem 'aws-sdk'
 gem 'devise'
 
@@ -57,3 +58,4 @@ group :production do
 end
 
 gem 'mail_form'
+# implement ^

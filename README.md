@@ -48,3 +48,6 @@ Credits
 
 License
 -------
+
+
+http://www.powpark.com/blog/programming/2013/10/16/multiple-file-upload-with-html5-and-rails-admin

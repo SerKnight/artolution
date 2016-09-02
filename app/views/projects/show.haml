@@ -82,6 +82,13 @@
         %a{href: 'https://www.linkedin.com/in/max-levi-frieder-72649038', target: '_blank'}
           %i.fa.fa-linkedin{"aria-hidden" => "true"} 
 
+      .well#gallery-well.relative
+        #grizzly-wrapper.gridzy.gridzyClassic.gridzyLightProgressIndicator.gridzyAnimated
+        = @project.gallery_images.each do |img|
+          .img-fluid.img-thumbnail
+            .grid-project-wrapper{style: %Q{background-image: url( #{image_path "#{asset_url(img.image(:thumb))}"})}}
+
+          
 
 :javascript
   document.addEventListener("turbolinks:load", function() {

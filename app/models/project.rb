@@ -8,8 +8,9 @@ class Project < ActiveRecord::Base
 	has_attached_file :hero, styles: { large: "1280x1024>", medium: "650x650" }
   validates_attachment_content_type :hero, content_type: /\Aimage\/.*\Z/
 
+  # Method
+  def create_associated_image(image)
+    gallery_images.create(image: image)
+  end
 
-  
-
-  #attr_accessor :delete_asset
 end
