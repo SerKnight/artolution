@@ -83,15 +83,25 @@
           %i.fa.fa-linkedin{"aria-hidden" => "true"} 
 
       .well#gallery-well.relative
-        #grizzly-wrapper.gridzy.gridzyClassic.gridzyLightProgressIndicator.gridzyAnimated
-        = @project.gallery_images.each do |img|
-          .img-fluid.img-thumbnail
-            .grid-project-wrapper{style: %Q{background-image: url( #{image_path "#{asset_url(img.image(:thumb))}"})}}
-
-          
-
+        / #grizzly-wrapper.gridzy.gridzyClassic.gridzyLightProgressIndicator.gridzyAnimated
+        #example03.gridzyExampleContainer
+          %h2 Combined with Lightboxes
+          .colLeft
+            %h3 Combined with PhotoSwipe
+            .gridzy.gridzyExample.gridzyClassic.gridzyAnimated{"data-options" => "{\"onOptionsChanged\": \"initializePhotoSwipeForGridzy\"}"}
+              - @project.gallery_images.each do |img|
+                %img{:alt => "", :src => asset_url(img.image(:thumb))}
+                
+           
+      
 :javascript
   document.addEventListener("turbolinks:load", function() {
     $(document).ready(blogPostInit());
     $(document).on('page:load', blogPostInit());
+
+    $('.gridzy').gridzy({
+      // options go here
+      // as an example, space between elements is set to 5 pixel.
+      spaceBetweenElements: 5
+    });
   });
