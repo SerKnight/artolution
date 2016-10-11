@@ -5,13 +5,16 @@
     %meta{:name => "viewport", :content => "width=device-width, initial-scale=1.0"}
     %title= content_for?(:title) ? yield(:title) : 'Solution'
     %meta{:name => "description", :content => "#{content_for?(:description) ? yield(:description) : 'Solution'}"}
-    %link{:href => "https://fonts.googleapis.com/css?family=Montserrat:400,700", :rel => "stylesheet", :type => "text/css"}/
-    %link{:href => "https://fonts.googleapis.com/css?family=Kaushan+Script", :rel => "stylesheet", :type => "text/css"}/
-    %link{:href => "https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic", :rel => "stylesheet", :type => "text/css"}
-    %link{:href => "https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700", :rel => "stylesheet", :type => "text/css"}/
-    %script{:src => "https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"}
-    %script{:src => "https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"}
+
+    %link{:href => "https://fonts.googleapis.com/css?family=Roboto:300,500", :rel => "stylesheet", :type => "text/css"}/
+
+
+
+    / %script{:src => "https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"}
+    / %script{:src => "https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"}
     %script{:src => "https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"}
+
+    %script{:src => "https://fonts.googleapis.com/css?family=Roboto"}
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
     = javascript_include_tag 'application', 'data-turbolinks-track' => true
     = csrf_meta_tags

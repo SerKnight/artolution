@@ -41,16 +41,24 @@
       .col-md-6.col-md-offset-3
         %p
           Our projects bring together children, youth, families, artists, educators and community groups that promote reconciliation, healing and community empowerment. Our founding objective is to alleviate critical issues related to:
+
+      %h1 Instagram Lookup
+      - @popular.each do |popular|
+        .col-sm-12.col-md-4
+          .thumbnail
+            = image_tag popular.images.low_resolution.url
+            .caption
+              = popular.user.username
   
 
 
 
 .relative#portfolio.whitesmoke-bg.padding-50
-  .container
-    .row
-      .col-lg-12.text-left
-        .section-heading
-          Our Artistc Pathways
+  / .container
+  /   .row
+  /     .col-lg-12.text-left
+  /       .section-heading
+  /         Our Artistc Pathways
     
   .container
     - @categories.each do |category|
@@ -125,7 +133,7 @@
     .row
       .col-lg-12.text-left
         .section-heading
-          Our Projects
+          Recent Projects
     .row
       .col-lg-12
         #middle-section.relative

@@ -6,8 +6,9 @@
 
 body {
   overflow-x: hidden;
-  font-family: "Roboto Slab", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: 'Roboto', sans-serif;
 }
+
 .text-muted {
   color: #777777;
 }
@@ -234,9 +235,8 @@ fieldset[disabled] .btn-xl.active {
 #portfolio .portfolio-item {
   margin: 0 0 15px;
   right: 0;
-  
   padding: 0;
-
+  background-size: cover;
   background-repeat:no-repeat;
   background-position: center center;
 }
@@ -247,7 +247,7 @@ fieldset[disabled] .btn-xl.active {
   margin: 0 auto;
 }
 #portfolio .portfolio-item .portfolio-link .portfolio-hover {
-  background: rgba(0,0,0,0.75);
+  background: rgba(255,255,255, 0.75);
   position: absolute;
   opacity: 0;
   transition: all ease 0.5s;
@@ -262,10 +262,14 @@ fieldset[disabled] .btn-xl.active {
   font-size: 18px;
   text-align: center;
   padding: 20px;
+  padding-top: 40px;
   color: #fff;
   opacity: 0.8;
+  width: 75%;
+  margin: 0 auto;
   font-family: helvetica;
-  color: #fff;
+  color: #000;
+  font-family: "Droid Serif", "Helvetica Neue", Helvetica, Arial, sans-serif;
   text-shadow: 1px 2px 0px rgba(0,0,0,0.2);
 }
 
@@ -303,10 +307,11 @@ fieldset[disabled] .btn-xl.active {
 #portfolio .portfolio-item .portfolio-caption h4 {
   text-transform: none;
   margin: 0;
-  font-size: 20px;
+  font-size: 22px;
   color: rgba(0,0,0,0.8);
   letter-spacing: 3px;
-  font-family: Impact, Charcoal, sans-serif;
+  /*font-family: Impact, Charcoal, sans-serif;*/
+  font-family: "Droid Serif", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 #portfolio .portfolio-item .portfolio-caption p {

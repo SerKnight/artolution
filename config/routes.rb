@@ -12,5 +12,9 @@ Rails.application.routes.draw do
   get '/contact', to: 'application#contact'
   get '/get-involved', to: 'application#contact'
 
+  get '/insta-auth', to: 'application#insta_auth'
+
+  get '/insta-callback', to: 'application#insta_callback'
+
   root to: 'visitors#homepage'
 end

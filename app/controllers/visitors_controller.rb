@@ -1,7 +1,7 @@
 class VisitorsController < ApplicationController
 
   def homepage
-
+    @popular = Instagram.media_popular
     @projects = Project.all
     @visitor = Visitor.new
     @categories = Category.all

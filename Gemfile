@@ -59,3 +59,4 @@ end
 
 gem 'mail_form'
 # implement ^
+gem "instagram"
