@@ -1,0 +1,9 @@
+.relative
+  - @project.gallery_images.each do |gi| 
+    .col-md-6
+      %div.capability{:itemscope => "", :itemtype => "http://schema.org/Product"}
+        %img.cap-img{style: "background-image: url(#{gi.image});", :src => gi.image, :itemprop => "image"}
+        / .title{:itemprop => "name"}
+        /   = capability['name']
+        / .description{:itemprop => "description"}
+        /   = capability['description'].html_safe

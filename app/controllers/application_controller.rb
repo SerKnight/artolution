@@ -5,6 +5,14 @@ class ApplicationController < ActionController::Base
 
   before_filter :get_categories
 
+  def allowed_user(current_user)
+    if current_user && current_user.email == 'chrisknight.mail@gmail.com'
+      return true
+    else
+      return false
+    end
+  end
+
   def get_categories
   	# @categories_struct = []
   	# Category.all.each do |cat|
@@ -26,32 +34,4 @@ class ApplicationController < ActionController::Base
 
   def team
   end
-
-  CALLBACK_URL = "http://localhost:3000/insta-callback"
-
-
-  before_filter :insta_auth
-
-  def insta_callback
-    -fail    
-  end
-
-  def insta_auth
-
-    # redirect_to "https://api.instagram.com/oauth/authorize/?client_id=6f5e6040a9524eafbec47225c9493a8d&redirect_uri=http://localhost:3000/insta-callback&response_type=code"
-    # require "net/http"
-    # require "uri"
-
-    # hashtag = 'tits'
-    # uri = URI.parse("https://api.instagram.com/v1/tags/#{hashtag}/media/recent?client_id=6f5e6040a9524eafbec47225c9493a8d}")
-    # response = Net::HTTP.get_response(uri)
-    # Net::HTTP.get_print(uri)
-
-    # # Full
-    # http = Net::HTTP.new(uri.host, uri.port)
-    # response = http.request(Net::HTTP::Get.new(uri.request_uri))
-    
-
-  end
-
 end

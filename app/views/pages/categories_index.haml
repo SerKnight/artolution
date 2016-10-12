@@ -1,0 +1,55 @@
+- meta title: "Artolution - #{@categories.map{|c|c.name}}", keywords: %{Global Community Art Projects}, description: "Art.", rel: { publisher: "https://plus.google.com/102047419752906667083/about" }, og: { title: "Art.", type: 'website', url: 'http://artolution.org/', image: asset_url('dj-power-og.png'), description: "Art.", site_name: "Art." }, twitter: { card: 'summary', site: '@Art.', title: "Art.", description: "Art.", image: { src: asset_url('main-twitter-card.png')}, domain: 'https://artolution.org' }
+// Schema.org stuff
+
+
+%meta{:content => "Hire DJ, Musicians, and plan Event Services", :itemprop => "name"}
+/ %meta{:content => "We tap the power of music to drive sales, engage customers, and increase brand awareness. Contact us to get started with your event.", :itemprop => "description"}
+
+
+= render partial: 'elements/hero'
+.relative= render partial: 'about_us'
+.relative= render partial: 'contact_us'
+.relative= render partial: 'services_list'
+.relative= render partial: 'talent_network'
+.relative= render partial: 'testimonials'
+.relative= render partial: 'client_list'
+.services-container.relative
+  .col.col-md-12.text-center
+    .service-brick.contact-brick
+      .contact-title
+        .contact-brick-title
+          HAVE A QUESTION FOR US?
+
+        %br
+
+        %a{href: '/contact'}
+          .btn
+            CONTACT US
+
+        / %br
+        / .btn.btn-alternate
+        /   DOWNLOAD PRICING
+
+        
+
+
+/ .relative
+/   #contact-us-container.text-center
+/     #contact-us.bg-2
+/       .contact-title
+/         %h3
+/           READY TO GET STARTED ON YOUR EVENT?
+/         %a{href: '/contact'}
+/           .btn
+/             CONTACT US
+
+
+- if request.path == "/services"
+  :javascript
+    var total = 0;
+    total +=  $('.hero-image-banner').height();
+    total += $('#about-us-container').parent().height();
+    total +=  $('#contact-us-container').height();
+    
+    TweenLite.to(window, 1.2, {scrollTo:{y: total - 19, x:0}, ease:Power2.easeOut});
+

@@ -1,0 +1,18 @@
+.hero-container
+  .hero-image-banner{style: "background-image: url(#{@category.image(:large)}); cover"}
+
+  .hero-copy-container
+    .hero-copy-wrapper.col-md-10.col-md-offset-2.text-left
+      .hero-headline
+        = @category.name
+      %h1
+        = @category.description
+    .col-md-8.col-md-offset-2.text-left.mobile-hide
+      .service-headline= @category.body
+
+
+
+  / - if @category.video_url
+  /   .play-hero-vid
+  /     = image_tag asset_url('icons/play.png'), class: 'youtube-video', "data-target" => "#video-modal", "data-toggle" => "modal", 'data-youtube-src' => hero['video_url']
+

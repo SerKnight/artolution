@@ -1,0 +1,87 @@
+%link{:href => "//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css", :rel => "stylesheet"}/
+.col-md-10.col-md-offset-1
+  .contact-form-padding
+    = form_for :contact, url: '/', method: "post", remote: true do |f|
+      .col-md-10.col-md-offset-1
+        .form-title GENERAL INFO
+        .contact-error.text-center.relative
+
+
+        .form-group
+          .col-md-12.no-padding
+            .col-md-6
+              %input.form-control{:placeholder => "Name *", :type => "text", required: 'true', name: 'contact[name]'}
+            .col-md-6
+              %input.form-control{:placeholder => "Email *", :type => "email", required: 'true', name: 'contact[email]'}
+            
+          .col-md-12.no-padding
+            .col-md-4
+              %input.form-control{:placeholder => "Company", :type => "text", name: 'contact[company]'}
+              
+            .col-md-4
+              %input.form-control{:placeholder => "Phone", :type => "tel", name: 'contact[phone]'}
+
+            .col-md-4
+              %select.form-control{name: 'contact[event_type]'}
+                %option{:disabled => "disabled", :selected => "selected", :value => ""} Event Type *
+                    
+                %option{:selected => false, value: 'hello'} Hello
+                %option Other
+
+
+        
+      .relative
+        .col-md-4.col-md-offset-4#adntl-info-toggle.text-center
+          .fa.fa-plus-circle
+          Additional Details
+
+      .relative
+        .col-md-10.col-md-offset-1#adntl-info-form
+          .form-title EVENT INFO
+
+          .col-md-6.no-padding
+            .col-md-12
+              %input.form-control#datepicker{:type => "text", placeholder: "Pick your Date:", style: 'cursor: pointer;', name: 'contact[event_date]'}
+                
+            .col-md-12
+              %select.form-control{name: 'contact[event_time]'}
+                %option{:disabled => "disabled", :selected => "selected", :value => ""} Timeframe
+                %option Morning
+                %option Afternoon
+                %option Night
+                %option All Day
+                %option Multi-Day
+            .col-md-12
+              %input.form-control#geocomplete{:placeholder => "Event Location", :type => "text", name: 'contact[event_location]'}
+
+          .col-md-6
+            #details-before
+              %textarea.form-control{:placeholder => "Event Details", :type => "text", name: 'contact[event_details]', id: 'details-text'}
+            .col-md-6.no-padding.mobile-hide#map-container
+              .map-div
+                .map_canvas
+          
+
+        .col-md-12.text-center.thanks-wrapper
+          .thanks-for-contact
+            We look forward to working with you to solve your DJ, Musician, & event needs.
+
+      .relative#contact-sumbit-button.col-md-12.text-center{style: 'margin-top: 30px;'}
+        .press
+          %button{type: "submit"} SUBMIT
+        / .btn
+        /   SUBMIT
+
+
+
+:javascript
+
+  $(document).ready(contactReady);
+  $(document).on('page:load', contactReady);
+
+  function contactReady(){
+    contactInit();
+  }
+
+
+

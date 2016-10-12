@@ -1,65 +1,66 @@
 !!!
 %html
   %head
-  %meta{:charset => "utf-8"}
-    %meta{:name => "viewport", :content => "width=device-width, initial-scale=1.0"}
-    %title= content_for?(:title) ? yield(:title) : 'Solution'
-    %meta{:name => "description", :content => "#{content_for?(:description) ? yield(:description) : 'Solution'}"}
+    = metamagic
+    %script{:type => "application/ld+json"}
+      :cdata
+        { "@context" : "http://schema.org/", 
+          "@type" : "Organization",
+          "name" : "Artolution",
+          "alternateName" : "The Artolution", 
+          "url" : "https://artolution.org",
+          "description" : "Artolution Rocks",
+          "sameAs" : [
+            "https://www.facebook.com/artolution",
+            "https://twitter.com/artolution",
+            "https://plus.google.com/102047419752906667083/about",
+            "https://plus.google.com/+artolutionMusic/about",
+            "https://www.instagram.com/artolution/",
+            "https://www.linkedin.com/company/scratch-events",
+            "https://www.youtube.com/user/artolutionUS",
+            "https://www.pinterest.com/artolution/"
+          ]
+        }
 
-    %link{:href => "https://fonts.googleapis.com/css?family=Roboto:300,500", :rel => "stylesheet", :type => "text/css"}/
+    :javascript
+      / var _gaq = _gaq || [];
+      / _gaq.push(['_setAccount', 'UA-10018007-4']);
+      / //_gaq.push(['_trackPageview']);
 
+      / (function() {
+      /   var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      /   ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      /   var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      / })();
 
-
-    / %script{:src => "https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"}
-    / %script{:src => "https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"}
-    %script{:src => "https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"}
-
-    %script{:src => "https://fonts.googleapis.com/css?family=Roboto"}
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
     = javascript_include_tag 'application', 'data-turbolinks-track' => true
+
     = csrf_meta_tags
+    = favicon_link_tag 'favicon.ico'
+
+    %meta{:property => "fb:app_id", :content => "407112402792308"}
+    %meta{:content => "width=device-width, initial-scale=1.0", :name => "viewport"}
+    %link{:href => "https://events.scratch.com/", :rel => "canonical"}
+    %script{:src => "https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"}
+    %script{:src => "https://maps.googleapis.com/maps/api/js?sensor=false&libraries=places"}
+    %script{:src => "https://cdn.smooch.io/smooch.min.js"}
 
   %body
-    .flash-notice
-      %p.notice= notice
-      %p.alert= alert
+    / - if ENV["PRODUCTION_SITE"] == "true"
+    /   :javascript
+    /     _gaq.push(['_trackPageview']);
 
-    %body#page-top.index
-      %nav.navbar.navbar-default.navbar-fixed-top
-        .container#header-container
-          .navbar-header.page-scroll
-            %button.navbar-toggle{"data-target" => "#bs-example-navbar-collapse-1", "data-toggle" => "collapse", :type => "button"}
-              %span.sr-only Toggle navigation
-              %span.icon-bar
-              %span.icon-bar
-              %span.icon-bar
-            %a.navbar-brand{:href => "/"} Artolution
+    #loader-overlay
+      .fa.fa-spinner.fa-spin
 
-          #bs-example-navbar-collapse-1.collapse.navbar-collapse.header-elements
-            %ul.nav.navbar-nav.navbar-right
-              %li.hidden
-                %a{:href => "#page-top"}
-              %li
-                %a.page-scroll{:href => "/about"} About Us
-              %li
-                %a.page-scroll{:href => "/projects"} Projects
-              %li
-                %a.page-scroll{:href => "/partners"} Partners
-              %li
-                %a.page-scroll{:href => "/team"} Team
-              %li
-                %a.page-scroll{:href => "/contact"} Contact
-              %li
-                %a.page-scroll{:href => "https://artolutionorg.simpledonation.com/"} Donate
-          
-      = yield
-      #video-container
-        #video-modal.modal.fade{"aria-labelledby" => "video-modalLabel", :role => "dialog", :tabindex => "-1"}
-          .modal-dialog{:role => "document", style: 'width: 853px;'}
-            .modal-body
+    #video-container
+      = render partial: 'elements/video_player'
+    = render partial: 'elements/lightbox'
 
-        #close-video
-          .bar.short-bar
-          .bar.long-bar
-          .bar.short-bar
-
+    #navigation-container= render partial: "elements/navbar"
+    / = flash_messages
+    / wtf
+    = yield
+    #footer-container= render partial: "elements/footer"
+    

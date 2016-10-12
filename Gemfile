@@ -8,13 +8,9 @@ gem 'turbolinks', '~> 5.0.0.beta'
 gem 'jbuilder', '~> 2.0'
 
 gem 'bootstrap-sass'
-gem 'gibbon'
 gem 'haml-rails'
-gem 'high_voltage'
 gem 'pg'
 gem 'puma'
-gem 'simple_form'
-gem 'sucker_punch'
 gem 'ransack'
 # gem 'will_paginate', github: 'jonatack/will_paginate'
 
@@ -58,5 +54,8 @@ group :production do
 end
 
 gem 'mail_form'
-# implement ^
-gem "instagram"
+# ^ implement
+
+gem 'httparty'
+gem 'sitemap_generator'
+gem 'metamagic'

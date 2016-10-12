@@ -1,0 +1,126 @@
+@import "declares";
+
+#about-page-container {
+
+	h2 {
+		font-size: 48px;
+		font-family: 'brandon-bold';
+		margin-top: 0px;
+    margin-bottom: 0px;
+	}
+
+
+  #about-us-content-wrapper {
+  	margin-top: 25px; 
+  	margin-bottom: 25px;
+
+    .text-block {
+      padding: 5px;
+    }
+  }
+
+  span {
+  	color: $brand_primary;
+  }
+
+  .about-scratch-img {
+    float: left;
+    max-width: 100%;
+    max-height: 350px;
+    padding: 15px;
+  }
+
+  #team-container {
+    position: relative;
+    float: left;
+    width: 100%;
+    background: $black;
+
+
+    .team-member-background {
+      position: absolute;
+      background: #000;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      opacity: 0.55;
+    }
+
+    .team-member {
+      float:left;
+      cursor: pointer;
+      position: relative;
+      width: 20%;
+      padding-bottom : 20%;
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-size: cover; /* you change this to "contain" if you don't want the images to be cropped */
+      text-shadow: -1px -1px #000;
+
+      .member-copy {
+        position: absolute;
+        bottom: 10%;
+        width: 80%;
+        margin-left: 10%; 
+        color: $light-gray;
+        opacity: 0.75;
+
+        .name {
+          text-transform: uppercase;
+          font-family: 'brandon-regular';
+          letter-spacing: 1px;
+          font-size: 1em;
+        }
+
+        .title {
+          font-family: 'brandon-light';
+          font-size: 0.75em;
+          letter-spacing: 1px;
+        }
+
+        .quote {
+          visibility: hidden;
+          width: 100%;
+          font-family: 'brandon-light';
+
+          .hr-short {
+            border-bottom: 3px solid #fff;
+            width: 150px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+
+  #about-page-container #team-container .team-member {
+    width: 50%;
+    padding-bottom : 50%;
+
+    .member-copy {
+      font-size: 75%;
+    }
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  #about-page-container #team-container .team-member {
+    width: 100%;
+    padding-bottom : 100%;
+  }
+
+}
+
+@media only screen and (max-width: 1400px) {
+	
+	#about-page-container {
+
+		h2 {
+      font-size: 2em;
+      text-align: center;
+		}
+	}	
+}

@@ -1,0 +1,304 @@
+@import "declares";
+
+
+/* ********************************  About Us ********************************  */
+#about-us-container {
+	padding-bottom: 100px;
+
+}
+
+
+/* ********************************  Contact Us ********************************  */
+
+.contact-small {
+	height: 250px !important;
+}
+
+#contact-us-container {
+	background-color: $black;
+	height: 357px;
+
+	#contact-us-bg {
+		height: 357px;
+    position: relative;
+    left: 0px;
+    top: 0px;
+    z-index: 0;
+    width: 100%;
+    opacity: 0.4;
+	}
+
+	#contact-us {
+		z-index: 2;
+		position: relative;
+		width: 100%;
+		height: 357px;
+	}
+
+	#contact-us:after {
+		content: "";
+		background: asset_url('backgrounds/contact_us_banner.jpg') no-repeat center center;
+		background-size: cover;
+		-webkit-background-size: cover;
+		-moz-background-size: cover;
+		background-size: cover;
+		-o-background-size: cover;
+		
+		top: 0;
+		left: 0;
+		bottom: 0;
+		right: 0;
+		position: absolute;
+		z-index: -1;
+    opacity: 0.4;
+	}
+	.bg-2:after {
+		background-image: asset_url('backgrounds/djdj.jpg') !important;
+	}
+
+	.contact-title {
+		padding-top: 75px;
+		width: 80%;
+		margin: 0 auto;
+
+		h3 {
+			margin-bottom: 20px;
+		}
+	}
+}
+
+
+/* ********************************  Service List ********************************  */
+
+.services-header {
+	border-bottom: none;
+	padding-top: 100px;
+	padding-bottom: 90px;
+	width: 50%;
+	margin: 0 auto;
+}
+
+.services-container {
+	background-color: $black;
+	margin: 0 auto;
+	
+	.col {
+		height: 300px;
+	}
+
+	.service-brick {
+		height: 300px;
+		opacity: 0.3;
+		-webkit-background-size: cover;
+	  -moz-background-size: cover;
+	  -o-background-size: cover;
+	  background-size: cover;
+		background-repeat: no-repeat;
+
+		transition: opacity 1s ease-out;
+	  -moz-transition: opacity 1s ease-out;
+	  -webkit-transition: opacity 1s ease-out;
+	  -o-transition: opacity 1s ease-out;
+	}
+	.service-brick:hover {
+		opacity: 0.7;
+	}
+
+	.contact-brick-copy {
+		margin-bottom: 20px;
+	}
+
+	.brick-title {
+		position: absolute;
+    width: 100%;
+    color: #fff;
+    top: 30%;
+    font-size: 1.65em;
+    font-family: 'brandon-bold';
+    letter-spacing: 2px;
+		pointer-events: none;
+    text-shadow: 0px 0px 5px #000;
+	}
+
+	.brick-copy {
+		position: absolute;
+		width: 50%;
+		color: #fff;
+		top: 50%;
+		font-family: 'minion-italic';
+		font-size: 17px;
+		letter-spacing: 2px;
+		z-index: 1;
+		pointer-events: none;
+		margin-left: 25%;
+		text-shadow: -1px -1px 5px #000;
+	}
+
+	.contact-brick {
+		background-color: #fff;
+    margin: 0 auto;
+    opacity: 1;
+
+    a:hover {
+    	text-decoration: none;
+    }
+
+
+		&:hover {
+			opacity: 1;
+		}
+
+		.contact-brick-title {
+			font-size: 2em;
+			letter-spacing: 2px;
+			font-family: 'brandon-bold';
+			color: $black;
+			opacity: 0.8;
+		}
+
+		.contact-title {
+			padding-top: 100px;
+		}
+	}
+}
+
+/* ********************************  Testimonals ********************************  */
+
+.testimonial {
+	margin-top: 50px;
+	margin-bottom: 50px;
+
+  img {
+    margin: 0 auto;
+    
+  }
+
+  .client {
+    font-size: 16px;
+    font-family: 'brandon-light';
+    color: #4a4a4a;
+    margin-top: 20px;
+  }
+ .quote {
+    font-size: 16px;
+    font-family: 'minion-italic';
+    color: #4a4a4a;
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 20px;
+    min-height: 120px;
+    line-height: 30px;
+  }
+}
+
+/* ********************************  Talent Network ********************************  */
+
+#talent-network-container	{
+	overflow: hidden;
+	background-color: #000;
+  height: 450px;
+  z-index: 10;
+
+	.toggle-box {
+		float: left;
+		width: 50%;
+		height: 100%;
+	}
+
+	.talent-copy {
+		position: relative;
+		font-family: 'brandon-light';
+		color: #fff;
+		top: 38%;
+		font-size: 28px;
+		letter-spacing: 2px;
+		width: 70%;
+		text-align: center;
+		display: none;
+		opacity: 0;
+	}
+
+	.talent-left {
+		left: 7.5%;
+		float: left;
+	}
+	.talent-right {
+		right: 7.5%;
+		float: right;
+	}
+
+	#map {
+		content: "";
+		background-size: cover;
+		-webkit-background-size: cover;
+		-moz-background-size: cover;
+		background-size: cover;
+		-o-background-size: cover;
+		position: absolute;
+		z-index: 100;
+		opacity: 0.65;
+		height: 100%;
+		background: asset_url('backgrounds/wordcloud.jpg') no-repeat right;
+    width: 75%;
+    left: -25%;
+    background-size: 86%;
+	}
+
+	#faces {
+		content: "";
+		background-size: cover;
+		-webkit-background-size: cover;
+		-moz-background-size: cover;
+		background-size: cover;
+		-o-background-size: cover;
+		position: absolute;
+		z-index: 100;
+		opacity: 0.55;
+		height: 100%;
+		background: asset_url('backgrounds/faces.jpg');
+		width: 75%;
+		right: -25%;
+		background-size: 65%;
+	}
+}
+
+/* ********************************  Client List ********************************  */
+
+#client-list-container {
+	z-index: 2;
+	position: relative;
+	width: 100%;
+	padding-bottom: 50px;
+	background-color: #000;
+
+
+	.brand {
+		position: relative;
+		width: 20%;
+    padding: 50px;
+		float: left;
+
+		img {
+	    max-width: 100%;
+	    max-height: 100px;
+		}
+	}
+}
+
+
+#client-list-container:after {
+	content: "";
+	background: asset_url('backgrounds/z-espagne.jpg') no-repeat center center;
+	background-size: cover;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	background-size: cover;
+	-o-background-size: cover;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	position: absolute;
+	z-index: -1;
+  opacity: 0.3;
+}

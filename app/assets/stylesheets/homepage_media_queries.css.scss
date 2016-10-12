@@ -1,0 +1,199 @@
+@import "declares";
+
+
+
+@media only screen and (min-width: 991px) {
+	.desk-bar {
+		width: 165px;
+		float: right;
+		margin-right: 20px;
+	}
+
+
+}
+
+@media only screen and (max-width: 991px) {
+
+	/* General Over Rides ********************************** */
+	
+	h1 {
+		font-size: 45px;
+	}
+
+	h2 {
+    font-size: 1.5em;
+    line-height: 30px;
+	}
+
+	h3 {
+		font-size: 1.5em;
+	}
+
+	.text-right {
+		
+	}
+
+	.mobile-hide {
+		display: none;
+	}
+
+	.mobile-show {
+		display: block;
+	}
+
+	/* Homepage  ********************************** */
+	
+	/* Hero  **************** */
+
+	#navigation-container .navbar-logo {
+    position: absolute;
+    top: 65px;
+    width: 100%;
+    text-align: center;
+    margin: 0 !important;
+
+    img {
+    	height: 45px;
+    }
+  }
+
+  .services-header {
+  	width: 80%;
+  }
+
+
+  .text-block {
+    text-align: center;
+  }
+
+	.homepage-hero-container .hero-copy-wrapper {
+	  position: absolute;
+	  width: 100%;
+	  top: 27.5%;
+	  padding-right: 0;
+	  padding-left: 0;
+
+	  .big-copy-wrapper {
+	  	width: 100%;
+
+	  	.hero-headline {
+	      line-height: 100%;
+	      text-align: center;
+	      font-size: 51px;
+	      font-family: 'brandon-bold';
+	      color: #fff;
+	      letter-spacing: 5px;
+	    }
+
+	    .hero-explain {
+	      font-family: 'minion';
+	      padding-right: 13px;
+	      max-width: 85%;
+	      padding: 0;
+	      float: none;
+	      margin: 0 auto; 
+	      margin-top: 25px;
+	      margin-bottom: 25px;
+	      text-align: center;
+	      color: #fff;
+	      text-shadow: -1px -1px 1px $black;
+	      font-size: 16px;
+	      letter-spacing: 1px;
+	      font-style: italic;
+	    }
+	  }
+	}
+
+	/* About us section ***************************** */ 
+	#mobile-about-title {
+		text-align: center;
+	}
+
+	/* Contact us  ********************************** */
+
+	#contact-us-container #contact-us:after {
+		background-size: inherit;
+		-webkit-background-size: inherit;
+		-moz-background-size: inherit;
+		background-size: inherit;
+		-o-background-size: inherit;
+	}
+
+	.services-container .contact-brick {
+		border-bottom: 1px solid $gray;
+	}
+
+	#client-list-container {
+		.brand {
+			width: 50%;
+		}
+	}
+
+	#footer-items .footer-element {
+		width: 100%;
+		float: left;
+		text-align: left; 
+	}
+
+	#footer-container {
+		.social-icons {
+			margin-top: 20px;
+		}
+	}
+
+	/* Services Container ************** */
+	.services-container .brick-copy {
+		width: 80%;
+		margin-left: 10%;
+	}
+}
+
+
+@media only screen and (max-width: 1200px) {
+	.tablet-hide {
+		display: none;
+	}
+
+	.tablet-show {
+		display: block;
+	}
+}
+
+
+@media only screen and (min-width: 991px) {
+
+	#contact-us-container .contact-title {
+		padding-top: 115px;
+	}
+}
+
+@media only screen and (max-width: 991px) {
+	.services-container .contact-brick .contact-title {
+    padding-top: 50px;
+	}
+}
+
+
+@media only screen and (max-width: 500px) {
+	#client-list-container {
+		.brand {
+			width: 100%;
+		}
+	}
+
+	.services-container .brick-title {
+    top: 25%;
+  }
+
+	.services-container .brick-copy { 
+		top: 52%;
+	}
+
+	h1 {
+		font-size: 35px;
+	}
+
+	.homepage-hero-container .see-more {
+    bottom: 20%;
+	}
+}

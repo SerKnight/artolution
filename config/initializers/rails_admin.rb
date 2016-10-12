@@ -1,4 +1,14 @@
 RailsAdmin.config do |config|
+  ### Popular gems integration
+
+  ## == Devise ==
+  # == Devise ==
+  config.authenticate_with do
+    unless (current_user and allowed_user(current_user))
+      flash[:error] = nil
+      redirect_to '/'
+    end    
+  end
 
   config.model 'Project' do
     list do
@@ -29,16 +39,10 @@ RailsAdmin.config do |config|
     end
   end
 
-
   config.actions do
     dashboard                     # mandatory
     index                         # mandatory
     new
-
-    dropzone do
-      only Project
-    end
-
     export
     bulk_delete
     show
@@ -46,5 +50,8 @@ RailsAdmin.config do |config|
     delete
     show_in_app
 
+    ## With an audit adapter, you can add:
+    # history_index
+    # history_show
   end
 end

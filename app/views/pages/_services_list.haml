@@ -1,0 +1,19 @@
+.text-center
+  .page-header.services-header
+    %h4
+      OUR DJ & MUSIC SERVICES
+    .hr-short
+    %i
+      Scratch Events offers scalable solutions for music based events & activations.
+
+.services-container.text-center
+  - @categories.each do |category|
+    .col.col-md-6.black-back
+      %a.service-brick.relative{style: "background-image: url(#{category.image});  no-repeat center center", href: category_path(category)}
+      .brick-title
+        = category.name.upcase
+      .brick-copy
+        = category.description
+
+
+  

@@ -1,0 +1,54 @@
+- if project
+  .col-md-12.close-study-wrapper.relative.text-left
+    .close-study
+      = image_tag asset_url('icons/cross.png'), style: 'margin-right: 10px;'
+      CLOSE
+  .case-study-content-wrapper{:itemscope => "", :itemtype => "http://schema.org/Article"}
+    #top-section.cs-section
+      .text-center
+        %h4
+          %div{:itemprop => "description"}= project.title
+        .hr-short
+        %i{:itemprop => "headline"}= project.description
+
+      .cs-title
+        The Request
+      .cs-body{:itemprop => "caption"}
+        = project.body.html_safe
+
+    #middle-section 
+      #grizzly-wrapper.gridzy.gridzyClassic.gridzyLightProgressIndicator.gridzyAnimated
+        - project.gallery_images.each do |photo|
+          %a.gallery-image{href: photo.image, "data-gallery" => ""}
+            %img{src: photo.image }
+
+
+
+    .relative#bot-bg-color
+      #bottom-section.cs-section
+        .cs-title
+          The Solution
+        .cs-body{:itemprop => "articleBody"}
+          = project.body
+
+        / - if !project.video_url.empty?
+        /   .cs-video
+        /     %iframe{:allowfullscreen => "", :frameborder => "0", :height => "480", :width => "853", :src => "https://www.youtube.com/embed/#{study['video_url_id']}", :alt => "#{study['client']} Video"}
+
+
+
+        %br
+        #view-more-close.text-center
+          .btn.close-study
+            VIEW MORE PROJECTS
+
+
+:javascript
+  studyToggle();
+
+  $('.gridzy').gridzy({
+    // options go here
+    // as an example, space between elements is set to 5 pixel.
+    desiredElementHeight: 300,
+    spaceBetweenElements: 5
+  });

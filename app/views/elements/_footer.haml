@@ -1,0 +1,45 @@
+.social-icons-mobile.mobile-show
+  %a.item.fa.fa-youtube{href: 'https://www.youtube.com/user/ScratchEventsUS', target: '_blank'}
+  %a.item.fa.fa-facebook{href: 'https://www.facebook.com/scratcheventsdjs', target: '_blank'}
+  %a.item.fa.fa-instagram{href: 'https://www.instagram.com/scratcheventsdjs/', target: '_blank'}
+  %a.item.fa.fa-twitter{href: 'https://twitter.com/ScratchEvents', target: '_blank'}
+%hr
+.col-md-12
+  #footer-top
+    .col-md-2#footer-logo.mobile-hide
+      = link_to image_tag(asset_url('scratch_logos/scratch_events_logo_black.png')), root_path
+    
+    .col-md-10.text-center#footer-items
+      %a.footer-element{href: '/about'}
+        ABOUT US
+      %a.footer-element{href: '/contact'}
+        CONTACT US
+      %a.footer-element{href: '/services'}
+        SERVICES
+      %a.footer-element{href: 'https://scratch.com/careers'}
+        CAREERS / DJS
+      %a.footer-element{href: 'https://scratch.com/press'}
+        PRESS
+      %a.footer-element{href: "https://scratch.com", target: '_blank'}
+        SCRATCH.COM
+
+      
+
+  .col-md-12.relative
+    .note
+      ="© Scratch Music Group #{DateTime.now.year}."
+    .note
+      = link_to "36 Cooper Square, 2nd Floor, New York, NY 10003.", "https://www.google.com/maps/place/36+Cooper+Sq,+New+York,+NY+10003/@40.7275365,-73.9950632,15.26z/data=!4m2!3m1!1s0x89c2599b1ba92bd7:0xa620abb22a83d516", target: '_blank'
+    .note
+      Send us a note at
+      = mail_to "info@scratchevents.com"
+
+
+.col-md-12.mobile-show#footer-logo-2.relative
+  = link_to image_tag(asset_url('scratch_logos/scratch_events_logo_black.png')), root_path
+
+.social-icons
+  %a.item.fa.fa-twitter{href: 'https://twitter.com/ScratchEvents', target: '_blank'}
+  %a.item.fa.fa-facebook{href: 'https://www.facebook.com/scratcheventsdjs', target: '_blank'}
+  %a.item.fa.fa-instagram{href: 'https://www.instagram.com/scratcheventsdjs/', target: '_blank'}
+  %a.item.fa.fa-youtube{href: 'https://www.youtube.com/user/ScratchEventsUS', target: '_blank'}
