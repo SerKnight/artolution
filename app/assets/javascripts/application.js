@@ -29,6 +29,7 @@ ready = function() {
   homepageInit();
   globalInit();
   homeSetup();
+  main();
 };
 
 

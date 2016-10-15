@@ -84,6 +84,6 @@ function youtubeEmbed(){
 
 
 function sizeHomepageHero(){
-  $('.homepage-hero-container').height($(window).height())
+  $('.hero-container').height($(window).height())
 }
 
