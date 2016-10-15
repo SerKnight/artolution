@@ -14,15 +14,8 @@ class ApplicationController < ActionController::Base
   end
 
   def get_categories
-  	# @categories_struct = []
-  	# Category.all.each do |cat|
-  	#   category = OpenStruct.new
-  	#   category.name = cat.name
-  	#   category.slug = cat.slug
-  	#   @categories_struct << category
-  	# end
-  	# #should i just query all categories?
-		@categories ||= Category.all
+ 
+		@categories ||= Category.where.not(slug: 'homepage')
   end
 
   def contact

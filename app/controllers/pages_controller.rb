@@ -1,12 +1,16 @@
 class PagesController < ApplicationController
   
+  def about
+  
+  end
 
-  def homepage
-
+  def partners
+    @artists = Artist.all
   end
 
   def categories_index
-    @category = Category.first
+    @category = Category.find_by_slug 'homepage'
+
     # Make a homepage category
   end
 
@@ -23,10 +27,17 @@ class PagesController < ApplicationController
     end
   end
 
+  def projects
+    if params[:artist_id]
+      @artist = Artist.find params[:artist_id]
+      @project_list = @artist.projects.group_by(&:category)
+    else
+      @project_list = Category.all.map{|c| [c, c.projects]}
+    end
+  end
 
-  def about
-    # @hero = LocomotiveClient.new('get-hero', 'hero', { tags: request.path }).response.first
-    # @employees = LocomotiveClient.new('active-employees', 'employees').response
+  def project_show 
+
   end
 
 end

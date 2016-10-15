@@ -77,24 +77,24 @@ function youtubeEmbed(){
 
 function faceAndMapToggle(){
 	$('#map, .talent-right').off().hover(function(){
-		TweenLite.to($('#map'), 1.5, { left: '-15%', opacity: 0.25, 'background-size': '80%'});
+		TweenLite.to($('#map'), 1.5, { left: '-15%', opacity: 0.25, 'background-size': '120%'});
 		TweenLite.to($('#faces'), 1.5, { right: '-35%'});
 		TweenLite.to($('.talent-right'), 1.5, {display: 'block'});
 		TweenLite.to($('.talent-right'), 0.75, {opacity: 1, left: -25 });
 	}, function(){
-		TweenLite.to($('#map'), 1.5, { left: '-25%', opacity: 0.75, 'background-size': '86%'});
+		TweenLite.to($('#map'), 1.5, { left: '-25%', opacity: 0.75, 'background-size': '105%'});
 		TweenLite.to($('#faces'), 1.5, { right: '-25%'});
 		TweenLite.to($('.talent-right'), 0, {display: 'none'});
 		TweenLite.to($('.talent-right'), 0.75, {left: '7.5%' });
 	})
 
 	$('#faces, .talent-left').off().hover(function(){
-		TweenLite.to($('#faces'), 1.5, { right: '-15%', opacity: 0.25, 'background-size': '59%'});
+		TweenLite.to($('#faces'), 1.5, { right: '-15%', opacity: 0.25, 'background-size': '120%'});
 		TweenLite.to($('#map'), 1.5, { left: '-35%'});
 		TweenLite.to($('.talent-left'), 1.5, {display: 'block'});
 		TweenLite.to($('.talent-left'), 0.75, {opacity: 1, left: '7.5%' });
 	}, function(){
-		TweenLite.to($('#faces'), 1.5, { right: '-25%', opacity: 0.75, 'background-size': '65%'});
+		TweenLite.to($('#faces'), 1.5, { right: '-25%', opacity: 0.75, 'background-size': '105%'});
 		TweenLite.to($('#map'), 1.5, { left: '-25%'});
 		TweenLite.to($('.talent-left'), 0, {display: 'none'});
 		TweenLite.to($('.talent-left'), 0.75, {left: '0%' });

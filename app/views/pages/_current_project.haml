@@ -1,20 +1,19 @@
 - if project
   .col-md-12.close-study-wrapper.relative.text-left
     .close-study
-      = image_tag asset_url('icons/cross.png'), style: 'margin-right: 10px;'
-      CLOSE
+      .fa.fa-close{style: 'font-size: 30px; margin: 20px;'}
   .case-study-content-wrapper{:itemscope => "", :itemtype => "http://schema.org/Article"}
     #top-section.cs-section
       .text-center
         %h4
           %div{:itemprop => "description"}= project.title
         .hr-short
-        %i{:itemprop => "headline"}= project.description
+        %i{:itemprop => "headline"}= project.category.name
 
       .cs-title
-        The Request
+        The Issue
       .cs-body{:itemprop => "caption"}
-        = project.body.html_safe
+        = project.description.html_safe
 
     #middle-section 
       #grizzly-wrapper.gridzy.gridzyClassic.gridzyLightProgressIndicator.gridzyAnimated
@@ -23,11 +22,10 @@
             %img{src: photo.image }
 
 
-
     .relative#bot-bg-color
       #bottom-section.cs-section
         .cs-title
-          The Solution
+          Proejct Recap
         .cs-body{:itemprop => "articleBody"}
           = project.body
 

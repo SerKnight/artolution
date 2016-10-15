@@ -1,5 +1,5 @@
-/ - if @current_art
-/   - meta title: "#{@current_art['client']} - Scratch Events", keywords: %{DJ Music services hire private parties in store event management target consumers retail hospitality brands agency internal entertainment }, description: "#{@current_art['headline']} - #{CGI::unescapeHTML(strip_tags(@current_art['request'][0..200]))} - #{CGI::unescapeHTML(strip_tags(@current_art['solution'][0..200]))}"
+/ - if @current_project
+/   - meta title: "#{@current_project['client']} - Scratch Events", keywords: %{DJ Music services hire private parties in store event management target consumers retail hospitality brands agency internal entertainment }, description: "#{@current_project['headline']} - #{CGI::unescapeHTML(strip_tags(@current_project['request'][0..200]))} - #{CGI::unescapeHTML(strip_tags(@current_project['solution'][0..200]))}"
 / - else
 /   - meta title: "#{@project['name']} - Scratch Events", keywords: %{DJ Music services hire private parties in store event management target consumers retail hospitality brands agency internal entertainment }, description: "#{CGI::unescapeHTML(strip_tags(@project['description']))}", rel: { publisher: "https://plus.google.com/102047419752906667083/about" }, og: { title: "#{@project['name']} Services at Scratch Events", image: asset_url('dj-power-og.png'), description: "#{CGI::unescapeHTML(strip_tags(@project['description']))}", site_name: "Scratch Events" }, twitter: { card: 'summary', site: '@scratchevents', title: "#{@project['name']} Services at Scratch Events", description: "#{CGI::unescapeHTML(strip_tags(@project['description']))}", image: { src: asset_url('main-twitter-card.png')}, domain: 'https://events.scratch.com' }
 
@@ -21,7 +21,7 @@
   = render partial: 'project_list', locals: { projects: @category.projects }
 
 #current-case-study.relative
-  = render partial: 'current_project', locals: { project: @current_art }
+  = render partial: 'current_project', locals: { project: @current_project }
 
   
 #contact-form-container.relative
@@ -29,125 +29,16 @@
     #contact-us.contact-small.bg-2
       .contact-title
         %h3
-          READY TO GET STARTED ON YOUR EVENT?
+          Get involved with the Artolution
 
   = render partial: 'contacts'
         
 
-      
 
-- if params[:study]
+- if params[:project]
   :javascript
     var height = $('.hero-container').height() + 
     $('#service-show-container').height() + 
     $('#all-studies').height() +
-    $('.capabilities-container').height()
-    TweenLite.to(window, 1.2, {scrollTo:{y: height, x:0}, ease:Power2.easeOut});
-
-/ / Page Content
-/ .container.padding-50
-/   / Page Heading/Breadcrumbs
-/   .row
-/     .col-lg-12
-/       %h1.page-header
-/         = @project.title
-/         %small
-/           - if @project.artists.count > 1
-/             = "by #{@project.artists.map{|p| p.name }}"
-/           - elsif @project.artists.count == 1
-/             = "by #{@project.artists.first.name}"
-/           - else
-/             by the Artolution
-
-/       %ol.breadcrumb
-/         %li= link_to 'Home', root_path
-/         %li= link_to @project.category.name, "/category/#{@project.category.slug}"
-/         %li.active= @project.title
-/   / /.row
-/   / Content Row
-/   .row
-/     / Blog Post Content Column
-/     .col-lg-8
-/       %p
-/         %i.fa.fa-newspaper-o
-/         = link_to @project.category.name, "/category/#{@project.category.slug}"
-/       %hr
-/       / Preview Image
-/       %img.img-responsive{:alt => "", :src => @project.hero{:large}}
-/       %hr
-/       / Post Content
-/       %p.lead= @project.body[0..200]
-      
-/       %p= @project.body[200..-1]
-
-/       .well
-/         #disqus_thread
-/         :javascript
-/           /**
-/           * RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-/           * LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
-/           */
-/           /*
-/           var disqus_config = function () {
-/           this.page.url = http://artolution.herokuapp.com; // Replace PAGE_URL with your page's canonical URL variable
-/           this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-/           };
-/           */
-/           (function() { // DON'T EDIT BELOW THIS LINE
-/           var d = document, s = d.createElement('script');
-          
-/           s.src = '//artolution.disqus.com/embed.js';
-          
-/           s.setAttribute('data-timestamp', +new Date());
-/           (d.head || d.body).appendChild(s);
-/           })();
-/         %noscript
-/           Please enable JavaScript to view the
-/           %a{:href => "https://disqus.com/?ref_noscript", :rel => "nofollow"} comments powered by Disqus.
-/     / Blog Sidebar Widgets Column
-/     .col-md-4
-/       / Blog Search Well
-/       .well.relative
-/         %h4 Categories
-/         .row#project-categories
-/           .col-lg-12
-/             %ul.list-unstyled
-/               - @categories.each do |cat|
-/                 %a{:href => "/category/#{cat.slug}"}
-/                   %li.relative= cat.name
-/           / /.col-lg-6
-/         / /.row
-/       / Side Widget Well
-/       .well#social-well.relative
-/         %a{href: 'https://www.instagram.com/artolution/', target: '_blank'}
-/           %i.fa.fa-instagram{"aria-hidden" => "true"} 
-/         %a{href: 'https://www.facebook.com/artolution/', target: '_blank'}
-/           %i.fa.fa-facebook{"aria-hidden" => "true"} 
-/         %a{href: 'https://www.twitter.com/theartolution/', target: '_blank'}
-/           %i.fa.fa-twitter{"aria-hidden" => "true"} 
-/         %a{href: 'https://www.linkedin.com/in/max-levi-frieder-72649038', target: '_blank'}
-/           %i.fa.fa-linkedin{"aria-hidden" => "true"} 
-
-/       .well#gallery-well.relative#sidewall-blog-index
-/         / #grizzly-wrapper.gridzy.gridzyClassic.gridzyLightProgressIndicator.gridzyAnimated
-/         #example03.gridzyExampleContainer
-/           %h2 Combined with Lightboxes
-/           .colLeft
-/             %h3 Combined with PhotoSwipe
-/             .gridzy.gridzyExample.gridzyClassic.gridzyAnimated{"data-options" => "{\"onOptionsChanged\": \"initializePhotoSwipeForGridzy\"}"}
-/               - @project.gallery_images.each do |img|
-/                 %img{:alt => "", :src => asset_url(img.image(:thumb))}
-                
-           
-      
-/ :javascript
-/   document.addEventListener("turbolinks:load", function() {
-/     $(document).ready(blogPostInit());
-/     $(document).on('page:load', blogPostInit());
-
-/     $('.gridzy').gridzy({
-/       // options go here
-/       // as an example, space between elements is set to 5 pixel.
-/       spaceBetweenElements: 5
-/     });
-/   });
+    $('.capabilities-container').height();
+    TweenLite.to(window, 1.2, {scrollTo:{y: height + 280, x:0}, ease:Power2.easeOut});

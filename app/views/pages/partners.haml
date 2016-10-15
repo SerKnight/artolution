@@ -1,0 +1,132 @@
+.relative{style: 'margin-top: 50px;'}
+  .container.text-center
+    .page-header
+      %h4
+        Partner Organizations
+      .hr-short
+      .text-block
+        %p Artolution projects are made possible through partnerships with institutions around the world, from international NGOs to grass-roots community centers, government agencies to schools.
+
+  .text-center#about-page-container.relative
+    #about-us-content-wrapper.relative
+      .col-md-8.col-md-offset-2
+        #grizzly-wrapper.gridzy.gridzyClassic.gridzyLightProgressIndicator.gridzyAnimated
+          - photos = ["http://ba.one.un.org/content/dam/unct/bih/agencies/227x68xbunicef.gif.pagespeed.ic.aBiSMgldys.png", "https://pbs.twimg.com/profile_images/538328216729968642/SdfeQXSM.png","https://d2zyf8ayvg1369.cloudfront.net/sites/all/themes/mercycorps/static/mercycorps_logo_red.png","http://portfolio.bluetext.com/wp-content/uploads/2012/08/Bluetext-Is-Chosen-by-the-Meridian-International-Center.jpg",'http://cdn.greatnonprofits.org/images/logos/ALT_PA__English_Color.jpg','https://i.vimeocdn.com/portrait/4941368_300x300','https://upload.wikimedia.org/wikipedia/commons/9/9a/Seal_of_an_Embassy_of_the_United_States_of_America.png']
+          - photos.each do |photo_url|
+            %a.gallery-image{href: photo_url, "data-gallery" => ""}
+              %img{src: photo_url }
+          
+
+    .text-center.relative
+      .page-header
+        %h4
+          Our Team
+        .hr-short
+        %i
+          Global network of artists, educators, and operational staff. 
+
+
+      #team-container
+        - @artists.each do |artist|
+          %a.team-member{style: "background-image: url(#{artist.avatar(:medium)}); cover", href: "/projects?artist_id=#{artist.id}"}
+            .team-member-background
+            .member-copy
+              .name
+                = artist.name
+              .title
+                = artist.quote
+              .quote
+                .hr-short
+                = artist.bio
+        
+
+
+  .col-lg-10.col-md-offset-1.padding-25#partner-exhaustive-list
+    .page-header.text-center
+      %h4
+        Full Partner List
+      .hr-short
+      %p Thank you to all the individuals & organizations who have made our work possible
+    %hr
+    .col.col-md-4
+      %li= link_to "UNICEF", "http://www.unicef.org/", target: '_blank'
+      %li= link_to "United Nations", "http://www.un.org/en/index.html", target: '_blank'
+      %li= link_to "Street Child United (UK, Brazil)", "http://www.streetchildunited.org/", target: '_blank'
+      %li= link_to "Mercy Corps", "https://www.mercycorps.org/", target: '_blank'
+      %li= link_to "Meridian International Center", "http://www.meridian.org/", target: '_blank'
+      %li= link_to "Open Society Initiative of Eastern Africa", "https://www.opensocietyfoundations.org", target: '_blank'
+    .col.col-md-4
+      %li= link_to "Give a Hand/ Monde Par La Mai", "http://www.mondeparlamain.org/", target: '_blank'
+      %li= link_to "US Consulate General, Jerusalem", "http://jerusalem.usconsulate.gov/", target: '_blank'
+      %li= link_to "aptART (Awareness and Prevention Through Art)", "http://www.aptart.org/", target: '_blank'
+      %li= link_to "ACTED", "http://www.acted.org/en", target: '_blank'
+      %li= link_to "US Consulate General, Mumbai", "http://mumbai.usconsulate.gov/", target: '_blank'
+      %li= link_to "Birla Academy of Art & Culture (Kolkata, India)", "http://www.birlaart.com/", target: '_blank'
+    .col.col-md-4
+      %li= link_to "US Embassy, Tel Aviv", "http://israel.usembassy.gov/", target: '_blank'
+      %li= link_to "Park Inn by Radisson", "http://www.parkinn.com/", target: '_blank'
+      %li= link_to "Brooklyn Arts Council", "http://www.brooklynartscouncil.org/", target: '_blank'
+      %li= link_to "International Rescue Committee (IRC)", "http://www.rescue.org/", target: '_blank'
+      %li= link_to "The Children’s Museum of the Arts (NYC)", "http://cmany.org/", target: '_blank'
+      %li= link_to "Boys & Girls Club of Greater Washington", "http://www.bgcgw.org/", target: '_blank'
+    .col.col-md-4
+      %li= link_to "University of Dayton (Ohio)", "https://www.udayton.edu/", target: '_blank'
+      %li= link_to "Taller Cultural (Santiago de Cub", "http://www.ecured.cu/", target: '_blank'
+      %li= link_to "Shakti Vahini (India)", "https://shaktivahini.wordpress.com/", target: '_blank'
+      %li= link_to "IRRI (International Renewable Resources Institute)", "http://www.irrimexico.org/", target: '_blank'
+      %li= link_to "Dumbo Arts Festival (NYC)", "http://dumboartsfestival.com/", target: '_blank'
+      %li= link_to "The Karam Foundation (Turkey)", "http://www.karamfoundation.org/", target: '_blank'
+    .col.col-md-4
+      %li= link_to "ConcentrArte (Mexico)", "http://www.concentrarte.org/", target: '_blank'
+      %li= link_to "Kibera Hamlets (Nairobi, Kenya)", "http://www.kiberahamlets.org/", target: '_blank'
+      %li= link_to "Kid Powered Media (Delhi, India)", "http://www.kidpoweredmedia.com/", target: '_blank'
+      %li= link_to "DC Commission on the Arts and Humaniti", "http://dcarts.dc.gov/", target: '_blank'
+      %li= link_to "Mumbai Smiles (India)", "http://www.mumbaismiles.org/", target: '_blank'
+      %li= link_to "Shambala Festival (UK)", "http://www.shambalafestival.org/", target: '_blank'
+    .col.col-md-4
+      %li= link_to "Parents Circle Families Forum (Israel and Palestin", "http://www.theparentscircle.com/", target: '_blank'
+      %li= link_to "Riverbank State Park (NYC)", "http://nysparks.com/parks/93/details.aspx", target: '_blank'
+      %li= link_to "Greenbelt Festival (UK)", "https://www.greenbelt.org.uk/", target: '_blank'
+      %li= link_to "Project Jericho (Ohio)", "http://www.project-jericho.com/", target: '_blank'
+      %li= link_to "CAES (Center for Art Education and Sustainability)", "http://www.caes-eco-art.net/", target: '_blank'
+      %li= link_to "Artistic Noise (NYC)", "http://www.artisticnoise.org/", target: '_blank'
+    .col.col-md-4
+      %li= link_to "Paróquia Cristo Rei, Cidade de Deus (Rio de Janeiro, Brazil)", "https://www.facebook.com/Pacristorei/", target: '_blank'
+      %li= link_to "Karunalaya (Chennai, India)", "http://www.karunalaya.in/", target: '_blank'
+      %li= link_to "Hand in Hand (Yad be Yad) School, Jerusalem", "https://www.handinhandk12.org/", target: '_blank'
+      %li= link_to "Partners of the Americas", "http://www.partners.net/", target: '_blank'
+      %li= link_to "Rhode Island School of Design Museum of Art", "http://risdmuseum.org/", target: '_blank'
+      %li= link_to "Salt Lake City Commission for the Arts", "http://saltlakearts.org/", target: '_blank'
+    .col.col-md-4
+      %li= link_to "J Street", "http://jstreet.org/", target: '_blank'
+      %li= link_to "HBO Latino", "http://www.hbomax.tv/hbo/", target: '_blank'
+      %li= link_to "Casa del Caribe (Cuba)", "https://www.facebook.com/casadelcaribe/", target: '_blank'
+      %li= link_to "Groundswell (NYC)", "https://www.groundswell.nyc/", target: '_blank'
+      %li= link_to "Isla Urbana (Mexico)", "http://islaurbana.org/", target: '_blank'
+      %li= link_to "El Museo De Los Niños (San Jose, Costa Rica)", "https://www.museocr.org/", target: '_blank'
+    .col.col-md-4
+      %li= link_to "The National Museum of the Jewish People: Beit Hatfuts", "http://www.bh.org.il/", target: '_blank'
+      %li= link_to "The Providence Mayor’s Office (Rhode Islan", "https://www.providenceri.com/mayor", target: '_blank'
+      %li= link_to "Tambour International Paint Company", "http://www.tambourpaints.com/", target: '_blank'
+      %li= link_to "Providence Children’s Museum (Rhode Island)", "http://www.childrenmuseum.org/", target: '_blank'
+      %li= link_to "Vidya (Delhi)", "http://vidya-india.org/", target: '_blank'
+      %li= link_to "Class Acts Arts (Maryland)", "http://classactsarts.org/", target: '_blank'
+    .col.col-md-4
+      %li= link_to "Alyn Hospital (Jerusalem)", "https://www.alyn.org/", target: '_blank'
+      %li= link_to "Recycling for Rhode Island Education Center", "http://www.rrie.org/", target: '_blank'
+      %li= link_to "New Zealand Children’s Arthouse Foundati", "http://www.arthouse.org.nz/", target: '_blank'
+      %li= link_to "US Consulate General, Kolkata (India)", "http://kolkata.usconsulate.gov/", target: '_blank'
+      %li= link_to "Latin American Youth Center (Washington, DC)", "http://www.layc-dc.org/", target: '_blank'
+
+
+
+      
+:javascript
+  partnersInit();
+
+  $('.gridzy').gridzy({
+    // options go here
+    // as an example, space between elements is set to 5 pixel.
+    desiredElementHeight: 300,
+    spaceBetweenElements: 5
+  });

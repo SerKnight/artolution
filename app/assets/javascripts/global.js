@@ -25,11 +25,10 @@ function studyToggle(){
 	  $('#current-case-study').html('')
 	  $('.study').removeClass('active-case-study')
 	  history.pushState(null, "<%= @current_study['headline'] %>", '/' + window.location.pathname.split('/').slice(1,3).join('/') );
-		document.title = $(".hero-headline").next().text() + " Services - Scratch Events"
 	  var height = $('.hero-container').height() + 
 	  $('#service-show-container').height() + 
 	  $('.capabilities-container').height()
-	  TweenLite.to(window, 1.2, {scrollTo:{y: height + 50, x:0}, ease:Power2.easeOut});
+	  TweenLite.to(window, 1.2, {scrollTo:{y: height, x:0}, ease:Power2.easeOut});
 	})
 }
 
