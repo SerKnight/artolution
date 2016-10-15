@@ -15,7 +15,6 @@ RailsAdmin.config do |config|
       exclude_fields_if do
         type == :datetime
       end
-
       exclude_fields :artists
     end
   end

@@ -20,7 +20,9 @@ gem 'rails_admin'
 gem 'rails_admin_dropzone'
 gem "paperclip", "~> 5.0.0"
 gem 'aws-sdk'
-gem 'devise'
+gem 'devise', github: 'plataformatec/devise' # we probably be using bleeding edge here, is there a version we can lock to?
+gem 'omniauth'
+gem 'omniauth-facebook'
 
 group :development do
   gem 'better_errors'
