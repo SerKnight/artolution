@@ -6,7 +6,7 @@ class ApplicationController < ActionController::Base
   before_filter :get_categories
 
   def allowed_user(current_user)
-    if current_user && current_user.email == 'chrisknight.mail@gmail.com'
+    if current_user && (current_user.email == 'chrisknight.mail@gmail.com' || current_user.email  == 'superheroxam@aol.com') 
       return true
     else
       return false
