@@ -42,7 +42,7 @@ p {
 
 
 span {
-	color: $brand-primary;
+	
 }
 
 i {
@@ -143,8 +143,8 @@ h4 {
 
 	button {
 	  width: 250px;
-	  color: #fff;
-	  background-color: #fed136;
+	  color: #000;
+	  background-color: $brand-primary;
 	  border: none;
 	  -webkit-border-radius: 5px;
 	  -moz-border-radius: 5px;
@@ -156,7 +156,7 @@ h4 {
 	}
 }
 .press button:hover {
-  background-color: #54893b;
+  background-color: #ad890c;
   -webkit-transform: translateY(1px);
   -moz-transform: translateY(1px);
   -ms-transform: translateY(1px);
@@ -167,7 +167,7 @@ h4 {
 .press button:active,
 .press button:disabled,
 .press button.active {
-  background-color: #345625;
+  background-color: #564301;
   -webkit-box-shadow: 0 3px #2a441d;
   -moz-box-shadow: 0 3px #2a441d;
   box-shadow: 0 3px #2a441d;

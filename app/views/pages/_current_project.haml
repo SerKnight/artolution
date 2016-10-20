@@ -25,9 +25,9 @@
     .relative#bot-bg-color
       #bottom-section.cs-section
         .cs-title
-          Proejct Recap
+          Project Recap
         .cs-body{:itemprop => "articleBody"}
-          = project.body
+          = project.body.html_safe
 
         / - if !project.video_url.empty?
         /   .cs-video

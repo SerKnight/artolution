@@ -17,6 +17,19 @@ RailsAdmin.config do |config|
       end
       exclude_fields :artists
     end
+
+    edit do
+      field :title
+      field :description, :froala
+      field :body, :froala
+      field :hero
+      field :category
+      field :category
+      field :slug
+      field :artists
+      field :gallery_images
+
+    end
   end
 
 

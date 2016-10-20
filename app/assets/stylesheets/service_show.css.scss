@@ -1,17 +1,16 @@
 @import "declares";
 
 
+#all-studies {
+	margin: 4%;
+}
+
 #service-show-container {
 	max-width: 1700px;
 	margin: 0 auto;
 
 	padding-left: 5%;
 	padding-right: 5%;
-
-	#all-studies {
-		padding-left: 40px;
-		padding-right: 40px;
-	}
 
 	.study-wrapper {
 		padding: 2.5%;
@@ -50,7 +49,7 @@
 				position: relative;
 				float: left;
 				width: 100%;
-				height: 40%;
+				height: 55%;
 
 				-webkit-background-size: cover;
 			  -moz-background-size: cover;
@@ -67,7 +66,7 @@
 				padding: 20px;
 				text-align: left;
 				width: 100%;
-				height: 60%;
+				height: 45%;
 
 				.study-title {
 					font-family: 'minion-italic';
@@ -293,7 +292,7 @@
   		text-transform: uppercase;
   		letter-spacing: 3px;
   		line-height: 36px;
-  		color: #fed136;
+  		color: $brand-primary;
 	  }
 
 	  i {

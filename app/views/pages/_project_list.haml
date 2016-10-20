@@ -1,5 +1,5 @@
 #all-studies.relative
-  .text-left{style: "padding-left: 2.5%; opacity: 0.9; font-family: 'brandon-light'; font-size: 23px;"}Community Artolution Projects
+  .text-left{style: "padding-left: 2.5%; opacity: 0.9; font-family: 'brandon-light'; font-size: 26px;"} Community Artolution Projects
   / .text-center
   /   .page-header
   /     %h4
@@ -10,7 +10,7 @@
 
 
   - projects.each do |project|
-    .col-md-3.study-wrapper
+    .col-md-4.study-wrapper
       - active_stud = request.path.split('/')[-1] == project.slug ?  'active-case-study' : ''
       %a.study{href: "/category/#{@category.slug}/#{project.slug}", 'data-remote': true, class: active_stud }
         .study-image{style: "background-image: url(#{project.hero(:medium)}); no-repeat center center"}
@@ -18,11 +18,11 @@
           .study-title
             = project.title
           .study-headline
-            = truncate(project.description, length: 55)
+            = ActionView::Base.full_sanitizer.sanitize(project.description[0..100])
 
           .peek-more
-            .fa.fa-eye
-            .view-more Read More
+            .fa.fa-paint-brush
+            .view-more View Project
 
 
 

@@ -8,40 +8,11 @@
 
 = render partial: 'elements/hero'
 .relative= render partial: 'about_us'
-.relative= render partial: 'contact_us'
-.relative= render partial: 'services_list'
 .relative= render partial: 'talent_network'
+.relative= render partial: 'services_list'
 / .relative= render partial: 'testimonials'
 / .relative= render partial: 'client_list'
-.services-container.relative
-  .col.col-md-12.text-center
-    .service-brick.contact-brick
-      .contact-title
-        .contact-brick-title
-          HAVE A QUESTION FOR US?
-
-        %br
-
-        %a{href: '/contact'}
-          .btn
-            CONTACT US
-
-        / %br
-        / .btn.btn-alternate
-        /   DOWNLOAD PRICING
-
-        
-
-
-/ .relative
-/   #contact-us-container.text-center
-/     #contact-us.bg-2
-/       .contact-title
-/         %h3
-/           READY TO GET STARTED ON YOUR EVENT?
-/         %a{href: '/contact'}
-/           .btn
-/             CONTACT US
+.relative= render partial: 'contact_us'
 
 
 - if request.path == "/services"

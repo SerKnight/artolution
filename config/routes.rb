@@ -7,7 +7,7 @@ Rails.application.routes.draw do
   # get '/about', to: 'application#about'
   # get '/team', to: 'application#team'
 
-  # get '/contact', to: 'application#contact'
+  get '/contact', to: 'pages#contact'
   # get '/get-involved', to: 'application#contact'
 
   devise_for :users, controllers: {registrations: "users/registrations", sessions: "users/sessions", passwords: "users/passwords", omniauth_callbacks: "users/omniauth_callbacks"}, skip: [:sessions, :registrations]
