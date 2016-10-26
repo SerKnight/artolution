@@ -1,0 +1,1 @@
+CKEDITOR.plugins.setLang("widget","de",{move:"Zum verschieben anw\xe4hlen und ziehen"});
