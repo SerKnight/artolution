@@ -16,8 +16,7 @@ gem 'ransack'
 
 gem 'figaro'
 gem 'font-awesome-rails'
-gem 'rails_admin'
-gem 'rails_admin_dropzone'
+gem 'activeadmin', github: 'activeadmin'
 gem "paperclip", "~> 5.0.0"
 gem 'aws-sdk'
 gem 'devise', github: 'plataformatec/devise' # we probably be using bleeding edge here, is there a version we can lock to?

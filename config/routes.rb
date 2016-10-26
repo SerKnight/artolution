@@ -1,8 +1,9 @@
 Rails.application.routes.draw do
-
-  mount RailsAdmin::Engine => '/studio', as: 'rails_admin'
-
-  # devise_for :users
+  devise_for :admin_users, ActiveAdmin::Devise.config
+  devise_for :users, controllers: {registrations: "users/registrations", sessions: "users/sessions", passwords: "users/passwords", omniauth_callbacks: "users/omniauth_callbacks"}, skip: [:sessions, :registrations]
+  # devise_for :users, ActiveAdmin::Devise.config
+  # devise_for :users, ActiveAdmin::Devise.config
+  ActiveAdmin.routes(self)
 
   # get '/about', to: 'application#about'
   # get '/team', to: 'application#team'
@@ -10,7 +11,6 @@ Rails.application.routes.draw do
   get '/contact', to: 'pages#contact'
   # get '/get-involved', to: 'application#contact'
 
-  devise_for :users, controllers: {registrations: "users/registrations", sessions: "users/sessions", passwords: "users/passwords", omniauth_callbacks: "users/omniauth_callbacks"}, skip: [:sessions, :registrations]
   devise_scope :user do
     get    "login"   => "users/sessions#new",         as: :new_user_session
     post   "login"   => "users/sessions#create",      as: :user_session
