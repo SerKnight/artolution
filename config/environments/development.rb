@@ -28,7 +28,7 @@ Rails.application.configure do
 
   Paperclip.options[:command_path] = "/usr/local/bin/"
 
-  config.assets.debug = true
+  config.assets.debug = false
 
   config.action_mailer.smtp_settings = {
     address: "smtp.gmail.com",
@@ -36,8 +36,8 @@ Rails.application.configure do
     domain: Rails.application.secrets.domain_name,
     authentication: "plain",
     enable_starttls_auto: true,
-    user_name: Rails.application.secrets.email_provider_username,
-    password: Rails.application.secrets.email_provider_password
+    user_name: ENV['email'],
+    password: ENV['password']
   }
   # ActionMailer Config
   config.action_mailer.default_url_options = { :host => 'localhost:3000' }

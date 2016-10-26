@@ -17,10 +17,9 @@ ActiveAdmin.register Project do
     f.inputs do
       f.input :title
       f.input :category
-      f.input :body
+      f.input :body, :as => :rich, :config => { :width => '76%', :height => '400px' }
       f.input :slug
-      f.input :hero, :as => :file, :hint => f.template.image_tag(f.object.hero.url(:thumb))
-
+      f.input :hero
       # f.input :excerpt, label: 'Deck'
       # f.input :subheadline, label: 'Meta Description'
       # f.input :page_title
