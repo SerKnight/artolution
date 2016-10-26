@@ -1,3 +1,5 @@
+source 'https://rubygems.org'
+
 gem 'rails', '4.2.4'
 gem 'friendly_id', '~> 5.1.0'
 gem 'sass-rails', '~> 5.0'
@@ -18,6 +20,7 @@ gem 'figaro'
 gem 'font-awesome-rails'
 gem 'activeadmin', github: 'activeadmin'
 gem "paperclip", "~> 5.0.0"
+gem 'rich'
 gem 'aws-sdk'
 gem 'devise', github: 'plataformatec/devise' # we probably be using bleeding edge here, is there a version we can lock to?
 gem 'omniauth'
