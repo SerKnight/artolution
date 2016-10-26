@@ -10,11 +10,13 @@
     .capability-copy
       .page-header
         %h4
-          ="#{@category.name} Solutions"
+          = @category.name
         .hr-short
         .text-center
           %i
             = @category.description.html_safe
+          .text-area
+            = @category.body.html_safe
 
     / = render partial: 'capabilities', locals: { capabilities: @category.project }
 
