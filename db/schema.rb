@@ -105,13 +105,6 @@ ActiveRecord::Schema.define(version: 20161026021414) do
     t.string   "caption"
   end
 
-  create_table "posts", force: :cascade do |t|
-    t.string   "title"
-    t.string   "description"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
-  end
-
   create_table "projects", force: :cascade do |t|
     t.string   "title"
     t.string   "description"
