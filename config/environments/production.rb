@@ -6,12 +6,14 @@ Rails.application.configure do
   config.action_controller.perform_caching = true
   config.serve_static_assets = true
   config.assets.js_compressor = :uglifier
-  config.assets.compile = true
   config.assets.digest = true
   config.assets.version = '1.0'
   # config.force_ssl = true
   # Set to :debug to see everything in the log.
   config.log_level = :info
+
+  config.assets.compile = false
+
   # config.log_tags = [ :subdomain, :uuid ]
   # config.logger = ActiveSupport::TaggedLogging.new(SyslogLogger.new)
   # config.cache_store = :mem_cache_store
@@ -20,7 +22,7 @@ Rails.application.configure do
   # Precompile additional assets.
   # application.js, application.css, and all non-JS/CSS in app/assets folder are already added.
   # config.assets.precompile += %w( search.js )
-  config.assets.precompile += %w( .svg .eot .woff .ttf )
+  config.assets.precompile += %w(*.png *.jpg *.jpeg *.gif .svg .eot .woff .ttf )
   config.assets.paths << Rails.root.join('app', 'assets', 'fonts')
   
 

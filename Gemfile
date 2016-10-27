@@ -48,6 +48,10 @@ group :test do
   gem 'selenium-webdriver'
 end
 
+group :production do
+  gem 'rails_12factor'
+end
+
 group :development, :test do
   gem 'factory_girl_rails'
   gem 'faker'
