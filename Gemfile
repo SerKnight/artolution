@@ -67,3 +67,5 @@ gem 'sitemap_generator'
 gem 'metamagic'
 
 gem "wysiwyg-rails", "~> 1.2.7"
+
+# instagram photo feed
