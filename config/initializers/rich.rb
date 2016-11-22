@@ -36,7 +36,7 @@ if Object.const_defined?("Rich")
     # remember to re-generate your styles by running:
     #   rake rich:refresh_assets
     config.image_styles = {
-      :thumb => "100x100#"
+      :medium => "350x350"
     }
 
     # == Convert options
@@ -65,7 +65,7 @@ if Object.const_defined?("Rich")
     # The style to insert by default. In addition to the
     # styles defined above you can also use :original to get 
     # the unprocessed file. Make sure this style exists.
-    config.default_style = :thumb
+    config.default_style = :medium
 
 	# == Upload non-image files
 	#

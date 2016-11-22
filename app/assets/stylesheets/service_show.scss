@@ -247,6 +247,15 @@
 	  #bottom-section {
 	  	margin-top: 70px;
 	  	margin-bottom: 60px;
+
+	  	img {
+		  	width: 100%;
+		  	height: auto;
+		  	max-width: 300px;
+		  	word-wrap: break-word;
+		  	float: left;
+		  	padding: 25px;
+	  	}
 	  }
 	  #bot-bg-color {
 	  	background-color: #fff;

@@ -11,12 +11,22 @@ ActiveAdmin.register Project do
 	  end
   end
 
+  index do
+    column :title
+    column :category
+    column :slug
+    column 'main image' do |post|
+      image_tag(post.hero.url(:thumb))
+    end
+    actions
+  end
 
 
   form multipart: true do |f|
     f.inputs do
       f.input :title
       f.input :category
+      f.input :description
       f.input :body, :as => :rich, :config => { :width => '76%', :height => '400px' }
       f.input :slug
       f.input :hero

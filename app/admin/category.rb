@@ -17,7 +17,7 @@ ActiveAdmin.register Category, :as => "project_category" do
       f.input :description
       f.input :body, :as => :rich, :config => { :width => '76%', :height => '400px' }
     end
-    
+    f.actions
   end
 
 end
