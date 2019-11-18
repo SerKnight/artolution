@@ -21,7 +21,7 @@ gem 'ransack'
 gem 'figaro'
 gem 'font-awesome-rails'
 gem 'activeadmin', github: 'activeadmin'
-gem "paperclip", "~> 5.0.0"
+gem "paperclip", "~> 6.1.0"
 gem 'rich', github: 'kreativgebiet/rich', ref: '3e92749ac77ee171bd6f0643d67b1579cc1c1271'
 #url(icons.png)
 gem 'aws-sdk'
