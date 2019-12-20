@@ -279,7 +279,7 @@ GEM
     puma (3.6.0)
     quiet_assets (1.1.0)
       railties (>= 3.1, < 5.0)
-    rack (1.6.4)
+    rack (1.6.12)
     rack-raw-upload (1.1.1)
       multi_json
     rack-test (0.6.3)
